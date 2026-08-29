@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content'
+import { getSiteYear } from './date'
 
 export type BlogPostEntry = CollectionEntry<'blog'> | CollectionEntry<'blogEn'>
 
@@ -88,7 +89,7 @@ function getYearFromCollection(
   collection: BlogPostEntry
 ): number | undefined {
   const dateStr = collection.data.updatedDate ?? collection.data.publishDate
-  return dateStr ? new Date(dateStr).getUTCFullYear() : undefined
+  return dateStr ? getSiteYear(dateStr) : undefined
 }
 
 export function groupCollectionsByYear<T extends BlogPostEntry>(
