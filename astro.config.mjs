@@ -15,8 +15,6 @@ import AstroAxiIntegration from './src/axi-integration.ts'
 // Others
 // import { visualizer } from 'rollup-plugin-visualizer'
 
-// Local integrations
-import { outputCopier } from './src/plugins/output-copier.ts'
 // Local rehype & remark plugins
 import rehypeAutolinkHeadings from './src/plugins/rehype-auto-link-headings.ts'
 // Shiki
@@ -34,7 +32,6 @@ const platform = process.env.DEPLOYMENT_PLATFORM || 'vercel'
 const isCloudflare = platform === 'cloudflare'
 const isGithubPages = platform === 'github'
 const isLocal = platform === 'local'
-const isVercel = platform === 'vercel'
 const mainDomain = config.personal?.domains?.main || 'example.com'
 const mainSite = /^(localhost|127\.0\.0\.1)(:\d+)?$/.test(mainDomain)
   ? `http://${mainDomain}/`
@@ -74,20 +71,11 @@ export default defineConfig({
     // sitemap(),
     // mdx(),
     // tailwind({ applyBaseStyles: false }),
-    AstroAxiIntegration(config),
+    AstroAxiIntegration(config)
     // (await import('@playform/compress')).default({
     //   SVG: false,
     //   Exclude: ['index.*.js']
-    // }),
-
-    // Temporary Vercel adapter fix; static builds already place assets in dist.
-    ...(isVercel
-      ? [
-          outputCopier({
-            integ: ['sitemap', 'pagefind']
-          })
-        ]
-      : [])
+    // })
   ],
   // root: './my-project-directory',
 
