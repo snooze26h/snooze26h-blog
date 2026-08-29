@@ -1,0 +1,25 @@
+---
+import type { BlogFeedSnapshot } from '@/types/reading'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import ReadingFeed from '@/components/reading/ReadingFeed.astro'
+
+import snapshotData from '../../data/blog-feed-snapshot.json'
+
+const snapshot = snapshotData as BlogFeedSnapshot
+---
+
+<BaseLayout
+  meta={{
+    title: '博客更新',
+    description: '我所订阅博客的近期文章更新。'
+  }}
+>
+  <main class='mb-12 mt-6 lg:mt-10'>
+    <ReadingFeed
+      items={snapshot.items}
+      contentUpdatedAt={snapshot.content_updated_at}
+      sourceCount={snapshot.source_count}
+      locale='zh'
+    />
+  </main>
+</BaseLayout>

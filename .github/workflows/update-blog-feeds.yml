@@ -1,0 +1,117 @@
+name: Update blog feeds
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_write:
+        description: Confirm updating and pushing the generated snapshot
+        required: true
+        default: false
+        type: boolean
+  # Scheduled runs are intentionally disabled until explicitly approved.
+  # schedule:
+  #   - cron: '17 */2 * * *'
+
+permissions: {}
+
+concurrency:
+  group: update-blog-feeds-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  update:
+    if: >-
+      github.repository == 'snooze26h/snooze26h-blog' &&
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'schedule' || inputs.confirm_write)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+        with:
+          version: 10.33.0
+          run_install: 'false'
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 22.20.0
+          cache: pnpm
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Update feed snapshot
+        run: pnpm feeds:update
+
+      - name: Validate feed snapshot
+        run: pnpm feeds:validate
+
+      - name: Test feed updater
+        run: pnpm feeds:test
+
+      - name: Lint
+        run: pnpm lint:check
+
+      - name: Type-check
+        run: pnpm type:check
+
+      - name: Build local static site
+        run: DEPLOYMENT_PLATFORM=local pnpm build
+
+      - name: Commit and push snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          snapshot='src/data/blog-feed-snapshot.json'
+
+          git ls-files --error-unmatch "$snapshot" >/dev/null
+
+          if ! git diff --cached --quiet; then
+            echo '::error::The index was not clean before snapshot staging.'
+            git diff --cached --name-only
+            exit 1
+          fi
+
+          if ! git diff --quiet -- . ":(exclude)$snapshot"; then
+            echo '::error::Unexpected tracked files changed.'
+            git diff --name-only -- . ":(exclude)$snapshot"
+            exit 1
+          fi
+
+          mapfile -t untracked < <(git ls-files --others --exclude-standard)
+          if (( ${#untracked[@]} > 0 )); then
+            echo '::error::Unexpected untracked files were created.'
+            printf '%s\n' "${untracked[@]}"
+            exit 1
+          fi
+
+          if git diff --quiet -- "$snapshot"; then
+            echo 'Feed content is unchanged.'
+            exit 0
+          fi
+
+          git add -- "$snapshot"
+          mapfile -t staged < <(git diff --cached --name-only)
+          if (( ${#staged[@]} != 1 )) || [[ "${staged[0]}" != "$snapshot" ]]; then
+            echo '::error::Only the feed snapshot may be staged.'
+            git diff --cached --name-only
+            exit 1
+          fi
+
+          git diff --cached --check
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'chore(reading): update blog feed snapshot'
+          git push --porcelain origin HEAD:main

@@ -2,6 +2,10 @@
   "name": "snooze26h-blog",
   "type": "module",
   "version": "0.1.0",
+  "packageManager": "pnpm@10.33.0",
+  "engines": {
+    "node": ">=20.19.0"
+  },
   "scripts": {
     "dev": "astro dev",
     "dev:check": "astro check --watch & astro dev",
@@ -18,6 +22,9 @@
     "lint": "eslint --fix 'src/**/*.{js,ts,jsx,tsx,astro}'",
     "lint:check": "eslint 'src/**/*.{js,ts,jsx,tsx,astro}'",
     "type:check": "astro check",
+    "feeds:update": "node scripts/update-blog-feeds.mjs",
+    "feeds:validate": "node scripts/update-blog-feeds.mjs --validate-only",
+    "feeds:test": "node --test scripts/update-blog-feeds.test.mjs",
     "quality": "npm run lint && npm run sync && npm run type:check && npm run format",
     "yijiansilian": "npm run quality",
     "clean": "rm -rf .astro .vercel dist .wrangler",
@@ -40,6 +47,7 @@
     "caniuse-lite": "^1.0.30001762",
     "date-fns": "^4.1.0",
     "hast-util-select": "^6.0.4",
+    "html-to-text": "10.0.1",
     "katex": "^0.16.27",
     "node-html-parser": "^7.0.2",
     "pagefind": "^1.4.0",
@@ -47,6 +55,7 @@
     "rehype-katex": "^7.0.1",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
+    "rss-parser": "3.13.0",
     "sharp": "^0.33.5",
     "simple-icons": "^15.22.0",
     "tailwind-merge": "^2.6.0",

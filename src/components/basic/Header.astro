@@ -55,25 +55,25 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
     {/* Menu links */}
     <div
       id='headerExpandConetent'
-      class='end-0 start-0 top-12 grid border border-transparent group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-muted/60 max-md:absolute max-md:opacity-0 max-md:pointer-events-none max-md:group-[.expanded]:pointer-events-auto max-md:group-[.not-top]:border-border max-md:group-[.expanded.not-top]:bg-background/60 max-md:group-[.expanded.not-top]:backdrop-blur-md max-md:group-[.not-top]:px-4 max-md:group-[.not-top]:py-2 md:grid-rows-1'
+      class='end-0 start-0 top-12 grid border border-transparent group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-muted/60 max-lg:absolute max-lg:opacity-0 max-lg:pointer-events-none max-lg:group-[.expanded]:pointer-events-auto max-lg:group-[.not-top]:border-border max-lg:group-[.expanded.not-top]:bg-background/60 max-lg:group-[.expanded.not-top]:backdrop-blur-md max-lg:group-[.not-top]:px-4 max-lg:group-[.not-top]:py-2 lg:grid-rows-1'
     >
-      <div class='flex flex-col items-center justify-center md:flex-row'>
+      <div class='flex flex-col items-center justify-center lg:flex-row'>
         {
           (config.header?.menu || []).map((item: any) => {
             const isBlogMenu = item.link === '/blog/research' || item.title === 'Blog'
             if (isBlogMenu && categories.length > 0) {
               return (
-                <div class='menu-item-with-dropdown relative w-full md:w-fit' style='position: relative;'>
+                <div class='menu-item-with-dropdown relative w-full lg:w-fit' style='position: relative;'>
                   <a
                     href={getLocalizedUrl(Astro.currentLocale, item.link)}
-                    class='blog-menu-link flex w-full flex-none items-center justify-end py-2 font-medium transition-none hover:text-primary md:px-3 md:justify-center'
+                    class='blog-menu-link flex w-full flex-none items-center justify-end py-2 font-medium transition-none hover:text-primary lg:px-3 lg:justify-center'
                     aria-label='Nav menu item'
                   >
                     {item.title}
                     <Icon name='chevron-down' class='chevron-icon ml-1 size-4 transition-transform' />
                   </a>
                   {/* Dropdown menu */}
-                  <div class='dropdown-menu absolute right-0 top-full mt-0 w-48 rounded-xl border border-border bg-background/75 shadow-lg backdrop-blur-lg dark:bg-muted/75 md:left-0 md:right-auto md:mt-2' style='z-index: 9999;'>
+                  <div class='dropdown-menu absolute right-0 top-full mt-0 w-48 rounded-xl border border-border bg-background/75 shadow-lg backdrop-blur-lg dark:bg-muted/75 lg:left-0 lg:right-auto lg:mt-2' style='z-index: 9999;'>
                     <div class='py-1'>
                       {categories.map((category) => (
                         <a
@@ -92,7 +92,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
             return (
               <a
                 href={getLocalizedUrl(Astro.currentLocale, item.link)}
-                class='w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary md:w-fit md:px-3'
+                class='w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary lg:w-fit lg:px-3'
                 aria-label='Nav menu item'
               >
                 {item.title}
@@ -100,12 +100,12 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
             )
           })
         }
-        <a class='w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary md:w-fit md:px-3' href='https://www.travellings.cn/go.html' title='Travellings' target='_blank' rel='noopener noreferrer'>
+        <a class='w-full flex-none grow py-2 text-right font-medium transition-none hover:text-primary lg:w-fit lg:px-3' href='https://www.travellings.cn/go.html' title='Travellings' target='_blank' rel='noopener noreferrer'>
           <span class='sr-only'>Travellings</span>
           <span class='text-xl'>🚇</span>
         </a>
-        <div class='flex w-full grow flex-row justify-end gap-x-3 md:w-fit md:gap-x-5'>
-          <a class='px-1 py-2 transition-none md:px-2' href={getLocalizedUrl(Astro.currentLocale, '/search')} title='Search'>
+        <div class='flex w-full grow flex-row justify-end gap-x-3 lg:w-fit lg:gap-x-5'>
+          <a class='px-1 py-2 transition-none lg:px-2' href={getLocalizedUrl(Astro.currentLocale, '/search')} title='Search'>
             <span class='sr-only'>Search</span>
             <Icon name='search' class='size-5' />
           </a>
@@ -118,7 +118,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
       <LanguageSwitch />
       <button
         id='toggleDarkMode'
-        class='group/dark box-content size-5 rounded-md border p-1.5 transition-colors hover:bg-border md:group-[.not-top]:rounded-xl'
+        class='group/dark box-content size-5 rounded-md border p-1.5 transition-colors hover:bg-border lg:group-[.not-top]:rounded-xl'
       >
         <span class='sr-only'>Dark Theme</span>
         <Icon class='system size-5 group-hover/dark:text-primary' name='computer' />
@@ -127,7 +127,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
       </button>
       <button
         id='toggleMenu'
-        class='rounded-md border p-1.5 transition-colors hover:bg-border md:hidden md:group-[.not-top]:rounded-xl'
+        class='rounded-md border p-1.5 transition-colors hover:bg-border lg:hidden lg:group-[.not-top]:rounded-xl'
       >
         <span class='sr-only'>Menu</span>
         <Icon class='size-5' name='menu' />
@@ -206,7 +206,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
     }
   }
 
-  @media (min-width: 800px) {
+  @media (min-width: 1024px) {
     header-component.not-top {
       margin-inline: 8%;
     }
@@ -214,7 +214,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
  
 
   /* header menu */
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     #headerExpandConetent {
       grid-template-rows: 0fr;
       transition:
@@ -318,7 +318,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
   }
 
   /* Mobile dropdown adjustments */
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     .menu-item-with-dropdown {
       display: flex;
       flex-direction: column;

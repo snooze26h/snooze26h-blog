@@ -1,0 +1,156 @@
+[
+  {
+    "id": "axi",
+    "name": "Axi's Blog",
+    "site_url": "https://axi404.top/",
+    "discovery_url": "https://axi404.top/",
+    "feed_url": "https://axi404.top/rss.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "tw93",
+    "name": "Tw93",
+    "site_url": "https://tw93.fun/",
+    "discovery_url": "https://tw93.fun/",
+    "feed_url": "https://tw93.fun/feed.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "sora",
+    "name": "sora's blog",
+    "site_url": "https://sorablog.me/",
+    "discovery_url": "https://sorablog.me/",
+    "feed_url": "https://sorablog.me/feed/",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "lil-log",
+    "name": "Lil'Log",
+    "site_url": "https://lilianweng.github.io/",
+    "discovery_url": "https://lilianweng.github.io/",
+    "feed_url": "https://lilianweng.github.io/index.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "kexue",
+    "name": "科学空间",
+    "site_url": "https://kexue.fm/",
+    "discovery_url": "https://kexue.fm/",
+    "feed_url": "https://kexue.fm/feed",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "ameow",
+    "name": "阿猫的博客",
+    "site_url": "https://ameow.xyz/",
+    "discovery_url": "https://ameow.xyz/",
+    "feed_url": "https://ameow.xyz/feed.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "lumina",
+    "name": "Lumina",
+    "site_url": "https://lumina.shawnxie.top/",
+    "discovery_url": "https://lumina.shawnxie.top/",
+    "feed_url": "https://lumina.shawnxie.top/backend/api/articles/rss.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "laohu-weekly",
+    "name": "老胡的周刊",
+    "site_url": "https://weekly.howie6879.com/",
+    "discovery_url": "https://weekly.howie6879.com/",
+    "feed_url": "https://weekly.howie6879.com/rss/rss.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "arthals",
+    "name": "Arthals’ ink",
+    "site_url": "https://arthals.ink/",
+    "discovery_url": "https://arthals.ink/",
+    "feed_url": "https://arthals.ink/rss.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "yutong",
+    "name": "Yutong’s Site",
+    "site_url": "https://www.lyt0112.com/",
+    "discovery_url": "https://www.lyt0112.com/",
+    "feed_url": "https://www.lyt0112.com/rss.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "neomelt",
+    "name": "Neomelt’s Blog",
+    "site_url": "https://www.neomelt.cloud/",
+    "discovery_url": "https://www.neomelt.cloud/",
+    "feed_url": "https://www.neomelt.cloud/rss.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "french-picnic",
+    "name": "FrenchPicnic",
+    "site_url": "https://frenchpicnic.github.io/",
+    "discovery_url": "https://frenchpicnic.github.io/",
+    "feed_url": "https://frenchpicnic.github.io/atom.xml",
+    "kind": "atom",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "linexic",
+    "name": "LineXic书屋",
+    "site_url": "https://www.linexic.top/",
+    "discovery_url": "https://www.linexic.top/",
+    "feed_url": "https://www.linexic.top/rss.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified"
+  },
+  {
+    "id": "meowvps",
+    "name": "MeowVPS",
+    "site_url": "https://meowvps.com/",
+    "discovery_url": "https://meowvps.com/",
+    "feed_url": "https://meowvps.com/rss.xml",
+    "kind": "rss",
+    "enabled": false,
+    "poll_interval_minutes": 120,
+    "status": "disabled_by_choice"
+  }
+]

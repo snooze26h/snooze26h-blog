@@ -1,0 +1,262 @@
+---
+import type { BlogFeedItem } from '@/types/reading'
+import { Button, FormattedDate, Icon } from '@/components/user'
+
+import FeedUpdateItem from './FeedUpdateItem.astro'
+
+interface Props {
+  items: BlogFeedItem[]
+  contentUpdatedAt: string | null
+  sourceCount: number
+  locale: 'zh' | 'en'
+}
+
+const { items, contentUpdatedAt, sourceCount, locale } = Astro.props
+const isEnglish = locale === 'en'
+const labels = isEnglish
+  ? {
+      all: 'All',
+      allEmpty: 'No articles are available yet.',
+      description:
+        'Recent posts from the blogs I follow. Open an item to continue reading at the original site.',
+      loadMore: 'Load more',
+      sourceCount: `${sourceCount} sources`,
+      title: 'Blog Updates',
+      unread: 'Unread',
+      unreadEmpty: 'You are all caught up.',
+      updated: 'Content updated'
+    }
+  : {
+      all: '全部',
+      allEmpty: '暂时还没有可显示的文章。',
+      description: '这里汇集我订阅博客的近期文章，点击后前往原站继续阅读。',
+      loadMore: '加载更多',
+      sourceCount: `${sourceCount} 个来源`,
+      title: '博客更新',
+      unread: '未读',
+      unreadEmpty: '已经全部读完了。',
+      updated: '内容更新于'
+    }
+const updatedDate = contentUpdatedAt ? new Date(contentUpdatedAt) : null
+---
+
+<reading-feed
+  class='mx-auto block max-w-4xl'
+  data-all-empty={labels.allEmpty}
+  data-page-size='20'
+  data-unread-empty={labels.unreadEmpty}
+>
+  <header class='mb-8 space-y-4'>
+    <div class='flex items-start gap-4'>
+      <div
+        class='flex size-11 shrink-0 items-center justify-center rounded-xl border border-border bg-muted text-primary'
+      >
+        <Icon class='size-5' name='rss' />
+      </div>
+      <div class='space-y-1'>
+        <h1 class='text-3xl font-semibold tracking-tight text-foreground'>{labels.title}</h1>
+        <p class='max-w-2xl text-sm leading-6 text-muted-foreground'>{labels.description}</p>
+      </div>
+    </div>
+
+    <div
+      class='flex flex-col gap-3 border-t border-border pt-4 sm:flex-row sm:items-center sm:justify-between'
+    >
+      <div
+        class='flex items-center gap-2'
+        role='group'
+        aria-label={isEnglish ? 'Article filter' : '文章筛选'}
+      >
+        <Button
+          as='button'
+          class='cursor-pointer'
+          type='button'
+          title={labels.unread}
+          data-reading-filter='unread'
+          aria-pressed='false'
+        />
+        <Button
+          as='button'
+          class='cursor-pointer'
+          type='button'
+          title={labels.all}
+          data-reading-filter='all'
+          aria-pressed='false'
+        />
+      </div>
+
+      <p class='text-xs text-muted-foreground'>
+        {
+          updatedDate ? (
+            <>
+              {labels.updated}{' '}
+              <FormattedDate
+                class='font-sans'
+                date={updatedDate}
+                dateTimeOptions={{ hour: '2-digit', minute: '2-digit' }}
+              />
+              <span class='mx-1.5' aria-hidden='true'>
+                ·
+              </span>
+            </>
+          ) : null
+        }
+        <span>{labels.sourceCount}</span>
+      </p>
+    </div>
+  </header>
+
+  <ul class='space-y-3' data-reading-list>
+    {items.map((item) => <FeedUpdateItem {item} />)}
+  </ul>
+
+  <div
+    class='flex flex-col items-center gap-2 rounded-2xl border border-dashed border-border bg-muted/40 px-6 py-12 text-center text-sm text-muted-foreground'
+    data-reading-empty
+    hidden={items.length > 0}
+  >
+    <Icon class='size-6' name='rss' />
+    <p>{items.length > 0 ? labels.unreadEmpty : labels.allEmpty}</p>
+  </div>
+
+  <div class='mt-6 flex justify-center'>
+    <Button
+      as='button'
+      class='cursor-pointer'
+      type='button'
+      title={labels.loadMore}
+      data-reading-load-more
+      hidden
+    />
+  </div>
+
+  <span class='sr-only' data-reading-status aria-live='polite'></span>
+</reading-feed>
+
+<script>
+  const STORAGE_KEY = 'blog-reading-read:v1'
+
+  function loadReadIds() {
+    try {
+      const value = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
+      return Array.isArray(value) ? value.filter((id) => typeof id === 'string').slice(-1000) : []
+    } catch {
+      return []
+    }
+  }
+
+  class ReadingFeedElement extends HTMLElement {
+    storageListener?: (event: StorageEvent) => void
+
+    connectedCallback() {
+      if (this.dataset.initialized === 'true') return
+      this.dataset.initialized = 'true'
+
+      const list = this.querySelector<HTMLElement>('[data-reading-list]')
+      const emptyState = this.querySelector<HTMLElement>('[data-reading-empty]')
+      const loadMoreButton = this.querySelector<HTMLButtonElement>('[data-reading-load-more]')
+      const status = this.querySelector<HTMLElement>('[data-reading-status]')
+      const filterButtons = [...this.querySelectorAll<HTMLButtonElement>('[data-reading-filter]')]
+      const items = [...this.querySelectorAll<HTMLElement>('[data-reading-item]')]
+      const pageSize = Number.parseInt(this.dataset.pageSize || '20', 10)
+
+      if (!list || !emptyState || !loadMoreButton || !status || !Number.isInteger(pageSize)) return
+
+      let currentFilter = 'unread'
+      let visibleCount = pageSize
+      let readIds = loadReadIds()
+      let readSet = new Set(readIds)
+
+      const saveReadIds = () => {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(readIds.slice(-1000)))
+        } catch {
+          return
+        }
+      }
+
+      const render = () => {
+        let matchingCount = 0
+        for (const item of items) {
+          const id = item.dataset.entryId || ''
+          const isRead = readSet.has(id)
+          const matches = currentFilter === 'all' || !isRead
+          item.dataset.read = isRead ? 'true' : 'false'
+          item.hidden = !matches || matchingCount >= visibleCount
+          if (matches) matchingCount += 1
+        }
+
+        for (const button of filterButtons) {
+          button.setAttribute(
+            'aria-pressed',
+            String(button.dataset.readingFilter === currentFilter)
+          )
+        }
+
+        emptyState.hidden = matchingCount > 0
+        emptyState.querySelector('p')!.textContent =
+          currentFilter === 'all' ? this.dataset.allEmpty || '' : this.dataset.unreadEmpty || ''
+        loadMoreButton.hidden = matchingCount <= visibleCount
+        status.textContent = `${Math.min(matchingCount, visibleCount)} / ${matchingCount}`
+      }
+
+      for (const button of filterButtons) {
+        button.addEventListener('click', () => {
+          currentFilter = button.dataset.readingFilter === 'all' ? 'all' : 'unread'
+          visibleCount = pageSize
+          render()
+        })
+      }
+
+      loadMoreButton.addEventListener('click', () => {
+        visibleCount += pageSize
+        render()
+      })
+
+      list.addEventListener('click', (event) => {
+        const target = event.target
+        if (!(target instanceof Element)) return
+        const link = target.closest('[data-reading-link]')
+        const item = link?.closest<HTMLElement>('[data-reading-item]')
+        const id = item?.dataset.entryId
+        if (!id || readSet.has(id)) return
+
+        readIds = [...readIds.filter((value) => value !== id), id].slice(-1000)
+        readSet = new Set(readIds)
+        saveReadIds()
+        render()
+      })
+
+      this.storageListener = (event) => {
+        if (event.key !== STORAGE_KEY) return
+        readIds = loadReadIds()
+        readSet = new Set(readIds)
+        render()
+      }
+      window.addEventListener('storage', this.storageListener)
+
+      render()
+    }
+
+    disconnectedCallback() {
+      if (this.storageListener) window.removeEventListener('storage', this.storageListener)
+    }
+  }
+
+  if (!customElements.get('reading-feed')) {
+    customElements.define('reading-feed', ReadingFeedElement)
+  }
+</script>
+
+<style>
+  :global([data-reading-filter][aria-pressed='true']) {
+    border-color: hsl(var(--primary) / 0.45);
+    background-color: hsl(var(--muted));
+    color: hsl(var(--foreground));
+  }
+
+  [data-reading-empty][hidden],
+  :global([data-reading-load-more][hidden]) {
+    display: none;
+  }
+</style>

@@ -1,0 +1,1915 @@
+{
+  "version": 1,
+  "content_updated_at": "2026-08-29T13:44:43.385Z",
+  "source_count": 13,
+  "items": [
+    {
+      "id": "lumina:d7276860582ad2cc29fb101c",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "为什么超级个体不需要超级团队？",
+      "published_at": "2026-08-25T03:50:18.000Z",
+      "summary": "“超级个体”成立但“超级团队”是误解，能力叠加会受到社会惰化、沟通成本和判断冲突影响，AI的价值不是消除团队损耗，而是让个体调用可搬运的能力，形成单一意志与多个执行体的“编队”。",
+      "url": "https://lumina.shawnxie.top/article/wei-shi-yao-chao-ji-ge-ti-bu-xu-yao-chao-ji-tuan-20ff7363"
+    },
+    {
+      "id": "lumina:519ad3e5ba62e0901b6ce07d",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "AI 原生软件开发生命周期实操手册",
+      "published_at": "2026-08-25T02:30:32.000Z",
+      "summary": "AI编码提速后，审批、评审、交接和部署成为软件开发新瓶颈。AI原生SDLC将线性流程改为循环自动化，在计划、设计、构建、测试、部署、维护各阶段嵌入AI代理，以版本化工件衔接流程，并保留人类关键决策，提升交付效率、治理能力与生产响应速度。",
+      "url": "https://lumina.shawnxie.top/article/ai-yuan-sheng-ruan-jian-kai-fa-sheng-ming-zhou-qi-fde77dc4"
+    },
+    {
+      "id": "lumina:eff30491a97d608f327c0ad1",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "Claude Academy：Anthropic官方AI学习平台",
+      "published_at": "2026-08-25T02:21:58.000Z",
+      "summary": "Anthropic 面向个人与企业的 AI 学习平台，解决用户从 Claude 基础使用到开发集成的学习与部署问题，提供产品教程、AI Fluency 课程和企业网络研讨会，覆盖对话、协作、编程、团队应用及 API、MCP 集成，帮助用户提升 AI 应用能力与企业落地效率。",
+      "url": "https://lumina.shawnxie.top/article/claude-academy-492a24f6"
+    },
+    {
+      "id": "lumina:57d2c332ec37584c060027bb",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "作为平台的 Codex：构建于开放的智能体运行框架之上",
+      "published_at": "2026-08-24T13:13:29.000Z",
+      "summary": "OpenAI开源Codex harness，将上下文管理、工具调用、状态流转、沙箱与审批机制封装为可复用的智能体运行层，使开发者能把代理嵌入工程、运维、安全和客服等专用应用，由产品掌控界面、业务数据与操作边界，并按需求选择exec、SDK或app-server集成。",
+      "url": "https://lumina.shawnxie.top/article/codex-as-a-platform-build-on-the-open-agent-0c2df3ec"
+    },
+    {
+      "id": "lumina:a10fd71ec6a95b1e961369de",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "AI 文本水印的工作原理",
+      "published_at": "2026-08-24T11:22:04.000Z",
+      "summary": "AI文本水印不依赖字符或元数据，而是在模型生成时利用密钥微调候选词选择，使绿色词出现概率累积偏高，持钥者可通过统计检测；轻度改写会稀释标记，重写或重组可抹除标记，检测结果仅表示文本被处理过，不能直接证明作者是AI。",
+      "url": "https://lumina.shawnxie.top/article/how-ai-text-watermarking-works-28001662"
+    },
+    {
+      "id": "lumina:484e1ff28bb81342c715c076",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "人类判断并不会离开软件工厂，它只是迁移了",
+      "published_at": "2026-08-24T10:40:27.000Z",
+      "summary": "讨论由 AI 编程代理驱动的软件工厂，指出其价值在于将代码任务转化为可重复、事件驱动且可验证的交付循环，而非单纯提高生成速度；人类仍需负责产品意图、架构、质量标准、风险判断和最终发布，并通过分层验证、隔离环境、清晰交接与人工边界控制自主程度。",
+      "url": "https://lumina.shawnxie.top/article/human-judgment-doesn-t-leave-the-software-factory-1f454580"
+    },
+    {
+      "id": "lumina:7aa16553513d417812897ba1",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "什么是推理",
+      "published_at": "2026-08-24T03:46:14.000Z",
+      "summary": "解释闭源模型推理痕迹的生成、隐藏与泄露机制，指出推理痕迹本质是被训练到特定通道的文本，推理强度主要由系统提示词控制，改变思考开关、预填充或输出路由可能导致痕迹泄露。",
+      "url": "https://lumina.shawnxie.top/article/what-is-reasoning-690a6174"
+    },
+    {
+      "id": "kexue:54712257fbfb1675a40b39f7",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "动量的新理解：逼近特征层面的梯度下降",
+      "published_at": "2026-08-23T10:01:00.000Z",
+      "summary": "一个以动量为状态变量的优化器，基本形式如下：\\begin{equation}\\begin{aligned}\\boldsymbol{M}_t =&\\, \\beta \\boldsymbol{M}_{...",
+      "url": "https://kexue.fm/archives/11875"
+    },
+    {
+      "id": "lumina:ee56dd412bf219dc013f73dd",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "“代码从来都不是难点”是对所有程序员的侮辱",
+      "published_at": "2026-08-19T09:32:24.000Z",
+      "summary": "反驳“编码容易、难的是决定做什么”的二元论，认为软件工程既需要扎实的实现技艺，也需要理解用户与业务；面对AI带来的行业变迁，开发者应保持批判学习、拓展相邻能力，并保有独立判断、责任感与品味。",
+      "url": "https://lumina.shawnxie.top/article/code-was-never-the-hard-part-is-an-insult-to-all-07a0eed5"
+    },
+    {
+      "id": "kexue:6033dc74fa0565a77355771c",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "流形上的最速下降：7. Stiefel的解析解",
+      "published_at": "2026-08-17T10:44:00.000Z",
+      "summary": "对于正交流形，我们此前的结论是：方阵情形下，我们可以完整地写出对应最速下降的解析解（参考《流形上的最速下降：2. Muon + 正交》）；但对于非方阵的Stiefel流形，其最速下降问题需要求解...",
+      "url": "https://kexue.fm/archives/11864"
+    },
+    {
+      "id": "lumina:4725ec188d28506ba698ca5e",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "增长黑客",
+      "published_at": "2026-08-17T09:08:36.000Z",
+      "summary": "《增长黑客》开源全文系统梳理创业公司从产品验证、获客到留存变现和病毒传播的增长方法，核心结论是数据驱动、实验验证与产品驱动增长仍有效，现仅授权非商业阅读与分享。",
+      "url": "https://lumina.shawnxie.top/article/zeng-chang-hei-ke-341ca15f"
+    },
+    {
+      "id": "lumina:3d71929ee49b83d7385729ac",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "前线部署工程师",
+      "published_at": "2026-08-17T09:07:28.000Z",
+      "summary": "FDE通过识别业务问题、客户获取、部署激活、续约扩收与规模复制，将AI模型嵌入真实流程并量化价值，是破解企业AI落地失败、弥合技术与商业价值鸿沟的关键岗位方法论。",
+      "url": "https://lumina.shawnxie.top/article/qian-xian-bu-shu-gong-cheng-shi-e4de9ea7"
+    },
+    {
+      "id": "lumina:1c3e1def8d61f4072066e5ed",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "OfficeCLI：开源 Office 套件命令行工具",
+      "published_at": "2026-08-17T09:06:07.000Z",
+      "summary": "OfficeCLI 以零依赖单二进制命令行工具解决 AI 智能体缺乏 Office 文档自动化能力的问题，可创建、读取和修改 Word、Excel、PowerPoint，并通过渲染、公式计算、结构化接口与 MCP 集成实现可预览、可修正的跨平台文档处理闭环。",
+      "url": "https://lumina.shawnxie.top/article/officecli-kai-yuan-office-tao-jian-ming-ling-xing-d083fae8"
+    },
+    {
+      "id": "lumina:472d31aad498e090793203ac",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "Embabel Agent：面向JVM的AI智能体框架",
+      "published_at": "2026-08-17T09:01:43.000Z",
+      "summary": "Embabel Agent解决JVM企业级智能体流程编排问题，以GOAP动态规划融合LLM、代码与领域模型，支持多种执行模式及MCP/A2A集成，提供强类型、可测试、可扩展的Java和Kotlin开发能力。",
+      "url": "https://lumina.shawnxie.top/article/embabel-agent-mian-xiang-jvmde-aizhi-neng-ti-834d71bd"
+    },
+    {
+      "id": "lumina:7de2832adef7b17b7c66d4b5",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "DeepSeek Harness：DeepSeek开发的智能体框架",
+      "published_at": "2026-08-17T09:00:02.000Z",
+      "summary": "DeepSeek Harness是基于Cordis、采用“一切皆插件”架构的开源智能体框架，旨在提供可扩展的智能体开发与Web运行能力，支持npm或源码启动并采用MIT许可，但当前仅处于开发者预览阶段，存在破坏性变更风险，不宜用于生产环境。",
+      "url": "https://lumina.shawnxie.top/article/deepseek-harness-deepseekkai-fa-de-zhi-neng-ti-a88da478"
+    },
+    {
+      "id": "lumina:eb24c1d7dfba9cc3f7e794db",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "Diagram Design：编辑级图表设计系统",
+      "published_at": "2026-08-17T08:56:58.000Z",
+      "summary": "解决AI图表同质化与难维护问题，为Claude Code、Codex和Pi提供27类编辑级图表，通过语义化布局、品牌提取、无障碍、draw.io/Mermaid重绘及自包含静动态导出，实现无需依赖、可验证的多品牌图表生产。",
+      "url": "https://lumina.shawnxie.top/article/diagram-design-bian-ji-ji-tu-biao-she-ji-xi-tong-577db597"
+    },
+    {
+      "id": "lumina:e53ec284341487a2dc6fb641",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "Obscura：Rust 开发的开源无头浏览器",
+      "published_at": "2026-08-17T08:54:03.000Z",
+      "summary": "Obscura以Rust原生渲染替代Chromium，解决AI代理与网页爬取的高资源占用、启动延迟和反检测需求，兼容CDP、Puppeteer、Playwright及MCP，实现抓取、截图和PDF导出，内存约30MB、加载约85毫秒，性能显著优于Headless Chrome。",
+      "url": "https://lumina.shawnxie.top/article/obscura-rust-kai-fa-de-kai-yuan-wu-tou-liu-lan-qi-1af6ecba"
+    },
+    {
+      "id": "lumina:66700f97926b698a152b4858",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "Omnigent：AI 智能体元框架",
+      "published_at": "2026-08-17T08:50:25.000Z",
+      "summary": "Omnigent以统一编排层解决多种AI智能体运行时难以协同、迁移和治理的问题，支持跨设备同步、多智能体监督、模型灵活接入、云沙箱协作与分级策略控制，使用户可在不重写代码的情况下组合和管理智能体。",
+      "url": "https://lumina.shawnxie.top/article/omnigent-ai-zhi-neng-ti-yuan-kuang-jia-4f399771"
+    },
+    {
+      "id": "lumina:0435735db059e5e05fdd96ee",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "TencentDB Agent Memory：AI Agent 团队级记忆中枢",
+      "published_at": "2026-08-17T08:46:18.000Z",
+      "summary": "TencentDB Agent Memory将对话、文档和代码沉淀为可复用团队记忆资产，解决多Agent协作重复劳动，并以跨框架共享、分层检索和细粒度权限提升经验复用，测试中用户信息理解应用率由48%升至76%。",
+      "url": "https://lumina.shawnxie.top/article/tencentdb-agent-memory-ai-agent-tuan-dui-ji-ji-yi-154aacbb"
+    },
+    {
+      "id": "lumina:5fe59704ae9b01a0d09a2a3c",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "Semantica：开源图原生AI基础设施",
+      "published_at": "2026-08-17T08:43:50.000Z",
+      "summary": "Semantica为高风险监管领域解决AI决策不可追溯、推理不确定与审计困难问题，以开源可自托管的上下文图和知识图谱替代传统RAG，支持可解释推理、决策溯源、规则合规检查及企业数据接入，v0.6.5同时修复多项严重安全漏洞。",
+      "url": "https://lumina.shawnxie.top/article/semantica-kai-yuan-tu-yuan-sheng-aiji-chu-she-shi-8398a387"
+    },
+    {
+      "id": "lumina:024975cfdff14ecdeaa2a574",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "Prime Agent：开源RLM（递归语言模型）智能体",
+      "published_at": "2026-08-17T08:41:25.000Z",
+      "summary": "Prime Agent通过递归提示架构、持久化状态与程序化子智能体，解决编码及长期自主任务的连续执行问题，实现并行协作、断点续连和受预算约束的自主运行，但生成代码以用户权限执行，需在隔离环境中使用。",
+      "url": "https://lumina.shawnxie.top/article/prime-agent-kai-yuan-rlm-di-gui-yu-yan-mo-xing-586dc36c"
+    },
+    {
+      "id": "lumina:c457486de3127ba3cf4e3bef",
+      "source_id": "lumina",
+      "source_name": "Lumina",
+      "title": "SwarmForge：基于tmux的AI智能体编排平台",
+      "published_at": "2026-08-17T08:38:06.000Z",
+      "summary": "SwarmForge解决多AI智能体本地协作开发的编排与交接问题，利用tmux、git worktree和守护进程协调角色流程，按任务复杂度提供三种工作流及多后端终端适配，实现可配置、可扩展的分工协作与质量门禁。",
+      "url": "https://lumina.shawnxie.top/article/swarmforge-ji-yu-tmuxde-aizhi-neng-ti-bian-pai-d3851cfa"
+    },
+    {
+      "id": "tw93:f14458a56b8220b063a76064",
+      "source_id": "tw93",
+      "source_name": "Tw93",
+      "title": "Mole 出 Mac 版后，用户教会了我做产品",
+      "published_at": "2026-08-16T00:00:00.000Z",
+      "summary": "最近我写了不少关于独立开发的思考，想着要汇总一下，就把 Mole 从开源 CLI 做到 Mac 付费软件这一路聊一聊，我当时是怎么想的，哪些事情做下来真的有用，也许能给正在做自己作品的朋友一些输入。 > Mole 的官网是 mole.fit，CLI 在 GitHub 开源，可以先去玩一玩。Yobi 收录了 Mac 版的功能、定价和同类工具对比。 去年国庆我在三亚的泳池边写了几百行代码，做了个 Mac 清理的命令行工具 Mole CLI 开源到 GitHub 上，本来只想给自己和同事用。结果不到一年收了 60K star，陆续发了 50 多个版本，121…",
+      "url": "https://tw93.fun/2026-08-16/mole-mac.html"
+    },
+    {
+      "id": "linexic:dd4117c1c8c3c94e1e7844b6",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "Ungoogled Chromium 初体验安装",
+      "published_at": "2026-08-12T00:00:00.000Z",
+      "summary": "作为一个重度浏览器控一直在尝试不同的浏览器，最近在博友的推荐下尝试了 Ungoogled Chromium 提升隐私了与使用体验",
+      "url": "https://www.linexic.top/post/ungoogled-chromium-install/"
+    },
+    {
+      "id": "ameow:a7e3d906aee1752b7771f4ed",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "好久不见",
+      "published_at": "2026-08-11T05:10:46.000Z",
+      "summary": "最近几个月都感觉没什么内容更新，所以就没有写周刊。 今天翻邮件的时候发现七牛云的 CDN SSL 证书过期了，导致博客的图片其实挂了差不多半个月。于是花了一个早上把数据迁移到腾讯云，成本差不多，证书可以自动化管理，年纪大了就是不爱折腾。迁移过程一路顺利没有踩太多坑，翻了下博客的照片都可以正常访问了，这里也试试上传新的照片。 是下班路上拍到的超绝晚霞，骑在一个很开阔的地方其实就看到了，结果拐个弯一分钟不到它就开始消失了，赶紧停下来拍了一张，再过几分钟就完全消失了。夏天雨后的傍晚，有晚霞，骑着车吹着凉爽的风，惬意。 顺便也更新了一下友链，有些朋友已经申请了…",
+      "url": "https://ameow.xyz/archives/blog-cdn-update"
+    },
+    {
+      "id": "axi:96261f755d273dac0f4df84a",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "VRChat 上手纪实",
+      "published_at": "2026-08-11T00:00:00.000Z",
+      "summary": "打算接触 VRChat，成为更美好的二次元游民。",
+      "url": "https://axi404.top/blog/vrchat"
+    },
+    {
+      "id": "kexue:d464dc3ce683a20734179ec6",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "除了交叉熵，LM Loss还有什么选择？",
+      "published_at": "2026-08-09T09:18:00.000Z",
+      "summary": "一直以来，交叉熵（Cross Entropy）都是LLM预训练和微调的标准损失函数。那这个“标准”可以改吗？如果想改，那又有哪些选择呢？改完之后又会带来什么影响呢？可能很多读者从未认真推敲过这些...",
+      "url": "https://kexue.fm/archives/11854"
+    },
+    {
+      "id": "axi:07e7169f85f3778fa04f6270",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "致新生的你/后日谈：极简新生手册",
+      "published_at": "2026-08-05T00:00:00.000Z",
+      "summary": "致新生的你中的部分内容显得略有冗长，对于那些真正意义上需要学习的内容，我们给出极简版本",
+      "url": "https://axi404.top/blog/advise-epilogue-3"
+    },
+    {
+      "id": "neomelt:8ec2fd7fa5a698acdd56b805",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "谈谈 Lee Sedol moment",
+      "published_at": "2026-08-04T18:00:00.000Z",
+      "summary": "当 AI 逐渐强大到可以替代掉一些 work 的时候，我们应该思考些什么……",
+      "url": "https://www.neomelt.cloud/posts/whats-lee-sedol-moment-of-robotics"
+    },
+    {
+      "id": "kexue:f3a3b8eb1d98f9eade0c767d",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "简单谈谈K3的MoE和Attention",
+      "published_at": "2026-08-04T05:07:00.000Z",
+      "summary": "上个月，我们发布了迄今为止最大的开源模型K3。作为K2的继任者，K3并不是一次从零开始的重新设计，而是沿着我们过去一系列工作自然演化而来，并融合了我们对效果、效率、稳定性的一些最新理解和改进。可...",
+      "url": "https://kexue.fm/archives/11848"
+    },
+    {
+      "id": "linexic:52ff8dd7321f70e749162a83",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "最近迷上了织围巾",
+      "published_at": "2026-08-04T00:00:00.000Z",
+      "summary": "最近迷上了针织类的东西，这个暑假就在家里开始织围巾",
+      "url": "https://www.linexic.top/post/zhi-mao-yi/"
+    },
+    {
+      "id": "linexic:c3e2b2e12a09a78b14d64b28",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "月记 15：武安-承载我童年的地方",
+      "published_at": "2026-08-01T00:00:00.000Z",
+      "summary": "这次暑假七月份从邯郸辗转到武安城，目的就是想看看我小时候活过的地方，另外，人总要和过去道别吧...",
+      "url": "https://www.linexic.top/post/monthly-15-er-tong-shi-qi/"
+    },
+    {
+      "id": "kexue:318f5eb0210cf416d0d025d9",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "解构Scaling Law：优化、架构、数据的三重奏",
+      "published_at": "2026-07-29T12:47:00.000Z",
+      "summary": "训练一个大型的神经网络，最终效果会受到非常多因素的影响，换个优化器，换个模型架构，或者换一个训练集，结果都可能截然不同。在工程实践中，我们将调试这些因素的经验结果，戏称为“炼丹”。但如何从经验上...",
+      "url": "https://kexue.fm/archives/11833"
+    },
+    {
+      "id": "axi:3fb6dbc08313c4645f8c03c4",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "大四回忆录",
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "summary": "我的大四生活。",
+      "url": "https://axi404.top/blog/uni-memoir4"
+    },
+    {
+      "id": "neomelt:bf081819f914f3a5d3464340",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "用 Tailscale 远程访问自己的机器",
+      "published_at": "2026-07-21T16:17:00.000Z",
+      "summary": "没有公网 IP、不动路由器，在家用浏览器直接打开远端主机上的 ComfyUI。记录一下 Tailscale 的原理、配置过程和踩过的坑。",
+      "url": "https://www.neomelt.cloud/posts/tailscale-remote-access"
+    },
+    {
+      "id": "kexue:b4b4d4a904fa84bf8ad2bc63",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "将Softmax Attention线性化为Gated DeltaNet",
+      "published_at": "2026-07-21T13:21:00.000Z",
+      "summary": "在文章《LogSumExp和Softmax的泰勒展开》中，我们介绍了LogSumExp和Softmax的近似展开，并由此得到了一种线性化Softmax Attention的简单方案。但在那篇文章...",
+      "url": "https://kexue.fm/archives/11823"
+    },
+    {
+      "id": "kexue:3d53f82f1436104a6540222a",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "基于排序不等式的相似度指标",
+      "published_at": "2026-07-16T08:47:00.000Z",
+      "summary": "昨天看到 @Ji_Ha_Kim 同学分享了一篇有趣的论文《Beyond Cosine Similarity》，里边提出基于排序不等式来构建新的更宽松的相似度指标，看了后感觉颇有意思，特来简单记录...",
+      "url": "https://kexue.fm/archives/11818"
+    },
+    {
+      "id": "kexue:d0a12db36c96b222d7853b2f",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "LogSumExp和Softmax的泰勒展开",
+      "published_at": "2026-07-13T03:04:00.000Z",
+      "summary": "最近看到论文《The Key to Going Linear: Analysis-Driven Transformer Linearization》里边直接对Softmax做近似展开来线性化At...",
+      "url": "https://kexue.fm/archives/11814"
+    },
+    {
+      "id": "linexic:ab433a2424ed5cc16f797c8b",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "月记 14：好久不见",
+      "published_at": "2026-07-09T00:00:00.000Z",
+      "summary": "",
+      "url": "https://www.linexic.top/post/monthly-14-hao-jiu-bu-jian/"
+    },
+    {
+      "id": "kexue:4b5150cb5689f02faaa4e9f1",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "让炼丹更科学一些（七）：步长调度与权重平均",
+      "published_at": "2026-07-06T02:03:00.000Z",
+      "summary": "精通炼丹的同学都知道，步长调度，或者说学习率调度（LR Schedule），对模型最终效果来说至关重要。我们在前几篇文章中已经推导过，即便只考虑SGD，终点收敛的最优学习率函数也具有Warmup...",
+      "url": "https://kexue.fm/archives/11804"
+    },
+    {
+      "id": "axi:47cb24b631a755a120a9c904",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "月记的结束",
+      "published_at": "2026-07-06T00:00:00.000Z",
+      "summary": "事物的变迁，让我不得不结束月记。",
+      "url": "https://axi404.top/blog/journal-end"
+    },
+    {
+      "id": "lil-log:a83e6b84205da59a50e87960",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Harness Engineering for Self-Improvement",
+      "published_at": "2026-07-04T00:00:00.000Z",
+      "summary": "The concept of recursive self-improvement (RSI) dates back to I. J. Good (1965), where he defined an “ultraintelligent machine” as a system that can surpass humans in all intellectual activities and design better machines to improve itself. Yudkowsky (2008) used the phrase “recu…",
+      "url": "https://lilianweng.github.io/posts/2026-07-04-harness/"
+    },
+    {
+      "id": "ameow:ad6a9268941b0896033af436",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 099 第 100 期撒花！",
+      "published_at": "2026-06-28T12:38:42.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 100 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT Ta-da！这居然是猫鱼周刊的第 100 期了（本刊是从 vol. 000 开始的）， 简单庆祝一下。 STDIN 当 AI 拿走一切之后 原文链接 一篇很有深度的长文，我觉得我难以三言两句概括，说实话有些地方我也没有完全理解或者想通，建议大家读读原文。我谈…",
+      "url": "https://ameow.xyz/archives/weekly-099"
+    },
+    {
+      "id": "kexue:6643ca1df9ed53c2d5dd9dec",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "矩阵函数近似中的暴力美学",
+      "published_at": "2026-06-25T13:53:00.000Z",
+      "summary": "此前，我们在《矩阵平方根和逆平方根的高效计算》和《矩阵r次方根和逆r次方根的高效计算》探讨过矩阵幂的高效计算，它们将原本用于计算$\\newcommand{msign}{\\mathop{\\text...",
+      "url": "https://kexue.fm/archives/11787"
+    },
+    {
+      "id": "lil-log:008190c8a129541997b0f62b",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Scaling Laws, Carefully",
+      "published_at": "2026-06-24T00:00:00.000Z",
+      "summary": "Scaling laws are one of the most critical empirical findings in deep learning. The observation is simple in form: the training loss $L$ decreases predictably as we scale up model size $N$, dataset size $D$, and compute $C$, following a power-law curve, which appears as a straigh…",
+      "url": "https://lilianweng.github.io/posts/2026-06-24-scaling-laws/"
+    },
+    {
+      "id": "ameow:fb2ec7ed85cf74ca9f4c10de",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 098 川西之行",
+      "published_at": "2026-06-14T10:19:35.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 99 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 摄于川西，连绵的雪山真的非常适合宽画幅。 又好久不见了。这一个多月其实还发生了挺多事情，挑一些有趣的给大家分享一下。国际惯例，先过一下 STDIN。 STDIN 烂而不自知的人 原文链接 职场上经常有「烂而不自知」的人，他们产出很多垃圾，却用工作量、加班时长等…",
+      "url": "https://ameow.xyz/archives/weekly-098"
+    },
+    {
+      "id": "sora:7a215c8520dbadeb4eda3219",
+      "source_id": "sora",
+      "source_name": "sora's blog",
+      "title": "CUDA入门与思考：为什么LLM不能生成一切？",
+      "published_at": "2026-06-11T13:23:31.000Z",
+      "summary": "LLM并不能生成一切，当今Vibe Coding的热潮是由多种因素产生的，大模型本质上还是个(wx+b)，一台吃掉数据与吐出数据的 ...",
+      "url": "https://sorablog.me/cuda%e5%85%a5%e9%97%a8%e4%b8%8e%e6%80%9d%e8%80%83%ef%bc%9a%e4%b8%ba%e4%bb%80%e4%b9%88llm%e4%b8%8d%e8%83%bd%e7%94%9f%e6%88%90%e4%b8%80%e5%88%87%ef%bc%9f/"
+    },
+    {
+      "id": "axi:c3a14331dbdfd0f094bc5b21",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "Embodied AI Paper List",
+      "published_at": "2026-06-08T00:00:00.000Z",
+      "summary": "Paper Reading 之后，重走 EAI。",
+      "url": "https://axi404.top/blog/eai-papers"
+    },
+    {
+      "id": "neomelt:3730f635d059282c45daa7a4",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "关于RM的碎碎念",
+      "published_at": "2026-06-07T06:10:00.000Z",
+      "summary": "前段时间太忙了没来得及写，周末闲暇来写一下吧",
+      "url": "https://www.neomelt.cloud/posts/%E5%85%B3%E4%BA%8Erm%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5"
+    },
+    {
+      "id": "tw93:4aec756d4a169f691b435470",
+      "source_id": "tw93",
+      "source_name": "Tw93",
+      "title": "你不知道的具身智能：从小机器狗到 Optimus",
+      "published_at": "2026-06-07T00:00:00.000Z",
+      "summary": "太长也要读 今年 4 月我组装了一台小机器狗，做的过程在推特上发过几条，大伙应该都刷到过，从买零件、装结构，到最后它能听懂指令、走两步、还能对话几句。 缘由要从过年那段时间说起，那阵子我天天用 Opus 4.6 写代码，发现很多地方它写得比我好，又快又准，越用越 FOMO，于是就想，要不试试软硬件结合的东西，这块相比纯软件可能还有一点门槛。 真想做了，方向很快就落到具体问题上，传感器怎么读，舵机怎么控，通信怎么兜底，电池、结构件和故障怎么处理。这些都比「做一台机器人」实在，于是我买了 STM32、ASRPRO、ESP32-C3、MG90S 舵机、OLE…",
+      "url": "https://tw93.fun/2026-06-07/robot.html"
+    },
+    {
+      "id": "axi:13ea56188479a9e8c3364189",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "月记·二零二六·四月",
+      "published_at": "2026-06-01T00:00:00.000Z",
+      "summary": "2026-04-01 ~ 2026-04-30.",
+      "url": "https://axi404.top/blog/journal-2604"
+    },
+    {
+      "id": "axi:28fae06b1ddb6b03761446af",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "Isaac Sim 一百讲（8）：Robot",
+      "published_at": "2026-05-31T00:00:00.000Z",
+      "summary": "从零开始的 Isaac Sim 之路，第一季开始！",
+      "url": "https://axi404.top/blog/isaac-8"
+    },
+    {
+      "id": "ameow:dc5de731fddbaa28b5863705",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "使用 Hermes 在飞书打造 AI Agent 团队",
+      "published_at": "2026-05-14T10:40:19.000Z",
+      "summary": "前言 关于如何安装和部署 Hermes 以及接入飞书，飞书官方的这两篇博客（Hermes Agent 安装与部署指南：一步步教你如何使用“爱马仕 Agent”（附飞书接入教程）、Hermes Agent 全解析：与 OpenClaw 对比及飞书接入指南）已经讲得非常详细，但是这样只能拉起来一个 Agent，还不能称为「团队」，真正的团队应该有多个 AI Agent，各自负责不同的岗位。当然你可以通过在多台机器或者虚拟机上部署多个 Hermes 实例来实现这样的效果，不过 Hermes 自带了一个 profile 的功能，可以在一个 Hermes 实例上…",
+      "url": "https://ameow.xyz/archives/build-an-ai-agent-team-in-feishu"
+    },
+    {
+      "id": "linexic:fc7e7573cdbbd633f48477eb",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "月记 13：四月小记",
+      "published_at": "2026-05-04T00:00:00.000Z",
+      "summary": "总是想不起来自己有个月记专栏，也幸亏有个月记专栏才让我不至于无文可写，来看看我这个四月发生了什么吧",
+      "url": "https://www.linexic.top/post/monthly-13-my-april/"
+    },
+    {
+      "id": "ameow:df3b8c20e86ff517740ea5b7",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 097 五一快乐",
+      "published_at": "2026-05-03T15:28:10.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 98 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 摄于香港九龙城区保良局颜宝铃书院外，是一个外墙上的壁画，看了下落款应该是在 2005 年左右画的。过去 20 年了，居然还保存得非常好，而且附近的外墙上也有很多这种壁画。 五一快乐！这周的内容不算很多，浅浅分享一下最近的所见所闻，以及摸索的一些东西吧。 STD…",
+      "url": "https://ameow.xyz/archives/weekly-097"
+    },
+    {
+      "id": "axi:ea8360cd2f83168987d8ec14",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "月记·二零二六·三月",
+      "published_at": "2026-05-02T00:00:00.000Z",
+      "summary": "2026-03-01 ~ 2026-03-31.",
+      "url": "https://axi404.top/blog/journal-2603"
+    },
+    {
+      "id": "neomelt:38896467c1119423491c3020",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "4月总结：忙碌，迷茫，方向，机遇？",
+      "published_at": "2026-05-01T18:10:00.000Z",
+      "summary": "总结这一个月的实习生活",
+      "url": "https://www.neomelt.cloud/posts/%E5%9C%A8%E6%96%B0%E7%9A%84%E5%9D%90%E6%A0%87%E9%87%8C"
+    },
+    {
+      "id": "tw93:fd55dc81ff63d4963e183bee",
+      "source_id": "tw93",
+      "source_name": "Tw93",
+      "title": "你不知道的 GEO：AI 可见性的原理、实践与取舍",
+      "published_at": "2026-05-01T00:00:00.000Z",
+      "summary": "花一小时让 AI 找到你的内容 这几天有好几个小伙伴@我说，我的开源工具在他们问 AI 的时候被主动推荐了，啥也没做居然可以被收录，想着要不花一个小时把内容结构化整一整，应该会更好，于是整好以后，快速发了一个速记推，但是内容结构不清晰，想着大家很感兴趣，那要不就整一个结构清晰的文章便于沉淀和查找。 我很讨厌去刷排名或者生产垃圾内容，更多想着让现有的内容对 AI 更可见，所以这篇文章不会教你投机，而是如何让AI更好理解你现有的内容本身。 去查了一下，发现 AI 搜索跟传统搜索逻辑完全不一样，传统 SEO 拼的是进 Google 前 10，但 83% 的 …",
+      "url": "https://tw93.fun/2026-05-01/ai-visibility.html"
+    },
+    {
+      "id": "ameow:476344151cbf83c82f292a65",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 096 AI 无法取代胶片",
+      "published_at": "2026-04-26T14:06:05.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 97 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 好久不见。 这张图摄于香港赤柱浅水湾海滩，去年七月底去的，终于把胶片洗出来了。这卷是 Harman Phoenix 2，一个蓝紫色的片基，说是照片蓝色表现会比较好，但是实际冲扫之后效果比较难看，倒是自己调了一下色之后好看很多。胶片比数码的宽容度高很多，而且更有…",
+      "url": "https://ameow.xyz/archives/weekly-096"
+    },
+    {
+      "id": "tw93:914f3151c563981cf2f2f445",
+      "source_id": "tw93",
+      "source_name": "Tw93",
+      "title": "你不知道的 AI Coding：非技术人的上手、场景与实战",
+      "published_at": "2026-04-26T00:00:00.000Z",
+      "summary": "太长不读 上个月在公司里给产品和业务的小伙伴分享了下如何上手 AI Coding，加上最近又发了条推特，聊到不少同学因为订阅门槛没机会用上一线 AI Coding 工具，方法和习惯不花钱就能先学，索性把上手这部分整理出来。不少人用 Claude Code 其实是卡在使用命令行的第一步，看到只有字符的终端会觉得是给程序员用的，自己肯定搞不定。其实门槛没想象的高，会用豆包这类对话框 AI 的人花点时间也能上手，剩下的就是慢慢习惯把执行权交给它。 等你用顺手后会发现它像个什么活都接的能干助手，跑后台数据、写解决你问题的小工具、把乱七八糟的文档拼成简报、做原型…",
+      "url": "https://tw93.fun/2026-04-26/ai-coding.html"
+    },
+    {
+      "id": "axi:b9c1185baa3f22f5307c3c70",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "再次来到 VLA 的巴别塔/StarVLA 初版技术报告",
+      "published_at": "2026-04-22T00:00:00.000Z",
+      "summary": "starVLA 的初版技术报告",
+      "url": "https://axi404.top/blog/starvla-v1"
+    },
+    {
+      "id": "sora:44f5ed16c740ebf3b6e90ad1",
+      "source_id": "sora",
+      "source_name": "sora's blog",
+      "title": "导师评价红黑榜备份（原作者因被威胁已停止收集）",
+      "published_at": "2026-04-21T11:19:39.000Z",
+      "summary": "请各位注意：该份《导师评价红黑榜》由GitHub用户 https://github.com/the-hidden-fish 发起， ...",
+      "url": "https://sorablog.me/%e5%af%bc%e5%b8%88%e8%af%84%e4%bb%b7%e7%ba%a2%e9%bb%91%e6%a6%9c%e5%a4%87%e4%bb%bd%ef%bc%88%e5%8e%9f%e4%bd%9c%e8%80%85%e5%9b%a0%e8%a2%ab%e5%a8%81%e8%83%81%e5%b7%b2%e5%81%9c%e6%ad%a2%e6%94%b6%e9%9b%86/"
+    },
+    {
+      "id": "tw93:e15878b306dc273044828a0c",
+      "source_id": "tw93",
+      "source_name": "Tw93",
+      "title": "在 AI 时代，我是如何深入学习一个技术领域的",
+      "published_at": "2026-04-06T00:00:00.000Z",
+      "summary": "想和大伙聊聊，在 AI 时代我是怎么深入学习一个技术领域的。没有 AI 之前，更多是看书、翻这个领域国内外有名的人的博客，然后摘抄记录到笔记本，速度挺慢，但很有学习的乐趣。比如当时学 WebGL，学懂一个东西差不多要半年空闲时间，慢但快乐。 有了 AI 之后，我还是很讨厌网上那种「3 分钟教你看完百年孤独」，也不喜欢短剧和倍速看剧的方式，更多还是挑好的看，宁愿慢一点、真正搞懂，也不愿意刷一堆摘要最后脑子里什么都没剩。 不过最近写「你不知道的 Claude Code」和 Agent 系列，除了自己懂的部分，还有大量不太清楚的领域。好在之前收藏了不少相关资…",
+      "url": "https://tw93.fun/2026-04-06/learn.html"
+    },
+    {
+      "id": "linexic:f190e428ba6969743e33d956",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "月记 12：探索与认识自我",
+      "published_at": "2026-04-03T00:00:00.000Z",
+      "summary": "",
+      "url": "https://www.linexic.top/post/monthly-12-myself-confused/"
+    },
+    {
+      "id": "tw93:7fe6a5609b6f7e3388dc871f",
+      "source_id": "tw93",
+      "source_name": "Tw93",
+      "title": "你不知道的大模型训练：原理、路径与新实践",
+      "published_at": "2026-04-03T00:00:00.000Z",
+      "summary": "太长也要读 在写完《你不知道的 Claude Code：架构、治理与工程实践》、《你不知道的 Agent：原理、架构与工程实践》后，我想着继续来写第三篇，这次打算挑战下自己来梳理一下大模型训练到底怎么回事，这篇文章争取让非专业背景的人也能读得懂。 2026 年来看大模型效果真正拉开差距的地方，慢慢不再是预训练本身了，而在它更后面的那一大段：后训练、评测、奖励、Agent 训练、蒸馏，每一个步骤都在影响用户实际感受效果。你发现某个模型突然变强了，背后可能是这几块一起优化到位了，而非单一因素导致。 下文按大模型训练链路顺序来讲，重点放在厂商怎么通过后半段训…",
+      "url": "https://tw93.fun/2026-04-03/llm.html"
+    },
+    {
+      "id": "axi:e7dacd87f484e12d96607fb6",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "月记·二零二六·二月",
+      "published_at": "2026-03-31T00:00:00.000Z",
+      "summary": "2026-02-01 ~ 2026-02-28.",
+      "url": "https://axi404.top/blog/journal-2602"
+    },
+    {
+      "id": "tw93:21ad6d9ed0c33a8019369278",
+      "source_id": "tw93",
+      "source_name": "Tw93",
+      "title": "杀死那个手工程序员",
+      "published_at": "2026-03-30T00:00:00.000Z",
+      "summary": "标题来自 12 年前我很喜欢的一首万青的歌《杀死那个石家庄人》的改写，虽然歌里写的不是一回事，但那种看着熟悉世界一点点被替换掉的感觉，还真有点像。 好多年没坐公交了，上次去太子湾，因为景区限行，只能把车停在外面，坐景区的免费接驳车进去。 前排有个小女孩一路都在刷那种 AI 生成的短视频，画面很粗糙，内容也很假，滑到下一个居然还是差不多的东西，她却看得津津有味，每个视频的点赞居然也都不低。看到这一幕的时候，我甚至有点难受，会忍不住想，以后我的小孩是不是也会在这种粗制滥造的 AI 内容里慢慢长大，最后连什么是真正美好的东西都越来越难分辨。 有了 AI 之后…",
+      "url": "https://tw93.fun/2026-03-30/kill.html"
+    },
+    {
+      "id": "ameow:e31663e8b13db1c67e441b91",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 095 谨防赛博夺舍",
+      "published_at": "2026-03-29T14:16:45.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 96 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 好久不见。这张照片是某天下午下楼摸鱼的时候拍的，公司之前的楼下转角处有个茶餐厅，在角落这里搞了个小狗幼儿园，图片里的两位是店里的，时常能看到不少小狗在这里聚会玩耍。我不是很喜欢狗的人，但是在工作累了的时候下楼看到小狗在阳光下奔跑玩耍，还是很治愈的。以至于公司要…",
+      "url": "https://ameow.xyz/archives/weekly-095"
+    },
+    {
+      "id": "neomelt:5d8f45602c1b4d150a517939",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "一次安装windows的记录",
+      "published_at": "2026-03-29T14:10:00.000Z",
+      "summary": "前言 由于必须要去做office相关的工作，而linux对其的支持有极差，正好博主的游戏本坏了，也没打算再修，所以干脆把990pro拆下来装到tb上用来做Windows的载体。 镜像 由于博主是linux系统，不太好做系统盘，所以让朋友帮忙做了一个win11专业工作站版的镜像 如果不懂镜像怎么做的朋友可以找其他资料自行制作 安装 这一步没什么好说的，就是点点点 驱动安装 由于新装的系统是没有任何驱动的，所以需要去用usb有线联网更新Windows去自动补全驱动 WINDOWS的激活 > 一个刷到的邪修： 在Windows的cmd(管理员)里依次输入下面…",
+      "url": "https://www.neomelt.cloud/posts/%E4%B8%80%E6%AC%A1%E5%AE%89%E8%A3%85windows%E7%9A%84%E8%AE%B0%E5%BD%95"
+    },
+    {
+      "id": "ameow:a3c8f4ab0987f9d011f1af99",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "把 SSH 私钥放进 YubiKey：一套更安全、可迁移的密钥管理方案",
+      "published_at": "2026-03-26T18:48:38.000Z",
+      "summary": "前言 近期供应链投毒事件频发，针对开发者工作流的攻击也越来越常见。无论是 Apifox、LiteLLM 这类事件，还是其他面向本地开发环境、依赖链和工具链的攻击，防范起来都不容易。一个更稳妥的思路，是尽量不要让私钥以普通文件的形式长期留在本地设备中；如果把私钥放进独立的硬件里，即使本机环境被入侵，也能在一定程度上降低密钥失窃的风险。 YubiKey 是 Yubico 推出的一种硬件安全密钥，通常是一个小型的 USB 设备，也有支持 USB-A、USB-C、NFC 等不同接口和连接方式的型号。它本质上是一块专门用于保存和使用敏感凭据的安全硬件，可以用于网…",
+      "url": "https://ameow.xyz/archives/secure-your-ssh-key-with-yubikey"
+    },
+    {
+      "id": "axi:ba2aab71fe14aecee1aec942",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "新时代的具身仿真数据引擎",
+      "published_at": "2026-03-24T00:00:00.000Z",
+      "summary": "向大家介绍 InternDataEngine，一个新时代的具身仿真数据引擎。",
+      "url": "https://axi404.top/blog/interndataengine"
+    },
+    {
+      "id": "yutong:f80fdbb2f12e687d29b37484",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Human Demonstration",
+      "published_at": "2026-03-22T23:00:00.000Z",
+      "summary": "What is the role of human demonstration in robotics learning?",
+      "url": "https://www.lyt0112.com/blog/human_demo-en"
+    },
+    {
+      "id": "linexic:40e22e9dcf592e228f1de77d",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "三月份我都买了些什么",
+      "published_at": "2026-03-21T00:00:00.000Z",
+      "summary": "记录了 2026 年 3 月 linexic 的一些花销都花在哪里？",
+      "url": "https://www.linexic.top/post/march-buy-what/"
+    },
+    {
+      "id": "tw93:5ea4afc08021a5e83eda3ab8",
+      "source_id": "tw93",
+      "source_name": "Tw93",
+      "title": "你不知道的 Agent：原理、架构与工程实践",
+      "published_at": "2026-03-21T00:00:00.000Z",
+      "summary": "太长不读 在写完「你不知道的 Claude Code：架构、治理与工程实践」之后，发现自己对 Agent 底层的理解还不够深入，加上团队在 Agent 方向已经有不少业务落地经验，一直缺少一份系统梳理，所以我又把资料、开源实现和自己写的代码一起过了一遍，最后整理成了这篇文章。 这篇文章主要讲 Agent 架构里几块最影响工程效果的内容，包括控制流、上下文工程、工具设计、记忆、多 Agent 组织、评测、追踪和安全，最后再用 OpenClaw 的实现把这些设计原则串起来看一遍。 整理下来，有几处判断和我原来想的不太一样，更贵的模型带来的提升，很多时候没有…",
+      "url": "https://tw93.fun/2026-03-21/agent.html"
+    },
+    {
+      "id": "sora:249de56b026ba8822b642bb3",
+      "source_id": "sora",
+      "source_name": "sora's blog",
+      "title": "逆向淘宝cursor销量第一商户：AI商家赚钱到底有多轻松？",
+      "published_at": "2026-03-18T14:21:39.000Z",
+      "summary": "本文仅作为技术探讨，逆向工作大多数由 Codex 完成，不具备专业性；本文不针对任何实体商家、没有透露任何商家姓名，文中插件完全由 ...",
+      "url": "https://sorablog.me/%e9%80%86%e5%90%91%e6%b7%98%e5%ae%9dcursor%e9%94%80%e9%87%8f%e7%ac%ac%e4%b8%80%e5%95%86%e6%88%b7%ef%bc%9aai%e5%95%86%e5%ae%b6%e8%b5%9a%e9%92%b1%e5%88%b0%e5%ba%95%e6%9c%89%e5%a4%9a%e8%bd%bb%e6%9d%be/"
+    },
+    {
+      "id": "neomelt:8ab5188c0257aa3604d5c370",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "Gazebo 仿真中的 z-fighting 问题记录",
+      "published_at": "2026-03-16T08:49:00.000Z",
+      "summary": "记录一次 Gazebo 仿真中灯条闪烁问题的排查过程，原因是 SDF 模型中共面几何引起的 z-fighting。",
+      "url": "https://www.neomelt.cloud/posts/gazebo-z-fighting-note"
+    },
+    {
+      "id": "tw93:1f83deaa88b8dfc06df18427",
+      "source_id": "tw93",
+      "source_name": "Tw93",
+      "title": "你不知道的 Claude Code：架构、治理与工程实践",
+      "published_at": "2026-03-12T00:00:00.000Z",
+      "summary": "太长不读 今天这篇来自最近半年深度用 Claude Code 的实际踩坑，两个账号每月 40 刀，算是交了点学费。 刚开始也把它当 ChatBot 用，后来很快发现不对劲：上下文越来越乱、工具越来越多效果越来越差、规则越写越长却越不遵守，折腾一段时间，研究了 Claude Code 本身之后才搞清楚问题在哪。 最直接的理解方式，是把 Claude Code 拆成六层来看： 层 职责 CLAUDE.md / rules / memory 长期上下文，告诉 Claude “是什么” Tools / MCP 动作能力，告诉 Claude “能做什么” Ski…",
+      "url": "https://tw93.fun/2026-03-12/claude.html"
+    },
+    {
+      "id": "sora:329cd2624a2d4e8ed7fcd2d5",
+      "source_id": "sora",
+      "source_name": "sora's blog",
+      "title": "万字实测typeless:完全不需要键盘的语音输入时代真的来临了吗？",
+      "published_at": "2026-03-11T11:30:00.000Z",
+      "summary": "（在写） 根据上下文推测语义 一篇 3 万多字的论文存在很多专业术语。让我惊喜的一点是，Typeles ...",
+      "url": "https://sorablog.me/%e4%b8%87%e5%ad%97%e6%b5%8b%e8%af%84typeless%e5%ae%8c%e5%85%a8%e4%b8%8d%e9%9c%80%e8%a6%81%e9%94%ae%e7%9b%98%e7%9a%84%e8%af%ad%e9%9f%b3%e8%be%93%e5%85%a5%e6%97%b6%e4%bb%a3%e7%9c%9f%e7%9a%84%e6%9d%a5/"
+    },
+    {
+      "id": "yutong:d80a34dde716c384e809def0",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Hand Motion Retargeting",
+      "published_at": "2026-03-10T00:00:00.000Z",
+      "summary": "Interaction-aware hand motion retargeting spanning geometry, force, and self-supervision.",
+      "url": "https://www.lyt0112.com/blog/retargeting-en"
+    },
+    {
+      "id": "ameow:8312c8b8320ed21179c10099",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 094 龙虾大跃进",
+      "published_at": "2026-03-08T16:33:29.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 95 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 又是一周，这周感觉做的自己的事情并不多，总体还是被工作消耗得比较厉害。首先是给之前做的 AI 文本生成检测 Aletheia 增加了一个新模型 DivEye，它的原理非常有意思，不需要针对新的大模型来做训练。另外就是尝试用本地的 qwen3.5-35b-a3b…",
+      "url": "https://ameow.xyz/archives/weekly-094"
+    },
+    {
+      "id": "tw93:b9038a3f50dfd8452f50dbf1",
+      "source_id": "tw93",
+      "source_name": "Tw93",
+      "title": "连龙虾都不会装的人，怎么会用龙虾呢?",
+      "published_at": "2026-03-07T00:00:00.000Z",
+      "summary": "今天看腾讯大厦装龙虾这件事，挺有感触，有点儿《龙虾大跃进》的感觉。 最近很多大厂都在疯狂让一线非技术员工去安装龙虾，网上甚至真有 500 上门安装服务。大家都在拼命找使用场景，拼命要求落地，拼命证明这个东西已经重要到不能错过，整个过程让我有一种很强的赛博科技折叠感。 看到一句话很有意思，连龙虾都不会装的人，怎么会用龙虾呢。再往前一步，连基本使用都没有建立起来，却要先做出完整场景，做出结果，做出价值证明，这本身就更难。 这背后有两个东西叠在一起。一个是错觉，很多老板看了太多视频号切片，被各种夸张叙事和万能案例反复轰炸以后，真的会产生一种幻觉，觉得这东西什…",
+      "url": "https://tw93.fun/2026-03-07/openclaw.html"
+    },
+    {
+      "id": "sora:ca8136bbef3a70ccdb6f914c",
+      "source_id": "sora",
+      "source_name": "sora's blog",
+      "title": "为什么您应该停止“折腾”",
+      "published_at": "2026-03-06T03:24:50.000Z",
+      "summary": "总有一群人，他们不喜欢技术，只喜欢“折腾”的感觉。AI之前，他们折腾笔记软件；在AI时代，他们乐此不疲地探索、追捧、神话各种概念、 ...",
+      "url": "https://sorablog.me/%e4%b8%ba%e4%bb%80%e4%b9%88%e6%82%a8%e5%ba%94%e8%af%a5%e5%81%9c%e6%ad%a2%e6%8a%98%e8%85%be/"
+    },
+    {
+      "id": "french-picnic:c46861767f619f3c5336e049",
+      "source_id": "french-picnic",
+      "source_name": "FrenchPicnic",
+      "title": "vps折腾日记",
+      "published_at": "2026-03-04T11:44:48.000Z",
+      "summary": "在友人的怂恿下买了台小vps, 瞎折腾扩宽下技术栈",
+      "url": "http://frenchpicnic.github.io/posts/91fabc8c/"
+    },
+    {
+      "id": "ameow:fbf66d88df031267f189420e",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "2136 年，人类发明了超光速引擎",
+      "published_at": "2026-03-04T10:42:32.000Z",
+      "summary": "> 本文由 qwen/qwen3.5-35b-a3b 编写。 > > Prompt: 请你以“2136年，人类发明了超光速引擎”为开头，写一部科幻短篇小说 2136 年，人类发明了超光速引擎。 林远站在“信天翁号”的舰桥前，透过强化玻璃凝视着那台被层层光盾包裹的核心引擎。它不像传统推进器那样喷吐火焰或离子流，它更像是一个静止的、深邃的黑洞，周围的空间因为极度的扭曲而呈现出一种破碎的水波纹质感。 “林博士，同步率 99.8%。”副手的声音有些发颤，“这是第一次载人超光速跳跃，目的地：比邻星 b。” 林远点了点头，喉咙干涩：“启动‘折叠’程序。” 并没有预…",
+      "url": "https://ameow.xyz/archives/human-invented-hyperdrive-in-2135"
+    },
+    {
+      "id": "ameow:48cc4cad74ea929a5b4f35ac",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 093 马年快乐",
+      "published_at": "2026-03-01T16:14:31.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 94 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 新年好！在这里给大家拜一个晚年，祝大家在这一年里万事胜意，心想事成。今年年初一广州依然放了烟花，灿烂的烟花点亮了整个白鹅潭，真的非常震撼。 回到周刊上，没想到离上一次更新已经整整一个月了，最近没怎么碰到特别有意思的事情，所以不是特别想写。最近似乎有点 burn…",
+      "url": "https://ameow.xyz/archives/weekly-093"
+    },
+    {
+      "id": "linexic:d1f38c94485d3d8fa4d29f07",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "月记 11：去北京",
+      "published_at": "2026-02-28T00:00:00.000Z",
+      "summary": "由于在家呆着心情过于沉闷于是家长提议给我资金让我去北京玩一趟，当散散心，遂出发",
+      "url": "https://www.linexic.top/post/month-11-go-to-beijing/"
+    },
+    {
+      "id": "axi:8ae9705ebf19b42b463bac3b",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "Astrbot/ 夕颜是如何炼成的",
+      "published_at": "2026-02-27T00:00:00.000Z",
+      "summary": "如何部署一个 Astrbot Agent，让她自由管理自己，并且作为鲁棒的助手",
+      "url": "https://axi404.top/blog/astrbot-xiyan"
+    },
+    {
+      "id": "neomelt:fc11111f70f8c812465efa47",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "一次把 OpenClaw 从连环报错拉回可用：sub2api + Telegram 实战排障复盘",
+      "published_at": "2026-02-26T04:54:00.000Z",
+      "summary": "从 No API key、403 blocked 到 Telegram pairing 的完整修复过程，含可复用配置与排障思路。",
+      "url": "https://www.neomelt.cloud/posts/openclaw-sub2api-telegram-recovery"
+    },
+    {
+      "id": "axi:5044c4e40191a9efdb975981",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "StarVLA 这段时间以来",
+      "published_at": "2026-02-24T00:00:00.000Z",
+      "summary": "StarVLA 这段时间以来的进展",
+      "url": "https://axi404.top/blog/about-starvla"
+    },
+    {
+      "id": "neomelt:8d048925ab852043608b3c65",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "从 GitHub Pages 到 Vercel 镜像：以及 Giscus -> Waline 评论迁移实录",
+      "published_at": "2026-02-23T04:54:00.000Z",
+      "summary": "把博客改成双平台发布，并把评论系统从 Giscus 迁到 Waline 的一次实战记录。",
+      "url": "https://www.neomelt.cloud/posts/vercel-waline-migration"
+    },
+    {
+      "id": "neomelt:637d8dcbf3276de162a4f0e3",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "关于计算机技术的一些想法",
+      "published_at": "2026-02-20T04:54:00.000Z",
+      "summary": "最近看了很多东西，也想了很多，将自己的心流记录下来",
+      "url": "https://www.neomelt.cloud/posts/%E5%85%B3%E4%BA%8Ecoding%E7%9A%84%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95"
+    },
+    {
+      "id": "neomelt:35d4475c44291e27ede5c7b1",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "2026 最新：国内环境低成本注册 Claude 账号防封教程",
+      "published_at": "2026-02-19T04:54:00.000Z",
+      "summary": "记录下注册claude账号的过程",
+      "url": "https://www.neomelt.cloud/posts/claude-sign-up-guide"
+    },
+    {
+      "id": "neomelt:f60f79c1d362aa2fa8faf1ff",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "Ubuntu系统雾凇输入法配置",
+      "published_at": "2026-02-18T04:54:00.000Z",
+      "summary": "记录下Ubuntu配置雾凇输入法的过程",
+      "url": "https://www.neomelt.cloud/posts/ubuntu-input-setting"
+    },
+    {
+      "id": "yutong:9e002dac6fe818b5b51d4ac5",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Running Into Doctor Who in Balboa Park",
+      "published_at": "2026-02-16T16:30:00.000Z",
+      "summary": "The plan was just to visit the San Diego Museum of Art, then a glance up while passing the Comic-Con Museum changed the day.",
+      "url": "https://www.lyt0112.com/blog/dw_worlds_of_wonder-en"
+    },
+    {
+      "id": "axi:490f5e57f0cd3e4b11cf2131",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "在 Windows 上使用 WSL 进行 Vibe Coding",
+      "published_at": "2026-02-15T00:00:00.000Z",
+      "summary": "绝大多数的 Coding Agent 均熟悉 Linux 的命令行环境，而 WSL 提供了一个在双系统与易用性之间较为平衡的解决方案。",
+      "url": "https://axi404.top/blog/wsl-coding"
+    },
+    {
+      "id": "ameow:1150b6efc122b3613e4b38f0",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "带 Mermaid 的 Markdown 转 docx",
+      "published_at": "2026-02-12T01:35:56.000Z",
+      "summary": "一般来说，LLM 都只能生成纯文本，如果要格式，一般只能 Markdown，并不能直接编辑 Word 文档（当然有一些 MCP 服务可以实现，没体验过）。另一方面，要让 LLM 来画图，在不使用 MCP 的情况下，也只有 Mermaid 能画。 本文主要提出一种 「LLM 原生」、带 Mermaid 的 Markdown 转换成 Word 文档（docx）的方法，适用于软著之类很适合用 AI 去编写的文档。 第一步当然是用任意 AI 去给你生成一份带 Mermaid 的 Markdown 文档，直接在 prompt 里面要求它用 Mermaid 来画流…",
+      "url": "https://ameow.xyz/archives/convert-markdown-with-mermaid-to-docx"
+    },
+    {
+      "id": "axi:2de92c35d1fe7d4ad642666e",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "月记·二零二六·一月",
+      "published_at": "2026-02-08T00:00:00.000Z",
+      "summary": "2026-01-01 ~ 2026-01-31.",
+      "url": "https://axi404.top/blog/journal-2601"
+    },
+    {
+      "id": "axi:8b6acf84b7e1158076ca0860",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "Paper Reading: Embodied AI 10",
+      "published_at": "2026-02-05T00:00:00.000Z",
+      "summary": "从一些 Embodied AI 相关工作中扫过。",
+      "url": "https://axi404.top/blog/paper-reading-eai10"
+    },
+    {
+      "id": "sora:87b757ce73be4ace2bd6f347",
+      "source_id": "sora",
+      "source_name": "sora's blog",
+      "title": "将校园VPN封印，杜绝后门监控",
+      "published_at": "2026-02-04T02:59:00.000Z",
+      "summary": "后门、自签名、流量监控——为什么我不建议您使用校园VPN？ 不论您是处于什么目的，在局域网（Local Area Network， ...",
+      "url": "https://sorablog.me/%e5%90%8e%e9%97%a8%e3%80%81%e8%87%aa%e7%ad%be%e5%90%8d%e3%80%81dpi%e7%9b%91%e6%8e%a7-%e4%b8%ba%e4%bb%80%e4%b9%88%e4%b8%8d%e6%8e%a8%e8%8d%90%e6%82%a8%e4%bd%bf%e7%94%a8%e6%a0%a1/"
+    },
+    {
+      "id": "ameow:8a10fbc6e15ef3a8d05ffb0f",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 092 AI 的贴吧",
+      "published_at": "2026-02-01T11:37:05.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 93 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 好久不见，又是一期间隔了两个星期的周刊。最近没有什么特别多有意思的内容，互联网上充斥着各种 AI 泡沫，干脆 detox 一下，给大脑放放假。 STDIN 需求等于流量吗？ 原文链接 作者分析了自己两个网站的流量，发现数字花园的流量增长比个人博客快，个人博客访…",
+      "url": "https://ameow.xyz/archives/weekly-092"
+    },
+    {
+      "id": "linexic:af00518517062b7dd8c53695",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "月记 10：我自身的近况",
+      "published_at": "2026-01-31T00:00:00.000Z",
+      "summary": "在 17 岁的当下我似乎更关注自身的情绪与感受，所以养成了写日记的习惯想把它们记录下来，但写博客又何尝不是一个记录呢",
+      "url": "https://www.linexic.top/post/month-10-myself/"
+    },
+    {
+      "id": "ameow:e76e116481f18105244f038f",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 091 2026 新年快乐",
+      "published_at": "2026-01-18T13:09:56.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 86 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 迟来的新年快乐！这是猫鱼周刊 2026 年的第一期，先祝各位新的一年里万事如意。 如上期所说，元旦假期去了贵州玩，照片摄于荔波小七孔景区。虽然是枯水期，有些景点关闭了，但是主要的景点基本都可以游览，而且景色也不错。因为以前去过九寨沟了，这里的水倒没有特别惊艳，…",
+      "url": "https://ameow.xyz/archives/weekly-091"
+    },
+    {
+      "id": "axi:307cbeaf5eae3fac93038654",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "月记·二零二五·十二月",
+      "published_at": "2026-01-15T00:00:00.000Z",
+      "summary": "2025-12-01 ~ 2025-12-31.",
+      "url": "https://axi404.top/blog/journal-2512"
+    },
+    {
+      "id": "arthals:e0979671cf2c85673d73dc21",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "更适合北大宝宝体质的 xv6 OS Lab 踩坑记 - Part8",
+      "published_at": "2026-01-11T23:00:01.000Z",
+      "summary": "北京大学 2025 年秋季学期操作系统/OS Lab Part 8",
+      "url": "https://arthals.ink/blog/xv6-os-lab-part8"
+    },
+    {
+      "id": "arthals:2c6933cc380bf830bc489589",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "更适合北大宝宝体质的 xv6 OS Lab 踩坑记 - Part6",
+      "published_at": "2026-01-11T23:00:00.000Z",
+      "summary": "北京大学 2025 年秋季学期操作系统/OS Lab Part 6",
+      "url": "https://arthals.ink/blog/xv6-os-lab-part6"
+    },
+    {
+      "id": "sora:537a290c38ee665c098f1fdf",
+      "source_id": "sora",
+      "source_name": "sora's blog",
+      "title": "[网络.2]浅谈SNI阻断-您的校园网，为什么打不开某些网站？",
+      "published_at": "2026-01-08T07:32:00.000Z",
+      "summary": "SNI阻断在我们的生活中无处不在。它藏在互联网的每一个角落里，藏在每一个ERR_TIMED_OUT里，藏在国人深埋的信息茧房里。 ...",
+      "url": "https://sorablog.me/%e7%bd%91%e7%bb%9c%e6%b5%85%e8%b0%88-2%e6%b5%85%e8%b0%88sni%e9%98%bb%e6%96%ad-%e6%82%a8%e7%9a%84%e6%a0%a1%e5%9b%ad%e7%bd%91%ef%bc%8c%e4%b8%ba%e4%bb%80%e4%b9%88%e6%89%93%e4%b8%8d/"
+    },
+    {
+      "id": "ameow:53b51c69eb1112967feb460a",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "PVE 使用 LXC 部署 Miloco",
+      "published_at": "2026-01-08T02:37:40.000Z",
+      "summary": "前言 虽然 Miloco 的系统要求写着要求 30 系以上的显卡，看着有点劝退，但其实可以不部署对应的模型，只运行系统，模型从云端获取（也可以是本地部署的模型）。由于部署只支持 Linux 和 WIndows，而且对具体的 Linux 发行版也有不少限制，例如 Alpine 就不行，过程中踩了不少坑，还是写篇文章记录一下。 LXC 准备 虽然完全可以自己用模板起 LXC 然后再装 Docker 之类，但是有个很好用的脚本： bash -c \"$(curl -fsSL https://raw.githubusercontent.com/community…",
+      "url": "https://ameow.xyz/archives/deploy-miloco-on-pve-lxc"
+    },
+    {
+      "id": "axi:b231a5c3e20be8814ae42de9",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "致新生的你/后日谈：价值博弈",
+      "published_at": "2026-01-06T00:00:00.000Z",
+      "summary": "在升学过程中的绝大多数内容往往涉及抉择，诸如保研以及直博，或者实习和科研，从本质上它们都是「价值博弈」",
+      "url": "https://axi404.top/blog/advise-epilogue-2"
+    },
+    {
+      "id": "axi:34599e2a6ef257f30ff4fc81",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "致新生的你/后日谈：序",
+      "published_at": "2026-01-04T00:00:00.000Z",
+      "summary": "为什么要写作致新生的你后日谈，一个新的系列的开始",
+      "url": "https://axi404.top/blog/advise-epilogue-0"
+    },
+    {
+      "id": "axi:66749c38f670a4cf51b87052",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "致新生的你/后日谈：为什么 Vibe Coding 如此重要",
+      "published_at": "2026-01-04T00:00:00.000Z",
+      "summary": "伴随着 Coding Agent 的能力提升，Vibe Coding 所触及的范围已经如此之广，然而绝大多数人并没有意识到",
+      "url": "https://axi404.top/blog/advise-epilogue-1"
+    },
+    {
+      "id": "french-picnic:a96a242977a4bf90fff3efe9",
+      "source_id": "french-picnic",
+      "source_name": "FrenchPicnic",
+      "title": "2025年终总结",
+      "published_at": "2025-12-31T08:41:03.000Z",
+      "summary": "不是所有的鱼都会生活在同一片海里",
+      "url": "http://frenchpicnic.github.io/posts/62873be4/"
+    },
+    {
+      "id": "ameow:e1a4a4a269c8d82d73a8f182",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 090 向大佬学习",
+      "published_at": "2025-12-28T12:58:15.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 91 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 一转眼来到 2025 年的最后一周，下周因为出去玩，周刊休息一周，所以在这里先祝各位新年快乐。 按照习惯来说，年底也应该写一份年度总结，今年真的发生了很多事，现在还没构思好到底要怎么总结我这一年，可能拖更到新的一年吧。 STDIN 『嗨威说』清华大学读研三年 …",
+      "url": "https://ameow.xyz/archives/weekly-090"
+    },
+    {
+      "id": "linexic:78d030af00aba3b723613036",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "再见2025 - 看看我今年都做了什么事吧",
+      "published_at": "2025-12-27T00:00:00.000Z",
+      "summary": "简单概括一下今年",
+      "url": "https://www.linexic.top/post/2025-year/"
+    },
+    {
+      "id": "ameow:f523e8993490ad09d2da15f5",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 089 Vibe Engineering",
+      "published_at": "2025-12-21T12:21:28.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 90 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 这周依然花了很多时间在 Glean 的开发上，内容也不是很多，STDOUT 部分介绍一些开发过程中的心得吧。 STDIN 关于博客开头的 AI 总结 原文链接 最近确实见到越来越多博客在开头的地方做一个 AI 总结，甚至为了模拟实时生成（事实上都是提前生成好的…",
+      "url": "https://ameow.xyz/archives/weekly-089"
+    },
+    {
+      "id": "ameow:839c3613acdb682c957a30da",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 088 两个 Linus 的史诗级会面",
+      "published_at": "2025-12-14T15:25:30.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 86 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 这周因为很多时间花在 Glean 的开发上，看的东西不多，所以周刊的内容相对也少一点。 STDIN CURSOR × FIGMA 技术调研 原文链接 早就有闻可以通过 Figma 把设计稿通过 MCP 让 AI 写高保真代码，这篇文章算是走通了整个流程，并且给…",
+      "url": "https://ameow.xyz/archives/weekly-088"
+    },
+    {
+      "id": "sora:1f63f00dbce6c48a08db9c0a",
+      "source_id": "sora",
+      "source_name": "sora's blog",
+      "title": "如何测试自己的GPT有没有降智",
+      "published_at": "2025-12-11T06:39:00.000Z",
+      "summary": "⚠此方法已于2026年2月过期。OpenAI封禁了Juice值。 这是在reddit上发现的测试方法，亲测有效。 & ...",
+      "url": "https://sorablog.me/%e5%a6%82%e4%bd%95%e6%b5%8b%e8%af%95%e8%87%aa%e5%b7%b1%e7%9a%84gpt%e6%9c%89%e6%b2%a1%e6%9c%89%e9%99%8d%e6%99%ba/"
+    },
+    {
+      "id": "sora:0237d50fbfb64937c562fe35",
+      "source_id": "sora",
+      "source_name": "sora's blog",
+      "title": "让LyricEase起死回生",
+      "published_at": "2025-12-08T11:09:00.000Z",
+      "summary": "在此感谢https://www.bilibili.com/opus/1062021335016800261与https://git ...",
+      "url": "https://sorablog.me/%e8%ae%a9lyricease%e8%b5%b7%e6%ad%bb%e5%9b%9e%e7%94%9f/"
+    },
+    {
+      "id": "ameow:cd9708a931d7647f0606bb96",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 087 做一个 RSS 阅读器",
+      "published_at": "2025-12-07T11:35:35.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 88 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 这周还是没有图。自从进了胶片的坑，出门要么不带数码的，要么带了也不拿出来拍。而一卷有 36 张，经常一次拍不完，又想等囤起来一起洗了，所以很久都没出什么图。 这周主要很多时间精力花在一个新坑上，起因是最近 Folo 团队裁员，裁掉了最核心的两位贡献者，而且发布…",
+      "url": "https://ameow.xyz/archives/weekly-087"
+    },
+    {
+      "id": "linexic:17829f5ccb29e78b993c103a",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "我从移动端网站回到了应用及一些博客主题的思考",
+      "published_at": "2025-12-05T00:00:00.000Z",
+      "summary": "因为种种原因我从移动端的网页回到了对应的应用还有一些关于博客主题的看法",
+      "url": "https://www.linexic.top/post/yi-dong-duan-he-bo-ke-zhu-ti/"
+    },
+    {
+      "id": "sora:53d3057897209e95d18a432d",
+      "source_id": "sora",
+      "source_name": "sora's blog",
+      "title": "宝塔面板使用WP Ghost插件时的不生效问题",
+      "published_at": "2025-12-03T14:39:00.000Z",
+      "summary": "本文参考了大量资料，尤其感谢https://vantageso.com/wordpress-hide-my-wp/的解决思路。 & ...",
+      "url": "https://sorablog.me/%e5%ae%9d%e5%a1%94%e9%9d%a2%e6%9d%bf%e4%bd%bf%e7%94%a8wp-ghost%e6%8f%92%e4%bb%b6%e6%97%b6%e7%9a%84%e4%b8%8d%e7%94%9f%e6%95%88%e9%97%ae%e9%a2%98/"
+    },
+    {
+      "id": "ameow:4f268b0aa189f21b70d6511f",
+      "source_id": "ameow",
+      "source_name": "阿猫的博客",
+      "title": "猫鱼周刊 vol. 086 走出迷茫",
+      "published_at": "2025-11-30T10:35:47.000Z",
+      "summary": "关于本刊 > 这是猫鱼周刊的第 86 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 好久不见。上周的周末有事回了趟广州家里，周六当天来回，折腾了一趟实在是太累了，于是就咕咕了。 这周的周刊将会迎来第二次重构，就如上期所说，新的周刊会分成 INIT、STDIN、STDOUT、MISC 和 EOF 这几个板块，弱化掉以前文章、项目之类的概念，更加…",
+      "url": "https://ameow.xyz/archives/weekly-086"
+    },
+    {
+      "id": "arthals:ee8541cd9f3f6f5d59d8ccdb",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "如何降级 iOS / iPadOS App",
+      "published_at": "2025-11-28T22:33:33.000Z",
+      "summary": "唉，商业化，原本好好的 App 就这么被塞满了广告",
+      "url": "https://arthals.ink/blog/downgrade-ios-app"
+    },
+    {
+      "id": "linexic:a803c5b377d5aa0367be3c4f",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "月记之九:我又重新审视了自己的未来",
+      "published_at": "2025-11-27T00:00:00.000Z",
+      "summary": "似乎越学越迷茫。。。一篇无病呻吟的流水账",
+      "url": "https://www.linexic.top/post/month-9-my-future/"
+    },
+    {
+      "id": "arthals:6ba1539a2fc8329e721e4e3d",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "更适合北大宝宝体质的 xv6 OS Lab 踩坑记 - Part5",
+      "published_at": "2025-11-22T20:49:15.000Z",
+      "summary": "北京大学 2025 年秋季学期操作系统/OS Lab Part 5",
+      "url": "https://arthals.ink/blog/xv6-os-lab-part5"
+    },
+    {
+      "id": "yutong:d9163820a7121792de927919",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Real-World RL",
+      "published_at": "2025-11-17T23:00:00.000Z",
+      "summary": "How real-world RL pulls robots out of virtual worlds and lets them learn in the only environment that matters.",
+      "url": "https://www.lyt0112.com/blog/real_world_rl-en"
+    },
+    {
+      "id": "arthals:afdcb20842bc2bc617a67c6d",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "更适合北大宝宝体质的 xv6 OS Lab 踩坑记 - Part4",
+      "published_at": "2025-10-27T13:40:52.000Z",
+      "summary": "北京大学 2025 年秋季学期操作系统/OS Lab Part 4",
+      "url": "https://arthals.ink/blog/xv6-os-lab-part4"
+    },
+    {
+      "id": "linexic:5f132f172d99cf2ab7f72911",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "【翻译】为什么我切换到了 Firefox 且不再回头",
+      "published_at": "2025-10-17T00:00:00.000Z",
+      "summary": "介绍了 Firefox 几个优点，以及为什么我还那么热衷于使用 Firefox 浏览器",
+      "url": "https://www.linexic.top/post/why-i-switched-to-firefox-and-never-looked-back/"
+    },
+    {
+      "id": "arthals:4d64baffd86f8a10e7436057",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "如何高效利用录播",
+      "published_at": "2025-10-15T06:56:01.000Z",
+      "summary": "什么年代了，还在传统学习？",
+      "url": "https://arthals.ink/blog/ai-utilized-replay"
+    },
+    {
+      "id": "arthals:d6387c3d36c6ddd6a073eac5",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "更适合北大宝宝体质的 xv6 OS Lab 踩坑记 - Part7",
+      "published_at": "2025-10-13T01:15:36.000Z",
+      "summary": "北京大学 2025 年秋季学期操作系统/OS Lab Part 7",
+      "url": "https://arthals.ink/blog/xv6-os-lab-part7"
+    },
+    {
+      "id": "arthals:f7f0a6d2902c556a7fc49b1f",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "更适合北大宝宝体质的 xv6 OS Lab 踩坑记 - Part2",
+      "published_at": "2025-10-11T03:56:13.000Z",
+      "summary": "北京大学 2025 年秋季学期操作系统/OS Lab Part 2",
+      "url": "https://arthals.ink/blog/xv6-os-lab-part2"
+    },
+    {
+      "id": "arthals:067b6e51f3577a45b9611611",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "更适合北大宝宝体质的 xv6 OS Lab 踩坑记 - Part3",
+      "published_at": "2025-10-05T02:41:24.000Z",
+      "summary": "北京大学 2025 年秋季学期操作系统/OS Lab Part 3",
+      "url": "https://arthals.ink/blog/xv6-os-lab-part3"
+    },
+    {
+      "id": "linexic:3409da687719f69ae0653d0e",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "国庆散记",
+      "published_at": "2025-10-05T00:00:00.000Z",
+      "summary": "来看看我的国庆假期都发生了什么事情吧！难道秋天一定是要下雨才能显得悲怆和苍凉吗，难道只有下雨才能让古往今来的诗人写出佳作三千吗，难道只有下雨才能圈住我这个在国庆想要浪一把的学生吗（）",
+      "url": "https://www.linexic.top/post/guo-qing-san-ji/"
+    },
+    {
+      "id": "arthals:d2d4f54573dde3bc4e7e7a8b",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "更适合北大宝宝体质的 xv6 OS Lab 踩坑记 - Part1",
+      "published_at": "2025-10-02T16:20:53.000Z",
+      "summary": "北京大学 2025 年秋季学期操作系统/OS Lab Part 1",
+      "url": "https://arthals.ink/blog/xv6-os-lab-part1"
+    },
+    {
+      "id": "arthals:25354b144cd6044784bde1e3",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "更适合北大宝宝体质的 xv6 OS Lab 踩坑记 - Part0",
+      "published_at": "2025-10-02T16:17:53.000Z",
+      "summary": "北京大学 2025 年秋季学期操作系统/OS Lab Part 0",
+      "url": "https://arthals.ink/blog/xv6-os-lab-part0"
+    },
+    {
+      "id": "laohu-weekly:4ed20020173432b8563b9a68",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "09-01~09-21.老胡的周刊（第201期）.md",
+      "published_at": "2025-09-20T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/09-01~09-21.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC201%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "linexic:ef2b3fc26f5fec6a1472ba83",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "读任冬生《羌风遍野》",
+      "published_at": "2025-09-19T00:00:00.000Z",
+      "summary": "众山之巅，羌碉伫立，不为遗迹开花，只为一千年等你到来。本文主要做摘录，个人见解较少",
+      "url": "https://www.linexic.top/post/qiang-feng-bian-ye/"
+    },
+    {
+      "id": "linexic:899290f88203894cb6e6503a",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "博客两周年记",
+      "published_at": "2025-09-06T00:00:00.000Z",
+      "summary": "不知不觉已经两周年了，时间好快啊，来看看今年都更新了什么吧。我们学校是寄宿制的学校，昨天（周五）坐车从学校回来了，今天看到脚页的计时才发现博客已经运行两年了！！！回想起来我一周年的时候也没单独写一篇文章，那时候光顾着写 “月记” ,这篇是临近周年时写的，当时还在干暑假工就没想起来这一茬事",
+      "url": "https://www.linexic.top/post/blog-two-year/"
+    },
+    {
+      "id": "laohu-weekly:51486d1dc2173d2a58ea35e9",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "08-17~08-31.老胡的周刊（第200期）.md",
+      "published_at": "2025-08-30T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/08-17~08-31.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC200%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "linexic:32ccffa091075bbb656f540c",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "检查你的Ip是否为公网IP",
+      "published_at": "2025-08-30T00:00:00.000Z",
+      "summary": "什么？！运营商也会骗人？闹了一出学艺不精的笑话",
+      "url": "https://www.linexic.top/post/ipv4/"
+    },
+    {
+      "id": "linexic:9fcd09897a0c97556b68f3bf",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "记去电影院看《南京照相馆》",
+      "published_at": "2025-08-18T00:00:00.000Z",
+      "summary": "《南京照相馆》这部电影最近很火，正好小镇附近有电影院，便决定看一下，给自己的暑假添上一笔。从我家往南走二百米左右有一栋小楼，进到电梯按到三楼就是电影院了，那里可以看出生意并不是很好也不知道为什么，明明是小镇唯一的电影院啊，用地理来解释的话可能就是人们的需求不在这里吧，年轻人都去完成城镇化了，小镇里都是留下的老人孩子...前两天我就去电影院问票价了，他回答我说：“会员价是35一位”。我问他：“那不是会员呢”。他回答：“不是会员就办一个”。额...看得出来生意也是不怎么好了",
+      "url": "https://www.linexic.top/post/go-to-the-cinema/"
+    },
+    {
+      "id": "arthals:b91010c5cbc7c713f0e3b342",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "如何彻底解决 Cursor Remote-SSH Server 下载问题",
+      "published_at": "2025-08-17T01:02:27.000Z",
+      "summary": "当然是写个脚本啦！",
+      "url": "https://arthals.ink/blog/cursor-remote-ssh-solution"
+    },
+    {
+      "id": "neomelt:da782756f83203327c97fd89",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "Rust入门指南",
+      "published_at": "2025-08-16T04:54:00.000Z",
+      "summary": "从所有权到错误处理，系统梳理 Rust 核心概念",
+      "url": "https://www.neomelt.cloud/posts/rust-guide"
+    },
+    {
+      "id": "laohu-weekly:6449b8aebe5e953b1b560d5d",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "08-11~08-16.老胡的周刊（第199期）.md",
+      "published_at": "2025-08-15T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/08-11~08-16.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC199%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "neomelt:52143be5d9df377b1cecee07",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "为什么我重新搭了一个博客",
+      "published_at": "2025-08-14T04:54:00.000Z",
+      "summary": "关于写博客这件事，以及我在学什么",
+      "url": "https://www.neomelt.cloud/posts/my-first-tech-blog"
+    },
+    {
+      "id": "laohu-weekly:92c5158c753e2afc27704cfe",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "08-03~08-10.老胡的周刊（第198期）.md",
+      "published_at": "2025-08-09T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/08-03~08-10.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC198%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "laohu-weekly:2a7d053221e85fe51d0183a1",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "07-21~08-03.老胡的周刊（第197期）.md",
+      "published_at": "2025-08-02T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/07-21~08-03.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC197%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "linexic:396d9712e2d8523016f61b1d",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "月记之八:我的七月",
+      "published_at": "2025-08-02T00:00:00.000Z",
+      "summary": "暑假已经过半看看我这一个月发生了什么事情",
+      "url": "https://www.linexic.top/post/month-8-my-july/"
+    },
+    {
+      "id": "linexic:72e37be4a808c1945a62ad54",
+      "source_id": "linexic",
+      "source_name": "LineXic书屋",
+      "title": "我是如何使用 Pagefind 构建 Astro 页面的搜索功能的",
+      "published_at": "2025-07-30T00:00:00.000Z",
+      "summary": "在今天我终于使用 Pagefind 完成了在 Astro 页面中添加搜索功能,同时因为我的粗心浪费了我的很多时间，同时我意识到转变思维也是解决问题很好的方式",
+      "url": "https://www.linexic.top/post/build-pagefind/"
+    },
+    {
+      "id": "laohu-weekly:9da4c5abc420e5819174a955",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "07-14~07-20.老胡的周刊（第196期）.md",
+      "published_at": "2025-07-19T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/07-14~07-20.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC196%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "laohu-weekly:ac21bfa9e7e3851cc0f0d9b8",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "07-07~07-13.老胡的周刊（第195期）.md",
+      "published_at": "2025-07-12T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/07-07~07-13.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC195%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "laohu-weekly:ace30bfdc8c5a81c34008a1c",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "07-01~07-06.老胡的周刊（第194期）.md",
+      "published_at": "2025-07-05T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/07-01~07-06.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC194%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "yutong:bf0eee102efb4ed0ef6eb891",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "An Unfinished Story",
+      "published_at": "2025-07-02T12:43:24.000Z",
+      "summary": "So we beat on, boats against the current, borne back ceaselessly into the past.",
+      "url": "https://www.lyt0112.com/blog/this_is_pku-en"
+    },
+    {
+      "id": "laohu-weekly:3b8a2b752ffa46ef33ebf8ae",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "06-23~06-29.老胡的周刊（第193期）.md",
+      "published_at": "2025-06-28T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/06-23~06-29.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC193%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "yutong:6904bfb11d397ea3ff1bba5c",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Rubik's Cube Blindfold",
+      "published_at": "2025-06-28T09:25:48.000Z",
+      "summary": "A practical guide to 3x3 blindfold solving with Speffz lettering, three-cycles, parity, and setup-based execution.",
+      "url": "https://www.lyt0112.com/blog/blindfold-en"
+    },
+    {
+      "id": "laohu-weekly:8b58ab8c665a6e8264324a5f",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "06-16~06-22.老胡的周刊（第192期）.md",
+      "published_at": "2025-06-21T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/06-16~06-22.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC192%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "laohu-weekly:e4f306a7ea095a1b26f2ffbf",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "06-09~06-15.老胡的周刊（第191期）.md",
+      "published_at": "2025-06-14T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/06-09~06-15.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC191%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "laohu-weekly:c348a6eb7a076fba5d71a98d",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "06-02~06-08.老胡的周刊（第190期）.md",
+      "published_at": "2025-06-07T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/06-02~06-08.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC190%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "yutong:b3f0f2cbc878ede6d0f257a8",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 11: Deadlock",
+      "published_at": "2025-06-06T15:40:00.000Z",
+      "summary": "Operating Systems Notes 11: Deadlock",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_11-zh"
+    },
+    {
+      "id": "yutong:bed603e68246fb3ba76fd7eb",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 10: Classic Synchronization Problems",
+      "published_at": "2025-06-06T15:39:00.000Z",
+      "summary": "Operating Systems Notes 10: Classic Synchronization Problems",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_10-zh"
+    },
+    {
+      "id": "yutong:c1067b0f8c2385efb7671f3a",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 09: Concurrency Mechanism",
+      "published_at": "2025-06-06T15:38:00.000Z",
+      "summary": "Operating Systems Notes 09: Concurrency Mechanism",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_09-zh"
+    },
+    {
+      "id": "laohu-weekly:87740ef60ee64a7666f342c5",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "05-26~05-31.老胡的周刊（第189期）.md",
+      "published_at": "2025-05-30T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/05-26~05-31.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC189%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "laohu-weekly:a9639745b53be037816a4728",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "05-19~05-25.老胡的周刊（第188期）.md",
+      "published_at": "2025-05-24T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/05-19~05-25.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC188%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "yutong:b1bdac43f0016c80027a3044",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 08: File System 2",
+      "published_at": "2025-05-18T19:17:00.000Z",
+      "summary": "Operating Systems Notes 08: File System 2",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_08-zh"
+    },
+    {
+      "id": "laohu-weekly:fe3da2fad0109c734f85a69e",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "05-06~05-18.老胡的周刊（第187期）.md",
+      "published_at": "2025-05-17T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/05-06~05-18.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC187%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "french-picnic:5e99f05f44b3ec62294a6bb1",
+      "source_id": "french-picnic",
+      "source_name": "FrenchPicnic",
+      "title": "置顶",
+      "published_at": "2025-05-07T08:10:10.000Z",
+      "summary": "一个导航栏",
+      "url": "http://frenchpicnic.github.io/posts/cc4d5834/"
+    },
+    {
+      "id": "laohu-weekly:0d56bad9c243431d655d49c7",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "04-20~05-05.老胡的周刊（第186期）.md",
+      "published_at": "2025-05-04T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/04-20~05-05.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC186%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "lil-log:3d2516a54ec70247c8721239",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Why We Think",
+      "published_at": "2025-05-01T00:00:00.000Z",
+      "summary": "Special thanks to John Schulman for a lot of super valuable feedback and direct edits on this post. Test time compute (Graves et al. 2016, Ling, et al. 2017, Cobbe et al. 2021) and Chain-of-thought (CoT) (Wei et al. 2022, Nye et al. 2021), have led to significant improvements in…",
+      "url": "https://lilianweng.github.io/posts/2025-05-01-thinking/"
+    },
+    {
+      "id": "yutong:710d6a63c4748bca9a3c7e96",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 07: File System 1",
+      "published_at": "2025-04-23T02:09:00.000Z",
+      "summary": "Operating Systems Notes 07: File System 1",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_07-zh"
+    },
+    {
+      "id": "yutong:9973a91c5eb72ba7cfd347f2",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Course Review for PKU Students",
+      "published_at": "2025-04-19T23:56:52.000Z",
+      "summary": "Helpful Course Information for PKU Students",
+      "url": "https://www.lyt0112.com/blog/course_review-zh"
+    },
+    {
+      "id": "laohu-weekly:8732d298bdfc82fa6fb73f58",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "04-14~04-19.老胡的周刊（第185期）.md",
+      "published_at": "2025-04-18T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/04-14~04-19.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC185%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "arthals:1b09fc197e40b3356a5fb382",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "策略 II",
+      "published_at": "2025-04-17T19:34:04.000Z",
+      "summary": "北京大学 2025 年春季学期具身智能导论 - 笔记 09",
+      "url": "https://arthals.ink/blog/policy-ii"
+    },
+    {
+      "id": "arthals:c0b10b14c1cba90856c6cf68",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "策略 I",
+      "published_at": "2025-04-15T22:38:04.000Z",
+      "summary": "北京大学 2025 年春季学期具身智能导论 - 笔记 08",
+      "url": "https://arthals.ink/blog/policy-i"
+    },
+    {
+      "id": "laohu-weekly:204b999bcd584f86c51817a6",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "04-07~04-12.老胡的周刊（第184期）.md",
+      "published_at": "2025-04-11T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/04-07~04-12.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC184%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "yutong:bd86d748897478ec7b2d2abf",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 06: Virtual Memory Technology",
+      "published_at": "2025-04-11T01:36:00.000Z",
+      "summary": "Operating Systems Notes 06: Virtual Memory Technology",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_06-zh"
+    },
+    {
+      "id": "laohu-weekly:eb86dca101e4c3e3db0954d6",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "03-31~04-06.老胡的周刊（第183期）.md",
+      "published_at": "2025-04-05T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/03-31~04-06.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC183%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "arthals:afcab9ef365e5fd3dd59800c",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "视觉与抓取 III",
+      "published_at": "2025-04-03T16:00:04.000Z",
+      "summary": "北京大学 2025 年春季学期具身智能导论 - 笔记 07",
+      "url": "https://arthals.ink/blog/vision-and-grasping-iii"
+    },
+    {
+      "id": "laohu-weekly:218ee8885ee0f47e7a21c3a4",
+      "source_id": "laohu-weekly",
+      "source_name": "老胡的周刊",
+      "title": "03-24~03-30.老胡的周刊（第182期）.md",
+      "published_at": "2025-03-29T15:54:00.000Z",
+      "summary": "",
+      "url": "https://weekly.howie6879.com/2025/03-24~03-30.%E8%80%81%E8%83%A1%E7%9A%84%E5%91%A8%E5%88%8A%EF%BC%88%E7%AC%AC182%E6%9C%9F%EF%BC%89.html"
+    },
+    {
+      "id": "yutong:36cf82a50a4c7b106b2fb901",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 05: Memory Management Overview",
+      "published_at": "2025-03-28T16:14:00.000Z",
+      "summary": "Operating Systems Notes 05: Memory Management Overview",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_05-zh"
+    },
+    {
+      "id": "yutong:f5ba1c456208b0ea433d53b1",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 04: Process and Thread Scheduling",
+      "published_at": "2025-03-28T04:15:00.000Z",
+      "summary": "Operating Systems Notes 04: Process and Thread Scheduling",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_04-zh"
+    },
+    {
+      "id": "yutong:d3261b7a0ff139582660e7f4",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 03: Process and Thread Model",
+      "published_at": "2025-03-27T00:13:00.000Z",
+      "summary": "Operating Systems Notes 03: Process and Thread Model",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_03-zh"
+    },
+    {
+      "id": "arthals:0344d19cdc38f8b4abbb89b0",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "VLA Frontier",
+      "published_at": "2025-03-26T23:39:31.000Z",
+      "summary": "VLA 前沿模型论文研读",
+      "url": "https://arthals.ink/blog/vla-frontier"
+    },
+    {
+      "id": "arthals:6fa5511e45171f70d9c54c36",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "视觉与抓取 II",
+      "published_at": "2025-03-25T23:26:04.000Z",
+      "summary": "北京大学 2025 年春季学期具身智能导论 - 笔记 06",
+      "url": "https://arthals.ink/blog/vision-and-grasping-ii"
+    },
+    {
+      "id": "arthals:9614218a0d4fbcfab4da9b27",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "RL in VLA",
+      "published_at": "2025-03-22T00:34:00.000Z",
+      "summary": "强化学习在 VLA 中的应用",
+      "url": "https://arthals.ink/blog/rl-in-vla"
+    },
+    {
+      "id": "arthals:7253bc1b895dd4260b8aa959",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "视觉与抓取 I",
+      "published_at": "2025-03-17T01:12:04.000Z",
+      "summary": "北京大学 2025 年春季学期具身智能导论 - 笔记 05",
+      "url": "https://arthals.ink/blog/vision-and-grasping-i"
+    },
+    {
+      "id": "yutong:41a62b8c5729457ff31fb90b",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 02: Interrupt and Exception Mechanism",
+      "published_at": "2025-03-13T04:20:00.000Z",
+      "summary": "Operating Systems Notes 02: Interrupt and Exception Mechanism",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_02-zh"
+    },
+    {
+      "id": "arthals:7bb4c212d55669e278924c50",
+      "source_id": "arthals",
+      "source_name": "Arthals’ ink",
+      "title": "机器人学 III",
+      "published_at": "2025-03-12T02:26:52.000Z",
+      "summary": "北京大学 2025 年春季学期具身智能导论 - 笔记 04",
+      "url": "https://arthals.ink/blog/robotics-iii"
+    },
+    {
+      "id": "yutong:197c0549f2d20fe5298ca0ac",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Operating Systems Notes 01: Overview of Operating Systems",
+      "published_at": "2025-03-11T22:14:00.000Z",
+      "summary": "Operating Systems Notes 01: Overview of Operating Systems",
+      "url": "https://www.lyt0112.com/blog/operating_systems_note_01-zh"
+    },
+    {
+      "id": "neomelt:b0d57c703956bea44d4a6bd6",
+      "source_id": "neomelt",
+      "source_name": "Neomelt’s Blog",
+      "title": "git命令速查",
+      "published_at": "2025-01-31T04:54:00.000Z",
+      "summary": "速查",
+      "url": "https://www.neomelt.cloud/posts/quick-git-command-lookup"
+    },
+    {
+      "id": "yutong:2378d8b965108fc79d0a4db7",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "How to Make a Beautiful Crystal at Home",
+      "published_at": "2025-01-28T15:07:00.000Z",
+      "summary": "其实是魅力化学的课程论文",
+      "url": "https://www.lyt0112.com/blog/crystal-zh"
+    },
+    {
+      "id": "yutong:fb87522b6095c25fdab3d3f7",
+      "source_id": "yutong",
+      "source_name": "Yutong’s Site",
+      "title": "Compiler Principles Lab Notes",
+      "published_at": "2025-01-12T02:15:00.000Z",
+      "summary": "Implement a compiler that compiles SysY language to Koopa IR, finally to RISC-V assembly",
+      "url": "https://www.lyt0112.com/blog/compiler_principles_lab_note-zh"
+    },
+    {
+      "id": "french-picnic:f7cbbf7ae93461c9a79c5045",
+      "source_id": "french-picnic",
+      "source_name": "FrenchPicnic",
+      "title": "2024年终总结",
+      "published_at": "2024-12-29T19:48:39.000Z",
+      "summary": "Though, Life still full of wonder",
+      "url": "http://frenchpicnic.github.io/posts/bf11e261/"
+    },
+    {
+      "id": "lil-log:85712f6b790db60e561911cf",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Reward Hacking in Reinforcement Learning",
+      "published_at": "2024-11-28T00:00:00.000Z",
+      "summary": "Reward hacking occurs when a reinforcement learning (RL) agent exploits flaws or ambiguities in the reward function to achieve high rewards, without genuinely learning or completing the intended task. Reward hacking exists because RL environments are often imperfect, and it is f…",
+      "url": "https://lilianweng.github.io/posts/2024-11-28-reward-hacking/"
+    },
+    {
+      "id": "french-picnic:4c839dd18ab8c697a2ea1b63",
+      "source_id": "french-picnic",
+      "source_name": "FrenchPicnic",
+      "title": "神必小笔记",
+      "published_at": "2024-09-05T10:16:10.000Z",
+      "summary": "一些神必的小笔记,主要是内容不够氵一篇或者临时问题",
+      "url": "http://frenchpicnic.github.io/posts/7094f7c2/"
+    },
+    {
+      "id": "french-picnic:09ee7c6c49e4b040e9ba1b96",
+      "source_id": "french-picnic",
+      "source_name": "FrenchPicnic",
+      "title": "Obsidian+HEXO配置博客",
+      "published_at": "2024-07-12T08:58:29.000Z",
+      "summary": "捡起来博客云云",
+      "url": "http://frenchpicnic.github.io/posts/4dcd95ef/"
+    },
+    {
+      "id": "lil-log:c74ff203fcbd2fa89c0194ac",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Extrinsic Hallucinations in LLMs",
+      "published_at": "2024-07-07T00:00:00.000Z",
+      "summary": "Hallucination in large language models usually refers to the model generating unfaithful, fabricated, inconsistent, or nonsensical content. As a term, hallucination has been somewhat generalized to cases when the model makes mistakes. Here, I would like to narrow down the proble…",
+      "url": "https://lilianweng.github.io/posts/2024-07-07-hallucination/"
+    },
+    {
+      "id": "lil-log:3f60039191c5208c5a8e21de",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Diffusion Models for Video Generation",
+      "published_at": "2024-04-12T00:00:00.000Z",
+      "summary": "Diffusion models have demonstrated strong results on image synthesis in past years. Now the research community has started working on a harder task—using it for video generation. The task itself is a superset of the image case, since an image is a video of 1 frame, and it is muc…",
+      "url": "https://lilianweng.github.io/posts/2024-04-12-diffusion-video/"
+    },
+    {
+      "id": "lil-log:8929e77fb210c63030759462",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Thinking about High-Quality Human Data",
+      "published_at": "2024-02-05T00:00:00.000Z",
+      "summary": "[Special thank you to Ian Kivlichan for many useful pointers (E.g. the 100+ year old Nature paper “Vox populi”) and nice feedback. 🙏 ] High-quality data is the fuel for modern data deep learning model training. Most of the task-specific labeled data comes from human annotation, …",
+      "url": "https://lilianweng.github.io/posts/2024-02-05-human-data-quality/"
+    },
+    {
+      "id": "french-picnic:97f6267172d39694378d6cf9",
+      "source_id": "french-picnic",
+      "source_name": "FrenchPicnic",
+      "title": "2023年终总结",
+      "published_at": "2023-12-30T19:07:26.000Z",
+      "summary": "又是大摸特摸的一年啊",
+      "url": "http://frenchpicnic.github.io/posts/c262e439/"
+    },
+    {
+      "id": "french-picnic:26ae01aa6a393890a90d72af",
+      "source_id": "french-picnic",
+      "source_name": "FrenchPicnic",
+      "title": "Next 使用与配置记录",
+      "published_at": "2023-12-26T06:35:31.000Z",
+      "summary": "本文讲充斥着大量测试使用的突兀代码,比如这个阅读全文",
+      "url": "http://frenchpicnic.github.io/posts/3c9c6c7a/"
+    },
+    {
+      "id": "lil-log:851e87086a628059519a3291",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Adversarial Attacks on LLMs",
+      "published_at": "2023-10-25T00:00:00.000Z",
+      "summary": "The use of large language models in the real world has strongly accelerated by the launch of ChatGPT. We (including my team at OpenAI, shoutout to them) have invested a lot of effort to build default safe behavior into the model during the alignment process (e.g. via RLHF). Howe…",
+      "url": "https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/"
+    },
+    {
+      "id": "lil-log:5e55023d73d9b65c76c65a7f",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "LLM Powered Autonomous Agents",
+      "published_at": "2023-06-23T00:00:00.000Z",
+      "summary": "Building agents with LLM (large language model) as its core controller is a cool concept. Several proof-of-concepts demos, such as AutoGPT, GPT-Engineer and BabyAGI, serve as inspiring examples. The potentiality of LLM extends beyond generating well-written copies, stories, essa…",
+      "url": "https://lilianweng.github.io/posts/2023-06-23-agent/"
+    },
+    {
+      "id": "lil-log:81f4a32fae170486cc2112d8",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Prompt Engineering",
+      "published_at": "2023-03-15T00:00:00.000Z",
+      "summary": "Prompt Engineering, also known as In-Context Prompting, refers to methods for how to communicate with LLM to steer its behavior for desired outcomes without updating the model weights. It is an empirical science and the effect of prompt engineering methods can vary a lot among m…",
+      "url": "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/"
+    },
+    {
+      "id": "lil-log:13c839d3c051b69538a84579",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "The Transformer Family Version 2.0",
+      "published_at": "2023-01-27T00:00:00.000Z",
+      "summary": "Many new Transformer architecture improvements have been proposed since my last post on “The Transformer Family” about three years ago. Here I did a big refactoring and enrichment of that 2020 post — restructure the hierarchy of sections and improve many sections with more recen…",
+      "url": "https://lilianweng.github.io/posts/2023-01-27-the-transformer-family-v2/"
+    },
+    {
+      "id": "lil-log:fd70d0b0cc6762b02b70b3e9",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Large Transformer Model Inference Optimization",
+      "published_at": "2023-01-10T17:00:00.000Z",
+      "summary": "[Updated on 2023-01-24: add a small section on Distillation.] Large transformer models are mainstream nowadays, creating SoTA results for a variety of tasks. They are powerful but very expensive to train and use. The extremely high inference cost, in both time and memory, is a b…",
+      "url": "https://lilianweng.github.io/posts/2023-01-10-inference-optimization/"
+    },
+    {
+      "id": "lil-log:56d77c5afb8858a98f30d2cd",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Some Math behind Neural Tangent Kernel",
+      "published_at": "2022-09-08T17:00:00.000Z",
+      "summary": "Neural networks are well known to be over-parameterized and can often easily fit data with near-zero training loss with decent generalization performance on test dataset. Although all these parameters are initialized at random, the optimization process can consistently lead to s…",
+      "url": "https://lilianweng.github.io/posts/2022-09-08-ntk/"
+    },
+    {
+      "id": "lil-log:960d7a461580972c8d7b49c7",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Generalized Visual Language Models",
+      "published_at": "2022-06-09T22:10:30.000Z",
+      "summary": "Processing images to generate text, such as image captioning and visual question-answering, has been studied for years. Traditionally such systems rely on an object detection network as a vision encoder to capture visual features and then produce text via a text decoder. Given a…",
+      "url": "https://lilianweng.github.io/posts/2022-06-09-vlm/"
+    },
+    {
+      "id": "lil-log:a000f8ce29871dddf4ecfbf0",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Learning with not Enough Data Part 3: Data Generation",
+      "published_at": "2022-04-15T22:10:30.000Z",
+      "summary": "Here comes the Part 3 on learning with not enough data (Previous: Part 1 and Part 2). Let’s consider two approaches for generating synthetic data for training. * Augmented data. Given a set of existing training samples, we can apply a variety of augmentation, distortion and tran…",
+      "url": "https://lilianweng.github.io/posts/2022-04-15-data-gen/"
+    },
+    {
+      "id": "lil-log:0adb21e7a93813ce1df704b1",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Learning with not Enough Data Part 2: Active Learning",
+      "published_at": "2022-02-20T00:00:00.000Z",
+      "summary": "This is part 2 of what to do when facing a limited amount of labeled data for supervised learning tasks. This time we will get some amount of human labeling work involved, but within a budget limit, and therefore we need to be smart when selecting which samples to label.",
+      "url": "https://lilianweng.github.io/posts/2022-02-20-active-learning/"
+    },
+    {
+      "id": "lil-log:e874ea58a932071687af203a",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Learning with not Enough Data Part 1: Semi-Supervised Learning",
+      "published_at": "2021-12-05T00:00:00.000Z",
+      "summary": "When facing a limited amount of labeled data for supervised learning tasks, four approaches are commonly discussed.",
+      "url": "https://lilianweng.github.io/posts/2021-12-05-semi-supervised/"
+    },
+    {
+      "id": "lil-log:52931248d842f0b6e250d942",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "How to Train Really Large Models on Many GPUs?",
+      "published_at": "2021-09-24T00:00:00.000Z",
+      "summary": "[Updated on 2022-03-13: add expert choice routing.] [Updated on 2022-06-10]: Greg and I wrote a shorted and upgraded version of this post, published on OpenAI Blog: “Techniques for Training Large Neural Networks”",
+      "url": "https://lilianweng.github.io/posts/2021-09-25-train-large/"
+    },
+    {
+      "id": "lil-log:4814fca9bba0816234c41974",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "What are Diffusion Models?",
+      "published_at": "2021-07-11T00:00:00.000Z",
+      "summary": "[Updated on 2021-09-19: Highly recommend this blog post on score-based generative modeling by Yang Song (author of several key papers in the references)]. [Updated on 2022-08-27: Added classifier-free guidance, GLIDE, unCLIP and Imagen. [Updated on 2022-08-31: Added latent diffu…",
+      "url": "https://lilianweng.github.io/posts/2021-07-11-diffusion-models/"
+    },
+    {
+      "id": "lil-log:d368984c1fee3bdc06d9199b",
+      "source_id": "lil-log",
+      "source_name": "Lil'Log",
+      "title": "Contrastive Representation Learning",
+      "published_at": "2021-05-31T00:00:00.000Z",
+      "summary": "The goal of contrastive representation learning is to learn such an embedding space in which similar sample pairs stay close to each other while dissimilar ones are far apart. Contrastive learning can be applied to both supervised and unsupervised settings. When working with uns…",
+      "url": "https://lilianweng.github.io/posts/2021-05-31-contrastive/"
+    }
+  ]
+}
