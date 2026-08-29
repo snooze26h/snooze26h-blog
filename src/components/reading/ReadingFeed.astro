@@ -106,7 +106,8 @@ const updatedDate = contentUpdatedAt ? new Date(contentUpdatedAt) : null
     </div>
   </header>
 
-  <ul class='space-y-3' data-reading-list>
+  {/* Third-party article titles and summaries must stay out of this site's own search index. */}
+  <ul class='space-y-3' data-pagefind-ignore data-reading-list>
     {items.map((item) => <FeedUpdateItem {item} />)}
   </ul>
 
