@@ -88,7 +88,7 @@ function getYearFromCollection(
   collection: BlogPostEntry
 ): number | undefined {
   const dateStr = collection.data.updatedDate ?? collection.data.publishDate
-  return dateStr ? new Date(dateStr).getFullYear() : undefined
+  return dateStr ? new Date(dateStr).getUTCFullYear() : undefined
 }
 
 export function groupCollectionsByYear<T extends BlogPostEntry>(

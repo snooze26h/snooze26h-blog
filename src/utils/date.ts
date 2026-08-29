@@ -9,6 +9,7 @@ export function getFormattedDate(
 
   return new Intl.DateTimeFormat(dateLocale, {
     ...(config.locale.dateOptions as Intl.DateTimeFormatOptions),
-    ...options
+    ...options,
+    timeZone: 'UTC'
   }).format(new Date(date))
 }
