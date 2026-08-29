@@ -2,7 +2,7 @@
 title: MDX 组件使用：User & Advanced
 publishDate: 2026-01-11
 updatedDate: 2026-01-11
-description: 文章内组件（Aside/Tabs 等）与高级组件（LinkPreview/GithubCard 等）的使用方式。
+description: 文章内组件（Aside/Tabs 等）与高级组件（GithubCard 等）的使用方式。
 category: tech
 tags:
   - mdx
@@ -11,7 +11,7 @@ language: zh
 ---
 
 import { Aside, Tabs, TabItem, Spoiler } from '@/components/user'
-import { GithubCard, LinkPreview, QRCode, ImageGroup, WebVideo } from '@/components/advanced'
+import { GithubCard, QRCode, ImageGroup, WebVideo } from '@/components/advanced'
 
 ## 1. 必须使用 MDX
 
@@ -41,10 +41,6 @@ import { GithubCard, LinkPreview, QRCode, ImageGroup, WebVideo } from '@/compone
 ### GitHub 卡片
 
 <GithubCard repo='Axi404/Axi-Theme' />
-
-### 链接预览
-
-<LinkPreview href='https://astro.build/' />
 
 ### 二维码
 

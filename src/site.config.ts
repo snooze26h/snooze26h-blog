@@ -3,21 +3,21 @@ import type { CardListData, Config, IntegrationUserConfig, ThemeUserConfig } fro
 export const theme: ThemeUserConfig = {
   // === Basic configuration ===
   /** Title for your website. Will be used in metadata and as browser tab title. */
-  title: "Axi Theme 使用文档",
+  title: 'snooze26h',
   /** Will be used in index page & copyright declaration */
-  author: 'Axi Theme',
-  author_en: 'Axi Theme',
+  author: 'snooze26h',
+  author_en: 'snooze26h',
   /** Description metadata for your website. Can be used in page metadata. */
-  description: 'Axi Theme 使用文档',
-  description_en: 'Axi Theme Documentation',
+  description: 'snooze26h 的个人博客。本科：北京交通大学。记录研究、技术、生活与个人思考。',
+  description_en: 'The personal blog of snooze26h. Undergraduate studies at Beijing Jiaotong University, with notes on research, technology, life, and personal ideas.',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
-  favicon: '/favicon/favicon.ico',
+  favicon: '/favicon/favicon.svg',
   /** Specify the default language for this site. */
   locale: {
-    lang: 'en-US',
-    attrs: 'en_US',
+    lang: 'zh-CN',
+    attrs: 'zh_CN',
     // Date locale
-    dateLocale: 'en-US',
+    dateLocale: 'zh-CN',
     dateOptions: {
       day: 'numeric',
       month: 'short',
@@ -42,9 +42,9 @@ export const theme: ThemeUserConfig = {
   /** Configure the header of your site. */
   header: {
     menu: [
-      { title: 'Blog', link: '/blog/research' },
-      { title: 'Academic', link: '/academic' },
-      { title: 'Projects', link: '/projects' },
+      { title: 'Blog', link: '/blog/tech' },
+      { title: 'Archives', link: '/archives' },
+      { title: 'Collections', link: '/collection' },
       { title: 'Links', link: '/links' },
       { title: 'About', link: '/about' }
     ]
@@ -61,7 +61,7 @@ export const theme: ThemeUserConfig = {
     /** Enable displaying a "Astro & Axi theme powered" link in your site's footer. */
     credits: true,
     /** Optional details about the social media accounts for this site. */
-    social: { github: 'https://github.com/Axi404/Axi-Theme' }
+    social: {}
   },
 
   content: {
@@ -75,19 +75,16 @@ export const theme: ThemeUserConfig = {
 
   /** Personal information configuration */
   personal: {
-    /** Your location */
-    location: 'China',
-    /** Your GitHub username */
-    githubUsername: 'Axi404',
-    /** Your email address */
-    email: 'gaoning@pjlab.org.cn',
-    /** Your Google Scholar profile URL */
-    googleScholar: 'https://scholar.google.com/citations?user=W9mT0rcAAAAJ&hl=zh-CN',
+    /** Education shown beside the profile */
+    location: '北京交通大学 · 本科',
+    /** Public contact addresses */
+    email: 'snooze062@gmail.com',
+    secondaryEmail: 'snooze26h@gmail.com',
     /** Blog start date for statistics */
-    blogStartDate: '2024-06-15',
+    blogStartDate: '2026-08-23',
     /** Domain configuration */
     domains: {
-      main: 'theme.axi404.top',
+      main: 'localhost:4321',
       // githubPages: '',
       // cloudflare: '',
       // friendCircle: '',
@@ -103,18 +100,14 @@ export const integ: IntegrationUserConfig = {
     applyTip: [
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: `https://${theme.personal?.domains?.main || 'example.com'}` },
-      { name: 'Avatar', val: `https://${theme.personal?.domains?.main || 'example.com'}/avatar/avatar.png` }
+      { name: 'Link', val: 'http://localhost:4321' },
+      { name: 'Avatar', val: 'http://localhost:4321/avatar/avatar.png' }
     ]
   },
   // Enable page search function
   pagefind: true,
-  // Add a random quote to the footer (default on homepage footer)
+  // Required by the theme schema; no Quote component is mounted by default.
   quote: {
-    // https://developer.hitokoto.cn/sentence/#%E8%AF%B7%E6%B1%82%E5%9C%B0%E5%9D%80
-    // server: 'https://v1.hitokoto.cn/?c=i',
-    // target: (data) => (data as { hitokoto: string }).hitokoto || 'Error'
-    // https://github.com/lukePeavey/quotable
     server: 'https://api.quotable.io/quotes/random?maxLength=60',
     target: `(data) => data[0].content || 'Error'`
   },
@@ -135,8 +128,6 @@ export const integ: IntegrationUserConfig = {
   // Comment system
   waline: {
     enable: false,
-    // Server service link
-    server: 'https://waline.example.com/',
     // Refer https://waline.js.org/en/guide/features/emoji.html
     emoji: ['bmoji', 'weibo'],
     // Refer https://waline.js.org/en/reference/client/props.html
@@ -154,23 +145,15 @@ export const integ: IntegrationUserConfig = {
 }
 
 export const terms: CardListData = {
-  title: 'Terms content',
+  title: '站点说明 / Site Notes',
   list: [
     {
-      title: 'Privacy Policy',
+      title: 'Privacy / 隐私说明',
       link: '/terms/privacy-policy'
     },
     {
-      title: 'Terms and Conditions',
-      link: '/terms/terms-and-conditions'
-    },
-    {
-      title: 'Copyright',
+      title: 'Copyright / 版权说明',
       link: '/terms/copyright'
-    },
-    {
-      title: 'Disclaimer',
-      link: '/terms/disclaimer'
     }
   ]
 }

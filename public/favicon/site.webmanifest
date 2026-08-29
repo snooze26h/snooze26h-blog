@@ -1,10 +1,10 @@
 {
-  "name": "Axi404",
-  "short_name": "Axi404",
+  "name": "snooze26h",
+  "short_name": "snooze26h",
   "icons": [
-    { "src": "/favicon/favicon-256x256.png", "sizes": "256x256", "type": "image/png" }
+    { "src": "/favicon/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#0B0B10",
+  "background_color": "#0B0B10",
   "display": "standalone"
 }

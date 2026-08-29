@@ -12,7 +12,7 @@ const { links } = config.integ
 const linksConf = links || { logbook: [], applyTip: [] }
 
 const headings = [
-  { depth: 2, slug: 'common-links', text: 'Common Links' },
+  { depth: 2, slug: 'reference-links', text: '参考博客' },
   { depth: 2, slug: 'apply-links', text: 'Apply Links' },
   ...(config.personal?.domains?.friendCircle ? [{ depth: 2, slug: 'small-circle', text: 'Small Circle' }] : [])
 ]
@@ -32,8 +32,8 @@ const { friends } = friendsData
           </svg>
         </div>
         <div>
-          <h2 id='common-links' class='text-2xl font-semibold m-0'>Common Links</h2>
-          <p class='text-sm text-muted-foreground m-0'>精选博客友链<span class='mx-2 align-middle'>·</span>一起探索有趣的世界</p>
+          <h2 id='reference-links' class='text-2xl font-semibold m-0'>参考博客</h2>
+          <p class='text-sm text-muted-foreground m-0'>搭建阶段筛选出的设计参考<span class='mx-2 align-middle'>·</span>不代表互换友链</p>
         </div>
       </div>
       

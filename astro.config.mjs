@@ -33,11 +33,21 @@ import config from './src/site.config.ts'
 const platform = process.env.DEPLOYMENT_PLATFORM || 'vercel'
 const isCloudflare = platform === 'cloudflare'
 const isGithubPages = platform === 'github'
+const isLocal = platform === 'local'
+const isVercel = platform === 'vercel'
+const mainDomain = config.personal?.domains?.main || 'example.com'
+const mainSite = /^(localhost|127\.0\.0\.1)(:\d+)?$/.test(mainDomain)
+  ? `http://${mainDomain}/`
+  : `https://${mainDomain}/`
 
 // https://astro.build/config
 export default defineConfig({
   // Top-Level Options
-  site: isGithubPages ? `https://${config.personal?.domains?.githubPages || 'example.github.io'}/` : (isCloudflare ? `https://${config.personal?.domains?.cloudflare || 'example.pages.dev'}/` : `https://${config.personal?.domains?.main || 'example.com'}/`),
+  site: isGithubPages
+    ? `https://${config.personal?.domains?.githubPages || 'example.github.io'}/`
+    : isCloudflare
+      ? `https://${config.personal?.domains?.cloudflare || 'example.pages.dev'}/`
+      : mainSite,
   // base: '/docs',
   trailingSlash: 'never',
 
@@ -50,8 +60,8 @@ export default defineConfig({
     }
   },
 
-  adapter: isGithubPages ? undefined : (isCloudflare ? cloudflare() : vercel()),
-  output: isGithubPages ? 'static' : (isCloudflare ? 'static' : 'server'),
+  adapter: isGithubPages || isLocal ? undefined : isCloudflare ? cloudflare() : vercel(),
+  output: isGithubPages || isLocal || isCloudflare ? 'static' : 'server',
 
   image: {
     service: {
@@ -70,11 +80,14 @@ export default defineConfig({
     //   Exclude: ['index.*.js']
     // }),
 
-    // Temporary fix vercel adapter
-    // static build method is not needed
-    outputCopier({
-      integ: ['sitemap', 'pagefind']
-    })
+    // Temporary Vercel adapter fix; static builds already place assets in dist.
+    ...(isVercel
+      ? [
+          outputCopier({
+            integ: ['sitemap', 'pagefind']
+          })
+        ]
+      : [])
   ],
   // root: './my-project-directory',
 

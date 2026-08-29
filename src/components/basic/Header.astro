@@ -37,7 +37,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
 ---
 
 <header-component
-  class='group sticky top-4 z-30 mb-12 flex items-center justify-between rounded-xl border border-transparent max-sm:py-1 sm:rounded-2xl [&.not-top]:border-border [&.not-top]:bg-background/60 [&.not-top]:px-1.5 [&.not-top]:backdrop-blur-md dark:[&.not-top]:bg-muted/60'
+  class='group sticky top-4 z-30 mb-12 flex items-center justify-between rounded-xl border border-transparent max-sm:py-1 sm:rounded-2xl [&.not-top]:border-border [&.not-top]:px-1.5'
 >
   <!-- <div
       class='absolute -left-4 -top-8 -z-10 box-content hidden h-20 w-[calc(100%+2rem)] !duration-0 max-sm:group-[.expanded]:block max-sm:group-[.expanded.not-top]:hidden max-sm:group-[.expanded]:bg-white dark:max-sm:group-[.expanded]:bg-muted'
@@ -72,7 +72,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
                     <Icon name='chevron-down' class='chevron-icon ml-1 size-4 transition-transform' />
                   </a>
                   {/* Dropdown menu */}
-                  <div class='dropdown-menu absolute right-0 top-full mt-0 w-48 rounded-xl border border-border bg-background/80 shadow-lg backdrop-blur-md dark:bg-muted/80 md:left-0 md:right-auto' style='z-index: 9999;'>
+                  <div class='dropdown-menu absolute right-0 top-full mt-0 w-48 rounded-xl border border-border bg-background/75 shadow-lg backdrop-blur-lg dark:bg-muted/75 md:left-0 md:right-auto md:mt-2' style='z-index: 9999;'>
                     <div class='py-1'>
                       {categories.map((category) => (
                         <a

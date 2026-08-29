@@ -6,7 +6,12 @@ import { integ, terms } from '@/site-config'
 
 const meta = {
   title: 'Site policy',
-  description: 'Site policy documentation'
+  description: 'Privacy and copyright notes for this site'
+}
+
+const englishTerms = {
+  ...terms,
+  list: terms.list.map((item) => ({ ...item, link: `/en${item.link}` }))
 }
 ---
 
@@ -18,8 +23,8 @@ const meta = {
     </div>
 
     <div id='content' class={cn('animate mt-8 max-w-none md:min-w-[45ch]', integ.typography.class)}>
-      <h2 class='text-xl font-medium'>Site policy documentation</h2>
-      <CardList {...terms} />
+      <h2 class='text-xl font-medium'>Privacy and copyright</h2>
+      <CardList {...englishTerms} />
     </div>
   </main>
 </PageLayout>

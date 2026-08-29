@@ -3,6 +3,7 @@ import type { MarkdownHeading } from 'astro'
 
 import { PageInfo, TOC } from '@/components/pages'
 import PageLayout from '@/layouts/ContentLayout.astro'
+import config from '@/site-config'
 
 interface Props {
   title: string
@@ -26,7 +27,7 @@ const { title, headings, info, ...props } = Astro.props
       {title}
     </h1>
     {
-      info && (
+      info && config.integ.waline.enable && (
         <PageInfo
           path={typeof info === 'string' ? info : info.slug}
           hideComment={typeof info === 'object' && info.hideComment ? info.hideComment : false}

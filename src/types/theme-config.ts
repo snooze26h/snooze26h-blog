@@ -182,6 +182,9 @@ export const ThemeConfigSchema = () =>
       /** Your email address */
       email: z.string().optional().describe('Your email address'),
 
+      /** Your secondary email address */
+      secondaryEmail: z.string().optional().describe('Your secondary email address'),
+
       /** Your Google Scholar profile URL */
       googleScholar: z.string().optional().describe('Your Google Scholar profile URL'),
 

@@ -12,7 +12,7 @@ const { links } = config.integ
 const linksConf = links || { logbook: [], applyTip: [] }
 
 const headings = [
-  { depth: 2, slug: 'common-links', text: 'Common Links' },
+  { depth: 2, slug: 'reference-links', text: 'Reference Blogs' },
   { depth: 2, slug: 'apply-links', text: 'Apply Links' },
   ...(config.personal?.domains?.friendCircle ? [{ depth: 2, slug: 'small-circle', text: 'Small Circle' }] : [])
 ]
@@ -32,8 +32,8 @@ const { friends } = friendsData
           </svg>
         </div>
         <div>
-          <h2 id='common-links' class='text-2xl font-semibold m-0'>Common Links</h2>
-          <p class='text-sm text-muted-foreground m-0'>Curated blogroll<span class='mx-2 align-middle'>·</span>Explore an interesting world together</p>
+          <h2 id='reference-links' class='text-2xl font-semibold m-0'>Reference Blogs</h2>
+          <p class='text-sm text-muted-foreground m-0'>Curated design references<span class='mx-2 align-middle'>·</span>Not reciprocal friend links</p>
         </div>
       </div>
       

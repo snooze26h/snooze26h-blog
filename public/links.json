@@ -1,14 +1,68 @@
 {
   "friends": [
     {
-      "id_name": "example-links",
-      "desc": "示例友链",
+      "id_name": "inspiration-links",
+      "desc": "搭建阶段筛选出的设计参考；不代表互换友链",
       "link_list": [
         {
-          "name": "示例博客",
-          "link": "https://example.com",
-          "avatar": "https://example.com/avatar.png",
-          "intro": "这是一个示例博客介绍"
+          "name": "Axi's Blog",
+          "link": "https://axi404.top/",
+          "avatar": "https://axi404.top/avatar/avatar.png",
+          "intro": "Axi-Theme 的作者与原始站点"
+        },
+        {
+          "name": "Arthals’ ink",
+          "link": "https://arthals.ink/",
+          "avatar": "https://cdn.arthals.ink/Arthals.png",
+          "intro": "所见高山远木，阔云流风"
+        },
+        {
+          "name": "Yutong’s Site",
+          "link": "https://www.lyt0112.com/",
+          "avatar": "https://www.lyt0112.com/_astro/profile_01.DE7o9qVJ_rHVQf.webp",
+          "intro": "My compass is curiosity."
+        },
+        {
+          "name": "高焕昂 Huan-ang Gao",
+          "link": "https://c7w.tech/",
+          "avatar": "https://c7w.tech/_astro/me_2025_08.DerPOhxS_ZErm5W.webp",
+          "intro": "Ph. D. student @ CS & AIR, Tsinghua University."
+        },
+        {
+          "name": "Neomelt’s Blog",
+          "link": "https://neomelt.cloud/",
+          "avatar": "https://www.neomelt.cloud/head.jpg",
+          "intro": "Keep looking, don’t settle"
+        },
+        {
+          "name": "Nian’s Blog",
+          "link": "https://alannian.top/",
+          "avatar": "https://alannian.top/assets/avatar.jpg",
+          "intro": "一念起，万水千山"
+        },
+        {
+          "name": "Jacky’s Blog",
+          "link": "https://www.jackyhu.top/",
+          "avatar": "https://www.jackyhu.top/avatar.jpg",
+          "intro": "窗外下雨了"
+        },
+        {
+          "name": "FrenchPicnic",
+          "link": "https://frenchpicnic.github.io/",
+          "avatar": "https://frenchpicnic.github.io/images/avatar.jpg",
+          "intro": "There's no undo and there's no repeat."
+        },
+        {
+          "name": "LineXic书屋",
+          "link": "https://www.linexic.top/",
+          "avatar": "https://www.linexic.top/avatar.webp",
+          "intro": "难离难舍，想抱紧些"
+        },
+        {
+          "name": "Cranecat’s Blog",
+          "link": "https://cranecat.cn/",
+          "avatar": "https://github.com/CraneCatLin.png",
+          "intro": "今日晴时望明日，明日何以报今晴"
         }
       ]
     }
