@@ -82,6 +82,8 @@ export const theme: ThemeUserConfig = {
     /** Public contact addresses */
     email: 'snooze062@gmail.com',
     secondaryEmail: 'snooze26h@gmail.com',
+    /** GitHub username: shows the profile label and the contribution calendar on the homepage */
+    githubUsername: 'snooze26h',
     /** Blog start date for statistics */
     blogStartDate: '2026-08-23',
     /** Domain configuration */
