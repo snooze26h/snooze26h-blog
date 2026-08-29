@@ -3,10 +3,11 @@ import config from '@/site-config'
 import { Icon } from '@/components/user'
 import LanguageSwitch from '@/components/user/LanguageSwitch.astro'
 import { getRelativeLocaleUrl } from 'astro:i18n'
-import { getBlogCollection, getUniqueCategories } from '@/server'
+import { getBlogCollection, getBlogCollectionEn, getUniqueCategories } from '@/server'
 
 // Get all categories for the dropdown menu
-const allCollections = await getBlogCollection()
+const allCollections =
+  Astro.currentLocale === 'en' ? await getBlogCollectionEn() : await getBlogCollection()
 const allCategories = getUniqueCategories(allCollections)
 
 // Define category display names and filter allowed categories

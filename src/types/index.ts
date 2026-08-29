@@ -14,11 +14,13 @@ export interface SiteMeta {
 
 export type CardListData = {
   title: string
+  title_en?: string
   list: CardList
 }
 
 export type CardList = {
   title: string
+  title_en?: string
   link?: string
   children?: CardList
 }[]

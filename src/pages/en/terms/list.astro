@@ -11,7 +11,12 @@ const meta = {
 
 const englishTerms = {
   ...terms,
-  list: terms.list.map((item) => ({ ...item, link: `/en${item.link}` }))
+  title: terms.title_en ?? terms.title,
+  list: terms.list.map((item) => ({
+    ...item,
+    title: item.title_en ?? item.title,
+    link: item.link ? `/en${item.link}` : undefined
+  }))
 }
 ---
 

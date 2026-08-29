@@ -1,12 +1,10 @@
 ---
 import { PostPreview } from '@/components/pages'
-import { getBlogCollection, groupCollectionsByYear, sortMDByDate } from '@/server'
+import { getBlogCollectionEn, groupCollectionsByYear, sortMDByDate } from '@/server'
 import { Button } from '@/components/user'
 import PageLayout from '@/layouts/BaseLayout.astro'
 
-export const prerender = true
-
-const allPosts = await getBlogCollection()
+const allPosts = await getBlogCollectionEn()
 const allPostsByDate = sortMDByDate(allPosts)
 const allPostsByYear = groupCollectionsByYear(allPostsByDate)
 

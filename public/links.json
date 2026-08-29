@@ -8,13 +8,15 @@
           "name": "Axi's Blog",
           "link": "https://axi404.top/",
           "avatar": "https://axi404.top/avatar/avatar.png",
-          "intro": "Axi-Theme 的作者与原始站点"
+          "intro": "Axi-Theme 的作者与原始站点",
+          "intro_en": "The original author and site of Axi Theme"
         },
         {
           "name": "Arthals’ ink",
           "link": "https://arthals.ink/",
           "avatar": "https://cdn.arthals.ink/Arthals.png",
-          "intro": "所见高山远木，阔云流风"
+          "intro": "所见高山远木，阔云流风",
+          "intro_en": "Distant mountains and tall trees beneath drifting clouds and winds"
         },
         {
           "name": "Yutong’s Site",
@@ -24,6 +26,7 @@
         },
         {
           "name": "高焕昂 Huan-ang Gao",
+          "name_en": "Huan-ang Gao",
           "link": "https://c7w.tech/",
           "avatar": "https://c7w.tech/_astro/me_2025_08.DerPOhxS_ZErm5W.webp",
           "intro": "Ph. D. student @ CS & AIR, Tsinghua University."
@@ -38,13 +41,15 @@
           "name": "Nian’s Blog",
           "link": "https://alannian.top/",
           "avatar": "https://alannian.top/assets/avatar.jpg",
-          "intro": "一念起，万水千山"
+          "intro": "一念起，万水千山",
+          "intro_en": "A thought arises; mountains and rivers unfold"
         },
         {
           "name": "Jacky’s Blog",
           "link": "https://www.jackyhu.top/",
           "avatar": "https://www.jackyhu.top/avatar.jpg",
-          "intro": "窗外下雨了"
+          "intro": "窗外下雨了",
+          "intro_en": "It's raining outside"
         },
         {
           "name": "FrenchPicnic",
@@ -54,15 +59,18 @@
         },
         {
           "name": "LineXic书屋",
+          "name_en": "LineXic Study",
           "link": "https://www.linexic.top/",
           "avatar": "https://www.linexic.top/avatar.webp",
-          "intro": "难离难舍，想抱紧些"
+          "intro": "难离难舍，想抱紧些",
+          "intro_en": "Hard to leave, hard to part; I wish I could hold you closer"
         },
         {
           "name": "Cranecat’s Blog",
           "link": "https://cranecat.cn/",
           "avatar": "https://github.com/CraneCatLin.png",
-          "intro": "今日晴时望明日，明日何以报今晴"
+          "intro": "今日晴时望明日，明日何以报今晴",
+          "intro_en": "Today's clear sky looks to tomorrow; how will tomorrow repay it?"
         }
       ]
     }

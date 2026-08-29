@@ -1,5 +1,10 @@
 ---
-import { getBlogCollection, sortMDByDate } from '@/utils/server'
+import {
+  getBlogCollection,
+  getBlogCollectionEn,
+  sortMDByDate,
+  type BlogPostEntry
+} from '@/utils/server'
 import { getReadingTime } from '@/utils/reading-time'
 import { Icon } from '@/components/user'
 
@@ -10,7 +15,9 @@ interface BlogStatsProps {
 const { blogStartDate } = Astro.props as BlogStatsProps
 const startDate = blogStartDate
 
-const allPosts = await getBlogCollection()
+const allPosts = (Astro.currentLocale === 'en'
+  ? await getBlogCollectionEn()
+  : await getBlogCollection()) as BlogPostEntry[]
 const sortedPosts = sortMDByDate(allPosts)
 
 const today = new Date()
@@ -82,4 +89,4 @@ const formatDate = (date: Date) => {
     <span class="text-muted-foreground">Total Posts</span>
     <span class="font-medium text-foreground">{allPosts.length}</span>
   </div>
-</div> 
+</div>

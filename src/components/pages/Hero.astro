@@ -125,7 +125,7 @@ const imageAlt: string = (heroImage?.alt || title) as string
                 aria-label={`View more blogs with the tag ${tag}`}
                 class='hover:underline hover:underline-offset-4'
                 data-pagefind-filter='tag'
-                href={`/tags/${tag}`}
+                href={`${Astro.currentLocale === 'en' ? '/en' : ''}/tags/${tag}`}
               >
                 {tag}
               </a>

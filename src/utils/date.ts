@@ -1,17 +1,14 @@
 import config from '@/site-config'
 
-const dateFormat = new Intl.DateTimeFormat(config.locale.dateLocale, config.locale.dateOptions)
-
 export function getFormattedDate(
   date: string | number | Date,
-  options?: Intl.DateTimeFormatOptions
+  options?: Intl.DateTimeFormatOptions,
+  locale?: string
 ) {
-  if (typeof options !== 'undefined') {
-    return new Date(date).toLocaleDateString(config.locale.dateLocale, {
-      ...(config.locale.dateOptions as Intl.DateTimeFormatOptions),
-      ...options
-    })
-  }
+  const dateLocale = locale?.startsWith('en') ? 'en-US' : config.locale.dateLocale || 'zh-CN'
 
-  return dateFormat.format(new Date(date))
+  return new Intl.DateTimeFormat(dateLocale, {
+    ...(config.locale.dateOptions as Intl.DateTimeFormatOptions),
+    ...options
+  }).format(new Date(date))
 }

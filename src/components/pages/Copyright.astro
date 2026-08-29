@@ -54,7 +54,7 @@ const shares = {
         <div class='flex gap-x-2 sm:min-w-16 sm:flex-col'>
           <span>Published at</span>
           <span class='text-sm text-foreground max-sm:place-self-center'>
-            {getFormattedDate(publishDate, { month: 'long' })}
+            {getFormattedDate(publishDate, { month: 'long' }, Astro.currentLocale)}
           </span>
         </div>
       )

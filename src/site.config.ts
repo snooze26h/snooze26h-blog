@@ -9,7 +9,8 @@ export const theme: ThemeUserConfig = {
   author_en: 'snooze26h',
   /** Description metadata for your website. Can be used in page metadata. */
   description: 'snooze26h 的个人博客。本科：北京交通大学。记录研究、技术、生活与个人思考。',
-  description_en: 'The personal blog of snooze26h. Undergraduate studies at Beijing Jiaotong University, with notes on research, technology, life, and personal ideas.',
+  description_en:
+    'The personal blog of snooze26h. Undergraduate studies at Beijing Jiaotong University, with notes on research, technology, life, and personal ideas.',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
   favicon: '/favicon/favicon.svg',
   /** Specify the default language for this site. */
@@ -26,7 +27,7 @@ export const theme: ThemeUserConfig = {
   },
   /** Set a logo image to show in the homepage. */
   logo: {
-    src: 'src/assets/avatar.png',
+    src: 'src/assets/avatar.webp',
     alt: 'Avatar'
   },
 
@@ -77,6 +78,7 @@ export const theme: ThemeUserConfig = {
   personal: {
     /** Education shown beside the profile */
     location: '北京交通大学 · 本科',
+    location_en: 'Beijing Jiaotong University · Undergraduate',
     /** Public contact addresses */
     email: 'snooze062@gmail.com',
     secondaryEmail: 'snooze26h@gmail.com',
@@ -84,24 +86,23 @@ export const theme: ThemeUserConfig = {
     blogStartDate: '2026-08-23',
     /** Domain configuration */
     domains: {
-      main: 'localhost:4321',
+      main: 'localhost:4321'
       // githubPages: '',
       // cloudflare: '',
       // friendCircle: '',
-    },
+    }
   }
 }
 
 export const integ: IntegrationUserConfig = {
   links: {
-    logbook: [
-    ],
+    logbook: [],
     // Yourself link info
     applyTip: [
       { name: 'Name', val: theme.title },
       { name: 'Desc', val: theme.description || 'Null' },
       { name: 'Link', val: 'http://localhost:4321' },
-      { name: 'Avatar', val: 'http://localhost:4321/avatar/avatar.png' }
+      { name: 'Avatar', val: 'http://localhost:4321/avatar/avatar.webp' }
     ]
   },
   // Enable page search function
@@ -114,8 +115,7 @@ export const integ: IntegrationUserConfig = {
   // Tailwindcss typography
   typography: {
     // https://github.com/tailwindlabs/tailwindcss-typography
-    class:
-      'break-words prose prose-axi dark:prose-invert dark:prose-axi prose-headings:font-medium'
+    class: 'break-words prose prose-axi dark:prose-invert dark:prose-axi prose-headings:font-medium'
   },
   // A lightbox library that can add zoom effect
   mediumZoom: {
@@ -146,13 +146,16 @@ export const integ: IntegrationUserConfig = {
 
 export const terms: CardListData = {
   title: '站点说明 / Site Notes',
+  title_en: 'Site Notice',
   list: [
     {
       title: 'Privacy / 隐私说明',
+      title_en: 'Privacy Policy',
       link: '/terms/privacy-policy'
     },
     {
       title: 'Copyright / 版权说明',
+      title_en: 'Copyright',
       link: '/terms/copyright'
     }
   ]

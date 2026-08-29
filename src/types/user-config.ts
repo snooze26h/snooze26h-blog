@@ -58,6 +58,7 @@ export const UserConfigSchema = z.object({
   // 个人信息配置
   personal: z.object({
     location: z.string().optional(),
+    location_en: z.string().optional(),
     githubUsername: z.string().optional(),
     email: z.string().optional(),
     secondaryEmail: z.string().optional(),

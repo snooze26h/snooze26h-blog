@@ -8,8 +8,6 @@ import { Button, Icon } from '@/components/user'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import config from '@/site-config'
 
-export const prerender = true
-
 export const getStaticPaths = (async ({ paginate }) => {
   const categoryMap: Record<string, string> = {
     'tech': 'Technical',

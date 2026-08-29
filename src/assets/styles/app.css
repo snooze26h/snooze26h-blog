@@ -1,10 +1,12 @@
+@import './global.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @font-face {
   font-family: 'Century Gothic';
-  src: url('/fonts/centurygothic.ttf') format('truetype');
+  src: url('/fonts/centurygothic.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: fallback;
@@ -12,7 +14,7 @@
 
 @font-face {
   font-family: 'Century Gothic';
-  src: url('/fonts/centurygothic_bold.ttf') format('truetype');
+  src: url('/fonts/centurygothic_bold.woff2') format('woff2');
   font-weight: bold;
   font-style: normal;
   font-display: fallback;
@@ -20,21 +22,14 @@
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-Variable.ttf');
+  src: url('/fonts/Satoshi-Variable.woff2') format('woff2');
   font-style: normal;
   font-display: fallback;
 }
 
 @font-face {
   font-family: 'Satoshi';
-  src: url('/fonts/Satoshi-VariableItalic.ttf');
-  font-style: italic;
-  font-display: fallback;
-}
-
-@font-face {
-  font-family: 'ComicShannsMono';
-  src: url('/fonts/ComicShannsMonoNerdFontPropo-Regular.otf');
+  src: url('/fonts/Satoshi-VariableItalic.woff2') format('woff2');
   font-style: italic;
   font-display: fallback;
 }

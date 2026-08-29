@@ -1,17 +1,17 @@
 // @ts-check
 
+import cloudflare from '@astrojs/cloudflare'
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 // Adapters
 import vercel from '@astrojs/vercel'
-import cloudflare from '@astrojs/cloudflare'
-// Integrations
-import AstroAxiIntegration from './src/axi-integration.ts'
 import { defineConfig } from 'astro/config'
 // Rehype & remark packages
 import rehypeKatex from 'rehype-katex'
-import remarkMath from 'remark-math'
 import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
 
+// Integrations
+import AstroAxiIntegration from './src/axi-integration.ts'
 // Others
 // import { visualizer } from 'rollup-plugin-visualizer'
 
@@ -61,7 +61,7 @@ export default defineConfig({
   },
 
   adapter: isGithubPages || isLocal ? undefined : isCloudflare ? cloudflare() : vercel(),
-  output: isGithubPages || isLocal || isCloudflare ? 'static' : 'server',
+  output: 'static',
 
   image: {
     service: {
@@ -113,8 +113,8 @@ export default defineConfig({
       ]
     ],
     remarkRehype: {
-      footnoteLabel: '脚注',
-      footnoteBackLabel: '返回内容',
+      footnoteLabel: 'Footnotes / 脚注',
+      footnoteBackLabel: 'Back to content / 返回内容',
       footnoteBackContent: '↑'
     },
     // https://docs.astro.build/en/guides/syntax-highlighting/

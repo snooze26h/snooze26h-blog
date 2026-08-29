@@ -11,7 +11,7 @@ type Props = HTMLAttributes<'time'> & {
 
 const { date, dateTimeOptions, class: className, ...attrs } = Astro.props
 
-const postDate = getFormattedDate(date, dateTimeOptions)
+const postDate = getFormattedDate(date, dateTimeOptions, Astro.currentLocale)
 ---
 
 <span class={cn('text-muted-foreground font-mono', className)} {...attrs}>

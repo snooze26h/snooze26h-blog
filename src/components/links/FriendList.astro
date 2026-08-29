@@ -4,7 +4,9 @@ import { Image } from 'astro:assets'
 interface friend {
   avatar: string
   name: string
+  name_en?: string
   intro: string
+  intro_en?: string
   link: string
 }
 
@@ -25,6 +27,7 @@ interface Props {
   list: friend_list
 }
 const { title, list: friendlist, ...props } = Astro.props
+const isEnglish = Astro.currentLocale === 'en'
 ---
 
 {title && <h2 id={friendlist.id_name}>{title}</h2>}
@@ -73,9 +76,11 @@ const { title, list: friendlist, ...props } = Astro.props
                 </div>
               </div>
               <div class='flex flex-col gap-y-2'>
-                <p class='my-0 line-clamp-1 text-sm'>{frd.name} </p>
+                <p class='my-0 line-clamp-1 text-sm'>
+                  {isEnglish ? frd.name_en || frd.name : frd.name}
+                </p>
                 <p class='my-0 line-clamp-1 text-xs text-muted-foreground sm:line-clamp-2'>
-                  {frd.intro}
+                  {isEnglish ? frd.intro_en || frd.intro : frd.intro}
                 </p>
               </div>
             </div>

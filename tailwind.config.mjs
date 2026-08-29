@@ -28,7 +28,7 @@ const typographyConfig = ({ theme }) => ({
         '&:hover': {
           textDecoration: 'none',
           backgroundColor: fg,
-          color: 'hsl(var(--background))',
+          color: 'hsl(var(--background))'
         }
       },
 
@@ -84,9 +84,7 @@ const typographyConfig = ({ theme }) => ({
 
 /** @type {import('tailwindcss').Config} */
 const config = {
-  content: [
-    './src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'
-  ],
+  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   darkMode: ['class'],
   safelist: ['dark'],
   plugins: [typography()],
@@ -141,7 +139,7 @@ const config = {
         sm: 'calc(var(--radius) - 4px)'
       },
       fontFamily: {
-        sans: ['Century Gothic', 'ComicShannsMono', 'Satoshi', ...fontFamily.sans]
+        sans: ['Century Gothic', 'Satoshi', ...fontFamily.sans]
       },
       typography: typographyConfig
     }

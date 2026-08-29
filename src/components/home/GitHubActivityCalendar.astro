@@ -29,15 +29,68 @@ interface Props {
   username: string
 }
 
+const EMPTY_DATA: GitHubActivityApiResponse = {
+  contributions: [],
+  total: { lastYear: 0 }
+}
+const MAX_ACTIVITY_DAYS = 400
+
+function normalizeGitHubActivityData(data: unknown): GitHubActivityApiResponse | undefined {
+  if (!data || typeof data !== 'object') return
+
+  const candidate = data as Partial<GitHubActivityApiResponse>
+  if (
+    !Array.isArray(candidate.contributions) ||
+    candidate.contributions.length > MAX_ACTIVITY_DAYS ||
+    !candidate.contributions.every(
+      (activity) =>
+        activity &&
+        typeof activity === 'object' &&
+        typeof activity.date === 'string' &&
+        /^\d{4}-\d{2}-\d{2}$/.test(activity.date) &&
+        Number.isFinite(parseISO(activity.date).getTime()) &&
+        Number.isFinite(activity.count) &&
+        Number.isFinite(activity.level)
+    ) ||
+    typeof candidate.total?.lastYear !== 'number' ||
+    !Number.isFinite(candidate.total.lastYear)
+  ) {
+    return
+  }
+
+  const contributions = [...candidate.contributions].sort((a, b) => a.date.localeCompare(b.date))
+  if (
+    contributions.length > 1 &&
+    differenceInCalendarDays(
+      parseISO(contributions[contributions.length - 1].date),
+      parseISO(contributions[0].date)
+    ) > MAX_ACTIVITY_DAYS
+  ) {
+    return
+  }
+
+  return { contributions, total: candidate.total }
+}
+
 async function fetchData(username: string): Promise<GitHubActivityApiResponse> {
   const apiUrl = 'https://github-contributions-api.jogruber.de/v4/'
-  const response = await fetch(`${apiUrl}${username}?y=last`)
-  const data = (await response.json()) as GitHubActivityApiResponse
-  if (!response.ok) {
-    const message = (data as any).error || 'Unknown error'
-    throw Error(`Fetching GitHub contribution data for "${username}" failed: ${message}`)
+  try {
+    const response = await fetch(`${apiUrl}${username}?y=last`, {
+      signal: AbortSignal.timeout(8_000)
+    })
+    if (!response.ok) {
+      throw Error(`GitHub contribution API returned HTTP ${response.status}`)
+    }
+
+    const data = normalizeGitHubActivityData(await response.json())
+    if (!data) {
+      throw Error('GitHub contribution API returned invalid data')
+    }
+    return data
+  } catch (error) {
+    console.warn(`Unable to load GitHub contributions for "${username}"`, error)
+    return EMPTY_DATA
   }
-  return data
 }
 
 function fillHoles(activities: Array<GitHubActivityDay>): Array<GitHubActivityDay> {
@@ -98,8 +151,9 @@ const { username } = Astro.props as Props
 const data = await fetchData(username)
 
 const activities = data.contributions
+const hasActivities = activities.length > 0
 const totalCount = data.total.lastYear
-const activityYear = getYear(parseISO(activities[0].date))
+const activityYear = hasActivities ? getYear(parseISO(activities[0].date)) : 0
 
 const blockSize = 12
 const blockMargin = 4
@@ -107,83 +161,85 @@ const blockRadius = 2
 const fontSize = 14
 const labelMargin = 8
 const labelHeight = fontSize + labelMargin
-const weeks = groupByWeeks(activities)
+const weeks = hasActivities ? groupByWeeks(activities) : []
 const width = weeks.length * (blockSize + blockMargin) - blockMargin
 const height = labelHeight + (blockSize + blockMargin) * 7 - blockMargin
 const monthLabels = getMonthLabels(weeks)
 ---
 
-<div class="overflow-x-auto w-full" style="max-width: 90vw;">
-  <svg class='block' width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
-    <g>
-      {
-        monthLabels.map(({ label, weekIndex }) => (
-          <text
-            x={(blockSize + blockMargin) * weekIndex}
-            y={0}
-            dominant-baseline='hanging'
-            fill='currentColor'
-          >
-            {label}
-          </text>
-        ))
-      }
-    </g>
-    {
-      weeks.map((week, wi) => (
-        <g transform={`translate(${(blockSize + blockMargin) * wi}, 0)`}>
-          {week.map((activity, di) =>
-            activity ? (
+{
+  hasActivities && (
+    <>
+      <div class='w-full overflow-x-auto' style='max-width: 90vw;'>
+        <svg class='block' width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
+          <g>
+            {monthLabels.map(({ label, weekIndex }) => (
+              <text
+                x={(blockSize + blockMargin) * weekIndex}
+                y={0}
+                dominant-baseline='hanging'
+                fill='currentColor'
+              >
+                {label}
+              </text>
+            ))}
+          </g>
+          {weeks.map((week, wi) => (
+            <g transform={`translate(${(blockSize + blockMargin) * wi}, 0)`}>
+              {week.map((activity, di) =>
+                activity ? (
+                  <rect
+                    class:list={[
+                      'stroke-foreground/10 hover:opacity-80',
+                      activity.level === 0 && 'fill-[#ebedf0] dark:fill-[#161b22]',
+                      activity.level === 1 && 'fill-[#c6e48b] dark:fill-[#0e4429]',
+                      activity.level === 2 && 'fill-[#7bc96f] dark:fill-[#006d32]',
+                      activity.level === 3 && 'fill-[#239a3b] dark:fill-[#26a641]',
+                      activity.level === 4 && 'fill-[#196127] dark:fill-[#39d353]'
+                    ]}
+                    x={0}
+                    y={labelHeight + (blockSize + blockMargin) * di}
+                    width={blockSize}
+                    height={blockSize}
+                    rx={blockRadius}
+                    ry={blockRadius}
+                    data-date={activity.date}
+                    data-level={activity.level}
+                  >
+                    <title>{`${activity.count} contributions on ${activity.date}`}</title>
+                  </rect>
+                ) : null
+              )}
+            </g>
+          ))}
+        </svg>
+      </div>
+      <footer class='flex items-center justify-between'>
+        <div>
+          {totalCount} contributions in {activityYear} ~ {activityYear + 1}
+        </div>
+        <div class='flex items-center gap-1'>
+          <span>Less</span>
+          {[0, 1, 2, 3, 4].map((level) => (
+            <svg width={blockSize} height={blockSize}>
               <rect
-                class:list={[
-                  'stroke-foreground/10 hover:opacity-80',
-                  activity.level === 0 && 'fill-[#ebedf0] dark:fill-[#161b22]',
-                  activity.level === 1 && 'fill-[#c6e48b] dark:fill-[#0e4429]',
-                  activity.level === 2 && 'fill-[#7bc96f] dark:fill-[#006d32]',
-                  activity.level === 3 && 'fill-[#239a3b] dark:fill-[#26a641]',
-                  activity.level === 4 && 'fill-[#196127] dark:fill-[#39d353]'
-                ]}
-                x={0}
-                y={labelHeight + (blockSize + blockMargin) * di}
                 width={blockSize}
                 height={blockSize}
                 rx={blockRadius}
                 ry={blockRadius}
-                data-date={activity.date}
-                data-level={activity.level}
-              >
-                <title>{`${activity.count} contributions on ${activity.date}`}</title>
-              </rect>
-            ) : null
-          )}
-        </g>
-      ))
-    }
-  </svg>
-</div>
-<footer class='flex items-center justify-between'>
-  <div>{totalCount} contributions in {activityYear} ~ {activityYear + 1}</div>
-  <div class='flex items-center gap-1'>
-    <span>Less</span>
-    {
-      [0, 1, 2, 3, 4].map((level) => (
-        <svg width={blockSize} height={blockSize}>
-          <rect
-            width={blockSize}
-            height={blockSize}
-            rx={blockRadius}
-            ry={blockRadius}
-            class:list={[
-              level === 0 && 'fill-[#ebedf0] dark:fill-[#161b22]',
-              level === 1 && 'fill-[#c6e48b] dark:fill-[#0e4429]',
-              level === 2 && 'fill-[#7bc96f] dark:fill-[#006d32]',
-              level === 3 && 'fill-[#239a3b] dark:fill-[#26a641]',
-              level === 4 && 'fill-[#196127] dark:fill-[#39d353]'
-            ]}
-          />
-        </svg>
-      ))
-    }
-    <span>More</span>
-  </div>
-</footer>
+                class:list={[
+                  level === 0 && 'fill-[#ebedf0] dark:fill-[#161b22]',
+                  level === 1 && 'fill-[#c6e48b] dark:fill-[#0e4429]',
+                  level === 2 && 'fill-[#7bc96f] dark:fill-[#006d32]',
+                  level === 3 && 'fill-[#239a3b] dark:fill-[#26a641]',
+                  level === 4 && 'fill-[#196127] dark:fill-[#39d353]'
+                ]}
+              />
+            </svg>
+          ))}
+          <span>More</span>
+        </div>
+      </footer>
+    </>
+  )
+}

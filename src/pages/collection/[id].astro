@@ -4,8 +4,6 @@ import { getPostsForCollection } from '@/server'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import { PostPreview, CollectionHeader } from '@/components/pages'
 
-export const prerender = true
-
 export async function getStaticPaths() {
   const collections = await getCollection('postCollections')
   return collections.map((collection) => ({
