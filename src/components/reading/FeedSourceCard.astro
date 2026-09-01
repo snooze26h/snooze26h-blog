@@ -22,9 +22,10 @@ const fallbackHue = Array.from(source.id).reduce((value, character) => {
   return (value * 31 + (character.codePointAt(0) ?? 0)) % 360
 }, 0)
 const configuredAccent = profile?.accent ?? ''
-const accent = /^#[\dA-F]{6}$/iu.test(configuredAccent)
+// Only monogram cards keep an accent tint; avatar cards draw their color from the avatar itself.
+const monogramAccent = /^#[\dA-F]{6}$/iu.test(configuredAccent)
   ? configuredAccent
-  : `hsl(${fallbackHue} 42% 52%)`
+  : `hsl(${fallbackHue} 32% 56%)`
 const nameCharacters = Array.from(source.name).filter((character) =>
   /[\p{L}\p{N}]/u.test(character)
 )
@@ -48,44 +49,38 @@ const labels = isEnglish
       countAriaSuffix: 'new posts',
       countSuffix: 'new',
       firstPost: 'Waiting for the first post to be collected',
-      following: 'Following',
-      followingAria: `Following ${source.name}; no new posts`,
-      latest: 'New from this blog',
       openArticle: 'Read the original',
       openRecent: 'Open this recent post',
       openSource: `Visit ${source.name}`,
-      quiet: 'Following · waiting for the next post',
-      recent: 'Recently published',
-      recentAction: 'Read this post',
-      summaryFallback: 'A new post is available. Open it to read on the original site.',
       untitled: 'New post'
     }
   : {
       countAriaSuffix: '篇新文章',
       countSuffix: '篇更新',
       firstPost: '等待首次收录文章',
-      following: '已关注',
-      followingAria: `已关注 ${source.name}，目前没有新文章`,
-      latest: '这个博客有新文章',
       openArticle: '前往原站阅读全文',
       openRecent: '打开这篇近期文章',
       openSource: `访问 ${source.name}`,
-      quiet: '正在关注 · 等待下一篇',
-      recent: '最近写过',
-      recentAction: '查看这篇',
-      summaryFallback: '该订阅源发布了一篇新文章，点击前往原站查看。',
       untitled: '新文章'
     }
 ---
 
 <li
-  class='source-card group relative flex flex-col overflow-hidden rounded-2xl border border-border/70 p-4 shadow-sm motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5'
+  class='source-card group relative flex flex-col overflow-hidden rounded-2xl border border-border/70 bg-card/70 p-5 shadow-sm motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5'
   data-has-new={String(items.length > 0)}
   data-source-card
   data-source-id={source.id}
-  style={`--source-accent: ${accent};`}
+  style={avatar ? undefined : `--source-accent: ${monogramAccent};`}
 >
-  <span class='source-accent absolute inset-x-0 top-0 h-0.5' aria-hidden='true'></span>
+  {
+    avatar ? (
+      <div class='card-ambient' aria-hidden='true'>
+        <img alt='' decoding='async' loading='lazy' src={avatar} />
+      </div>
+    ) : (
+      <div class='card-ambient card-ambient--tint' aria-hidden='true' />
+    )
+  }
 
   <header class='relative z-10 flex items-center gap-3'>
     <div
@@ -143,17 +138,14 @@ const labels = isEnglish
     </div>
 
     <span
-      class='source-count shrink-0 rounded-full px-2.5 py-1 text-[0.6875rem] font-medium'
+      class='source-count shrink-0 rounded-full bg-primary/10 px-2.5 py-1 text-[0.6875rem] font-medium text-primary'
       data-count-aria-suffix={labels.countAriaSuffix}
       data-count-suffix={labels.countSuffix}
-      data-empty-aria-label={labels.followingAria}
-      data-empty-label={labels.following}
       data-source-count
-      aria-label={items.length > 0
-        ? `${items.length} ${labels.countAriaSuffix}`
-        : labels.followingAria}
+      hidden={items.length === 0}
+      aria-label={items.length > 0 ? `${items.length} ${labels.countAriaSuffix}` : undefined}
     >
-      {items.length > 0 ? `${items.length} ${labels.countSuffix}` : labels.following}
+      {items.length > 0 ? `${items.length} ${labels.countSuffix}` : ''}
     </span>
   </header>
 
@@ -161,13 +153,11 @@ const labels = isEnglish
     <p class='line-clamp-2 min-h-10 text-xs leading-5 text-muted-foreground'>{description}</p>
     <ul class='mt-2.5 flex flex-wrap gap-1.5' aria-label={isEnglish ? 'Topics' : '常写主题'}>
       {
-        topics
-          .slice(0, 2)
-          .map((topic) => (
-            <li class='source-topic rounded-full border px-2 py-0.5 text-[0.6875rem] leading-4'>
-              {topic}
-            </li>
-          ))
+        topics.slice(0, 2).map((topic) => (
+          <li class='rounded-full border border-border/60 px-2 py-0.5 text-[0.6875rem] leading-4 text-muted-foreground'>
+            {topic}
+          </li>
+        ))
       }
     </ul>
   </div>
@@ -176,13 +166,10 @@ const labels = isEnglish
     {
       items.map((item) => (
         <article
-          class='source-panel flex flex-col rounded-xl p-3'
+          class='source-panel source-panel--new flex flex-col rounded-xl p-3'
           data-entry-id={item.id}
           data-source-item
         >
-          <p class='mb-1.5 text-[0.6875rem] font-medium uppercase tracking-wider text-primary'>
-            {labels.latest}
-          </p>
           <a
             class='group/article flex flex-1 flex-col rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
             data-source-item-link
@@ -194,18 +181,22 @@ const labels = isEnglish
             <h2 class='line-clamp-2 text-sm font-medium leading-5 text-foreground transition-colors group-hover/article:text-primary'>
               {item.title || labels.untitled}
             </h2>
-            <p class='mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground'>
-              {item.summary || labels.summaryFallback}
-            </p>
+            {item.summary && (
+              <p class='mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground'>
+                {item.summary}
+              </p>
+            )}
             <div class='mt-2.5 flex items-center justify-between gap-3 text-[0.6875rem] text-muted-foreground'>
               <FormattedDate
                 class='font-sans'
                 date={new Date(item.published_at)}
                 dateTimeOptions={{ hour: '2-digit', minute: '2-digit' }}
               />
-              <span class='inline-flex items-center gap-1 text-primary'>
-                {labels.openArticle}
-                <span aria-hidden='true'>→</span>
+              <span
+                class='source-arrow text-primary transition-opacity motion-safe:duration-200'
+                aria-hidden='true'
+              >
+                <svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M7 17 17 7'></path><path d='M7 7h10v10'></path></svg>
               </span>
             </div>
           </a>
@@ -219,35 +210,28 @@ const labels = isEnglish
       data-source-quiet
       hidden={items.length > 0}
     >
-      <div class='mb-2 flex items-center gap-2 text-[0.6875rem] text-muted-foreground'>
-        <span class='source-pulse size-1.5 rounded-full' aria-hidden='true'></span>
-        <span>{labels.quiet}</span>
-      </div>
       {
         recentItem ? (
-          <>
-            <p class='mb-1 text-[0.6875rem] font-medium uppercase tracking-wider text-muted-foreground'>
-              {labels.recent}
-            </p>
-            <a
-              class='group/recent block rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
-              href={recentItem.url}
-              rel='noopener noreferrer'
-              target='_blank'
-              aria-label={`${labels.openRecent}: ${recentItem.title || labels.untitled}`}
-            >
-              <h2 class='line-clamp-2 text-sm font-medium leading-5 text-foreground transition-colors group-hover/recent:text-primary'>
-                {recentItem.title || labels.untitled}
-              </h2>
-              <div class='mt-2.5 flex items-center justify-between gap-3 text-[0.6875rem] text-muted-foreground'>
-                <FormattedDate class='font-sans' date={new Date(recentItem.published_at)} />
-                <span class='inline-flex items-center gap-1'>
-                  {labels.recentAction}
-                  <span aria-hidden='true'>↗</span>
-                </span>
-              </div>
-            </a>
-          </>
+          <a
+            class='group/recent block rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
+            href={recentItem.url}
+            rel='noopener noreferrer'
+            target='_blank'
+            aria-label={`${labels.openRecent}: ${recentItem.title || labels.untitled}`}
+          >
+            <h2 class='line-clamp-2 text-sm font-medium leading-5 text-foreground transition-colors group-hover/recent:text-primary'>
+              {recentItem.title || labels.untitled}
+            </h2>
+            <div class='mt-2 flex items-center justify-between gap-3 text-[0.6875rem] text-muted-foreground'>
+              <FormattedDate class='font-sans' date={new Date(recentItem.published_at)} />
+              <span
+                class='source-arrow transition-opacity motion-safe:duration-200'
+                aria-hidden='true'
+              >
+                <svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M7 17 17 7'></path><path d='M7 7h10v10'></path></svg>
+              </span>
+            </div>
+          </a>
         ) : (
           <p class='text-sm text-muted-foreground'>{labels.firstPost}</p>
         )
@@ -257,65 +241,82 @@ const labels = isEnglish
 </li>
 
 <style>
-  .source-card {
-    background:
-      radial-gradient(
-        circle at 96% 0%,
-        color-mix(in srgb, var(--source-accent) 13%, transparent) 0%,
-        transparent 42%
-      ),
-      hsl(var(--card) / 0.72);
+  /* Each card's ambience comes from that blog's own avatar, blurred into a soft wash. */
+  .card-ambient {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to bottom, black 12%, transparent 78%);
+    mask-image: linear-gradient(to bottom, black 12%, transparent 78%);
+  }
+
+  .card-ambient img {
+    position: absolute;
+    top: -42%;
+    left: -12%;
+    width: 82%;
+    max-width: none;
+    aspect-ratio: 1;
+    object-fit: cover;
+    filter: blur(44px) saturate(1.15);
+    opacity: 0.14;
+    transition: opacity 200ms ease-out;
+  }
+
+  :global(.dark) .card-ambient img {
+    opacity: 0.24;
+  }
+
+  .source-card:hover .card-ambient img {
+    opacity: 0.2;
+  }
+
+  :global(.dark) .source-card:hover .card-ambient img {
+    opacity: 0.32;
+  }
+
+  /* Monogram-only sources fall back to a faint tint in the same position. */
+  .card-ambient--tint {
+    background: radial-gradient(
+      circle at 18% -20%,
+      color-mix(in srgb, var(--source-accent) 22%, transparent) 0%,
+      transparent 58%
+    );
   }
 
   .source-card:hover {
-    border-color: color-mix(in srgb, var(--source-accent) 38%, hsl(var(--border)));
+    border-color: hsl(var(--border));
     box-shadow: 0 12px 28px hsl(var(--foreground) / 0.07);
   }
 
   .source-card[data-has-new='true'] {
-    border-color: color-mix(in srgb, var(--source-accent) 48%, hsl(var(--border)));
-  }
-
-  .source-accent {
-    background: linear-gradient(90deg, var(--source-accent), transparent 82%);
-    opacity: 0.78;
+    border-color: hsl(var(--primary) / 0.4);
   }
 
   .source-avatar {
-    color: color-mix(in srgb, var(--source-accent) 72%, hsl(var(--foreground)));
-    background: color-mix(in srgb, var(--source-accent) 13%, hsl(var(--background)));
+    background: hsl(var(--muted));
+    color: color-mix(in srgb, var(--source-accent, hsl(var(--primary))) 70%, hsl(var(--foreground)));
     box-shadow:
-      0 0 0 1px color-mix(in srgb, var(--source-accent) 24%, hsl(var(--border))),
+      0 0 0 1px hsl(var(--border)),
       0 5px 14px hsl(var(--foreground) / 0.08);
   }
 
-  .source-count,
-  .source-topic {
-    color: color-mix(in srgb, var(--source-accent) 76%, hsl(var(--foreground)));
-    background: color-mix(in srgb, var(--source-accent) 10%, hsl(var(--background)));
-  }
-
-  .source-topic {
-    border-color: color-mix(in srgb, var(--source-accent) 21%, hsl(var(--border)));
-  }
-
   .source-panel {
-    border: 1px solid color-mix(in srgb, var(--source-accent) 13%, hsl(var(--border)));
-    background: color-mix(in srgb, var(--source-accent) 5%, hsl(var(--muted) / 0.72));
+    border: 1px solid hsl(var(--border) / 0.7);
+    background: hsl(var(--muted) / 0.55);
   }
 
-  .source-pulse {
-    background: var(--source-accent);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--source-accent) 13%, transparent);
+  .source-panel--new {
+    border-color: hsl(var(--primary) / 0.3);
+    background: hsl(var(--primary) / 0.06);
   }
 
-  :global(.dark) .source-card {
-    background:
-      radial-gradient(
-        circle at 96% 0%,
-        color-mix(in srgb, var(--source-accent) 11%, transparent) 0%,
-        transparent 44%
-      ),
-      hsl(var(--card) / 0.58);
+  .source-arrow {
+    opacity: 0.45;
+  }
+
+  a:hover .source-arrow,
+  a:focus-visible .source-arrow {
+    opacity: 1;
   }
 </style>

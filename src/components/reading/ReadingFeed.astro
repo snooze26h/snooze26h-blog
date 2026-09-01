@@ -177,16 +177,17 @@ for (const item of items) {
           totalNew += newCount
           card.dataset.hasNew = String(newCount > 0)
           if (count) {
-            count.textContent =
-              newCount > 0
-                ? `${newCount} ${count.dataset.countSuffix || ''}`.trim()
-                : count.dataset.emptyLabel || '0'
-            count.setAttribute(
-              'aria-label',
-              newCount > 0
-                ? `${newCount} ${count.dataset.countAriaSuffix || ''}`.trim()
-                : count.dataset.emptyAriaLabel || count.textContent
-            )
+            count.hidden = newCount === 0
+            if (newCount > 0) {
+              count.textContent = `${newCount} ${count.dataset.countSuffix || ''}`.trim()
+              count.setAttribute(
+                'aria-label',
+                `${newCount} ${count.dataset.countAriaSuffix || ''}`.trim()
+              )
+            } else {
+              count.textContent = ''
+              count.removeAttribute('aria-label')
+            }
           }
           if (emptyState) emptyState.hidden = newCount > 0
         }
