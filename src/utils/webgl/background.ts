@@ -4,17 +4,9 @@ export function enableGradientBackground(): void {
     gradientBg.style.display = 'block'
     gradientBg.style.opacity = '1'
   }
-  
-  const style = document.createElement('style')
-  style.textContent = `
-    header-component.not-top {
-      background-color: hsl(var(--background) / 0.0) !important;
-    }
-    .dark header-component.not-top {
-      background-color: hsl(var(--muted) / 0.0) !important;
-    }
-  `
-  document.head.appendChild(style)
+  // The upstream theme used to inject an !important rule here that made the
+  // scrolled header fully transparent so the gradient could show through it.
+  // The header must stay opaque over page content, so that hack is gone.
 }
 
 export function disableGradientBackground(): void {
