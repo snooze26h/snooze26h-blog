@@ -1,0 +1,321 @@
+---
+import type { BlogFeedItem, BlogFeedSource } from '@/types/reading'
+import { FormattedDate } from '@/components/user'
+
+interface Props {
+  source: BlogFeedSource
+  items: BlogFeedItem[]
+  recentItem?: BlogFeedItem
+  locale: 'zh' | 'en'
+}
+
+const { source, items, recentItem, locale } = Astro.props
+const isEnglish = locale === 'en'
+const hostname = new URL(source.site_url).hostname.replace(/^www\./u, '')
+const profile = source.profile
+const avatar = /^\/images\/blog-sources\/[a-z\d-]+\.(?:ico|jpe?g|png|webp)$/iu.test(
+  profile?.avatar ?? ''
+)
+  ? profile?.avatar
+  : undefined
+const fallbackHue = Array.from(source.id).reduce((value, character) => {
+  return (value * 31 + (character.codePointAt(0) ?? 0)) % 360
+}, 0)
+const configuredAccent = profile?.accent ?? ''
+const accent = /^#[\dA-F]{6}$/iu.test(configuredAccent)
+  ? configuredAccent
+  : `hsl(${fallbackHue} 42% 52%)`
+const nameCharacters = Array.from(source.name).filter((character) =>
+  /[\p{L}\p{N}]/u.test(character)
+)
+const monogram =
+  nameCharacters
+    .slice(0, /\p{Script=Han}/u.test(nameCharacters[0] ?? '') ? 1 : 2)
+    .join('')
+    .toUpperCase() || 'RSS'
+const description = isEnglish
+  ? profile?.description_en || `An independent blog published at ${hostname}.`
+  : profile?.description || `收录来自 ${hostname} 的独立博客更新。`
+const profileTopics = isEnglish ? profile?.topics_en : profile?.topics
+const topics =
+  Array.isArray(profileTopics) && profileTopics.length > 0
+    ? profileTopics
+    : isEnglish
+      ? ['Independent blog', source.kind.toUpperCase()]
+      : ['独立博客', source.kind.toUpperCase()]
+const labels = isEnglish
+  ? {
+      countAriaSuffix: 'new posts',
+      countSuffix: 'new',
+      firstPost: 'Waiting for the first post to be collected',
+      following: 'Following',
+      followingAria: `Following ${source.name}; no new posts`,
+      latest: 'New from this blog',
+      openArticle: 'Read the original',
+      openRecent: 'Open this recent post',
+      openSource: `Visit ${source.name}`,
+      quiet: 'Following · waiting for the next post',
+      recent: 'Recently published',
+      recentAction: 'Read this post',
+      summaryFallback: 'A new post is available. Open it to read on the original site.',
+      untitled: 'New post'
+    }
+  : {
+      countAriaSuffix: '篇新文章',
+      countSuffix: '篇更新',
+      firstPost: '等待首次收录文章',
+      following: '已关注',
+      followingAria: `已关注 ${source.name}，目前没有新文章`,
+      latest: '这个博客有新文章',
+      openArticle: '前往原站阅读全文',
+      openRecent: '打开这篇近期文章',
+      openSource: `访问 ${source.name}`,
+      quiet: '正在关注 · 等待下一篇',
+      recent: '最近写过',
+      recentAction: '查看这篇',
+      summaryFallback: '该订阅源发布了一篇新文章，点击前往原站查看。',
+      untitled: '新文章'
+    }
+---
+
+<li
+  class='source-card group relative flex flex-col overflow-hidden rounded-2xl border border-border/70 p-4 shadow-sm motion-safe:transition motion-safe:duration-200 motion-safe:hover:-translate-y-0.5'
+  data-has-new={String(items.length > 0)}
+  data-source-card
+  data-source-id={source.id}
+  style={`--source-accent: ${accent};`}
+>
+  <span class='source-accent absolute inset-x-0 top-0 h-0.5' aria-hidden='true'></span>
+
+  <header class='relative z-10 flex items-center gap-3'>
+    <div
+      class='source-avatar flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-full'
+    >
+      {
+        avatar ? (
+          <img
+            alt=''
+            class:list={[
+              'size-full',
+              profile?.avatar_fit === 'contain' ? 'object-contain p-1.5' : 'object-cover'
+            ]}
+            decoding='async'
+            height='48'
+            loading='lazy'
+            src={avatar}
+            width='48'
+          />
+        ) : (
+          <span class='text-sm font-semibold tracking-tight' aria-hidden='true'>
+            {monogram}
+          </span>
+        )
+      }
+    </div>
+
+    <div class='min-w-0 flex-1'>
+      <a
+        class='group/source inline-flex max-w-full items-center gap-1.5 rounded-sm font-semibold text-foreground outline-none transition-colors hover:text-primary focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
+        href={source.site_url}
+        rel='noopener noreferrer'
+        target='_blank'
+        aria-label={labels.openSource}
+      >
+        <span class='truncate'>{source.name}</span>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          width='13'
+          height='13'
+          viewBox='0 0 24 24'
+          fill='none'
+          stroke-width='2'
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          class='shrink-0 stroke-muted-foreground transition-colors group-hover/source:stroke-primary'
+          aria-hidden='true'
+        >
+          <path d='M15 3h6v6'></path>
+          <path d='M10 14 21 3'></path>
+          <path d='M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6'></path>
+        </svg>
+      </a>
+      <p class='truncate text-xs text-muted-foreground'>{hostname}</p>
+    </div>
+
+    <span
+      class='source-count shrink-0 rounded-full px-2.5 py-1 text-[0.6875rem] font-medium'
+      data-count-aria-suffix={labels.countAriaSuffix}
+      data-count-suffix={labels.countSuffix}
+      data-empty-aria-label={labels.followingAria}
+      data-empty-label={labels.following}
+      data-source-count
+      aria-label={items.length > 0
+        ? `${items.length} ${labels.countAriaSuffix}`
+        : labels.followingAria}
+    >
+      {items.length > 0 ? `${items.length} ${labels.countSuffix}` : labels.following}
+    </span>
+  </header>
+
+  <div class='relative z-10 mt-4'>
+    <p class='line-clamp-2 min-h-10 text-xs leading-5 text-muted-foreground'>{description}</p>
+    <ul class='mt-2.5 flex flex-wrap gap-1.5' aria-label={isEnglish ? 'Topics' : '常写主题'}>
+      {
+        topics
+          .slice(0, 2)
+          .map((topic) => (
+            <li class='source-topic rounded-full border px-2 py-0.5 text-[0.6875rem] leading-4'>
+              {topic}
+            </li>
+          ))
+      }
+    </ul>
+  </div>
+
+  <div class='relative z-10 mt-auto pt-4' data-source-items>
+    {
+      items.map((item) => (
+        <article
+          class='source-panel flex flex-col rounded-xl p-3'
+          data-entry-id={item.id}
+          data-source-item
+        >
+          <p class='mb-1.5 text-[0.6875rem] font-medium uppercase tracking-wider text-primary'>
+            {labels.latest}
+          </p>
+          <a
+            class='group/article flex flex-1 flex-col rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
+            data-source-item-link
+            href={item.url}
+            rel='noopener noreferrer'
+            target='_blank'
+            aria-label={`${labels.openArticle}: ${item.title || labels.untitled}`}
+          >
+            <h2 class='line-clamp-2 text-sm font-medium leading-5 text-foreground transition-colors group-hover/article:text-primary'>
+              {item.title || labels.untitled}
+            </h2>
+            <p class='mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground'>
+              {item.summary || labels.summaryFallback}
+            </p>
+            <div class='mt-2.5 flex items-center justify-between gap-3 text-[0.6875rem] text-muted-foreground'>
+              <FormattedDate
+                class='font-sans'
+                date={new Date(item.published_at)}
+                dateTimeOptions={{ hour: '2-digit', minute: '2-digit' }}
+              />
+              <span class='inline-flex items-center gap-1 text-primary'>
+                {labels.openArticle}
+                <span aria-hidden='true'>→</span>
+              </span>
+            </div>
+          </a>
+        </article>
+      ))
+    }
+
+    <div
+      class='source-panel rounded-xl p-3'
+      data-source-empty
+      data-source-quiet
+      hidden={items.length > 0}
+    >
+      <div class='mb-2 flex items-center gap-2 text-[0.6875rem] text-muted-foreground'>
+        <span class='source-pulse size-1.5 rounded-full' aria-hidden='true'></span>
+        <span>{labels.quiet}</span>
+      </div>
+      {
+        recentItem ? (
+          <>
+            <p class='mb-1 text-[0.6875rem] font-medium uppercase tracking-wider text-muted-foreground'>
+              {labels.recent}
+            </p>
+            <a
+              class='group/recent block rounded-sm outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background'
+              href={recentItem.url}
+              rel='noopener noreferrer'
+              target='_blank'
+              aria-label={`${labels.openRecent}: ${recentItem.title || labels.untitled}`}
+            >
+              <h2 class='line-clamp-2 text-sm font-medium leading-5 text-foreground transition-colors group-hover/recent:text-primary'>
+                {recentItem.title || labels.untitled}
+              </h2>
+              <div class='mt-2.5 flex items-center justify-between gap-3 text-[0.6875rem] text-muted-foreground'>
+                <FormattedDate class='font-sans' date={new Date(recentItem.published_at)} />
+                <span class='inline-flex items-center gap-1'>
+                  {labels.recentAction}
+                  <span aria-hidden='true'>↗</span>
+                </span>
+              </div>
+            </a>
+          </>
+        ) : (
+          <p class='text-sm text-muted-foreground'>{labels.firstPost}</p>
+        )
+      }
+    </div>
+  </div>
+</li>
+
+<style>
+  .source-card {
+    background:
+      radial-gradient(
+        circle at 96% 0%,
+        color-mix(in srgb, var(--source-accent) 13%, transparent) 0%,
+        transparent 42%
+      ),
+      hsl(var(--card) / 0.72);
+  }
+
+  .source-card:hover {
+    border-color: color-mix(in srgb, var(--source-accent) 38%, hsl(var(--border)));
+    box-shadow: 0 12px 28px hsl(var(--foreground) / 0.07);
+  }
+
+  .source-card[data-has-new='true'] {
+    border-color: color-mix(in srgb, var(--source-accent) 48%, hsl(var(--border)));
+  }
+
+  .source-accent {
+    background: linear-gradient(90deg, var(--source-accent), transparent 82%);
+    opacity: 0.78;
+  }
+
+  .source-avatar {
+    color: color-mix(in srgb, var(--source-accent) 72%, hsl(var(--foreground)));
+    background: color-mix(in srgb, var(--source-accent) 13%, hsl(var(--background)));
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--source-accent) 24%, hsl(var(--border))),
+      0 5px 14px hsl(var(--foreground) / 0.08);
+  }
+
+  .source-count,
+  .source-topic {
+    color: color-mix(in srgb, var(--source-accent) 76%, hsl(var(--foreground)));
+    background: color-mix(in srgb, var(--source-accent) 10%, hsl(var(--background)));
+  }
+
+  .source-topic {
+    border-color: color-mix(in srgb, var(--source-accent) 21%, hsl(var(--border)));
+  }
+
+  .source-panel {
+    border: 1px solid color-mix(in srgb, var(--source-accent) 13%, hsl(var(--border)));
+    background: color-mix(in srgb, var(--source-accent) 5%, hsl(var(--muted) / 0.72));
+  }
+
+  .source-pulse {
+    background: var(--source-accent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--source-accent) 13%, transparent);
+  }
+
+  :global(.dark) .source-card {
+    background:
+      radial-gradient(
+        circle at 96% 0%,
+        color-mix(in srgb, var(--source-accent) 11%, transparent) 0%,
+        transparent 44%
+      ),
+      hsl(var(--card) / 0.58);
+  }
+</style>

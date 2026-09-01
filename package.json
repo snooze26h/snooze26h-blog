@@ -22,6 +22,7 @@
     "lint": "eslint --fix 'src/**/*.{js,ts,jsx,tsx,astro}'",
     "lint:check": "eslint 'src/**/*.{js,ts,jsx,tsx,astro}'",
     "type:check": "astro check",
+    "feeds:baseline": "node scripts/update-blog-feeds.mjs --initialize-baseline",
     "feeds:update": "node scripts/update-blog-feeds.mjs",
     "feeds:validate": "node scripts/update-blog-feeds.mjs --validate-only",
     "feeds:test": "node --test scripts/update-blog-feeds.test.mjs",

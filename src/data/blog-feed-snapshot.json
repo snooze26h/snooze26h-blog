@@ -1,7 +1,51 @@
 {
-  "version": 1,
-  "content_updated_at": "2026-08-29T13:44:43.385Z",
+  "version": 2,
+  "monitoring_started_at": "2026-08-30T20:18:47.826Z",
+  "content_updated_at": "2026-08-30T20:43:02.652Z",
   "source_count": 13,
+  "source_started_at": {
+    "axi": "2026-08-30T20:18:47.826Z",
+    "tw93": "2026-08-30T20:18:47.826Z",
+    "sora": "2026-08-30T20:18:47.826Z",
+    "lil-log": "2026-08-30T20:18:47.826Z",
+    "kexue": "2026-08-30T20:18:47.826Z",
+    "ameow": "2026-08-30T20:18:47.826Z",
+    "lumina": "2026-08-30T20:18:47.826Z",
+    "laohu-weekly": "2026-08-30T20:18:47.826Z",
+    "arthals": "2026-08-30T20:18:47.826Z",
+    "yutong": "2026-08-30T20:18:47.826Z",
+    "neomelt": "2026-08-30T20:18:47.826Z",
+    "french-picnic": "2026-08-30T20:18:47.826Z",
+    "linexic": "2026-08-30T20:18:47.826Z"
+  },
+  "source_baseline_day_urls": {
+    "axi": [],
+    "tw93": [],
+    "sora": [],
+    "lil-log": [],
+    "kexue": [],
+    "ameow": [],
+    "lumina": [],
+    "laohu-weekly": [],
+    "arthals": [],
+    "yutong": [],
+    "neomelt": [],
+    "french-picnic": [],
+    "linexic": []
+  },
+  "date_only_item_ids": [
+    "tw93:f14458a56b8220b063a76064",
+    "tw93:4aec756d4a169f691b435470",
+    "tw93:fd55dc81ff63d4963e183bee",
+    "tw93:914f3151c563981cf2f2f445",
+    "tw93:e15878b306dc273044828a0c",
+    "tw93:7fe6a5609b6f7e3388dc871f",
+    "tw93:21ad6d9ed0c33a8019369278",
+    "tw93:5ea4afc08021a5e83eda3ab8",
+    "tw93:1f83deaa88b8dfc06df18427",
+    "tw93:b9038a3f50dfd8452f50dbf1"
+  ],
+  "new_item_ids": [],
   "items": [
     {
       "id": "lumina:d7276860582ad2cc29fb101c",

@@ -1,24 +1,31 @@
 ---
-import type { BlogFeedSnapshot } from '@/types/reading'
+import type { BlogFeedSnapshot, BlogFeedSource } from '@/types/reading'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import ReadingFeed from '@/components/reading/ReadingFeed.astro'
 
 import snapshotData from '../../data/blog-feed-snapshot.json'
+import feedsData from '../../data/blog-feeds.json'
 
 const snapshot = snapshotData as BlogFeedSnapshot
+const sources = (feedsData as BlogFeedSource[]).filter((source) => source.enabled)
+if (sources.length !== snapshot.source_count) {
+  throw new Error('Enabled blog sources do not match the feed snapshot')
+}
 ---
 
 <BaseLayout
   meta={{
-    title: '博客更新',
-    description: '我所订阅博客的近期文章更新。'
+    title: '博客订阅',
+    description: '按订阅源查看从监控开始后发布的新文章。'
   }}
 >
   <main class='mb-12 mt-6 lg:mt-10'>
     <ReadingFeed
+      sources={sources}
       items={snapshot.items}
+      newItemIds={snapshot.new_item_ids}
+      monitoringStartedAt={snapshot.monitoring_started_at}
       contentUpdatedAt={snapshot.content_updated_at}
-      sourceCount={snapshot.source_count}
       locale='zh'
     />
   </main>

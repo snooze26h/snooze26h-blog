@@ -1,51 +1,53 @@
 ---
-import type { BlogFeedItem } from '@/types/reading'
-import { Button, FormattedDate, Icon } from '@/components/user'
+import type { BlogFeedItem, BlogFeedSource } from '@/types/reading'
+import { FormattedDate, Icon } from '@/components/user'
 
-import FeedUpdateItem from './FeedUpdateItem.astro'
+import FeedSourceCard from './FeedSourceCard.astro'
 
 interface Props {
+  sources: BlogFeedSource[]
   items: BlogFeedItem[]
+  newItemIds: string[]
+  monitoringStartedAt: string | null
   contentUpdatedAt: string | null
-  sourceCount: number
   locale: 'zh' | 'en'
 }
 
-const { items, contentUpdatedAt, sourceCount, locale } = Astro.props
+const { sources, items, newItemIds, monitoringStartedAt, contentUpdatedAt, locale } = Astro.props
 const isEnglish = locale === 'en'
 const labels = isEnglish
   ? {
-      all: 'All',
-      allEmpty: 'No articles are available yet.',
       description:
-        'Recent posts from the blogs I follow. Open an item to continue reading at the original site.',
-      loadMore: 'Load more',
-      sourceCount: `${sourceCount} sources`,
-      title: 'Blog Updates',
-      unread: 'Unread',
-      unreadEmpty: 'You are all caught up.',
-      updated: 'Content updated'
+        'Every subscribed blog has its own place here. New posts appear under their source after monitoring begins.',
+      monitoredSince: 'Monitoring since',
+      sourceCount: `${sources.length} sources`,
+      statusPrefix: 'New posts',
+      title: 'Blog Subscriptions',
+      updated: 'Feed content updated'
     }
   : {
-      all: '全部',
-      allEmpty: '暂时还没有可显示的文章。',
-      description: '这里汇集我订阅博客的近期文章，点击后前往原站继续阅读。',
-      loadMore: '加载更多',
-      sourceCount: `${sourceCount} 个来源`,
-      title: '博客更新',
-      unread: '未读',
-      unreadEmpty: '已经全部读完了。',
-      updated: '内容更新于'
+      description: '每个订阅博客都有自己的位置；开始监控后发布的新文章，会出现在对应来源中。',
+      monitoredSince: '监控开始于',
+      sourceCount: `${sources.length} 个订阅源`,
+      statusPrefix: '当前新文章',
+      title: '博客订阅',
+      updated: '订阅内容更新于'
     }
+const monitoringStartedDate = monitoringStartedAt ? new Date(monitoringStartedAt) : null
 const updatedDate = contentUpdatedAt ? new Date(contentUpdatedAt) : null
+const newIdSet = new Set(newItemIds)
+const itemsBySource = new Map<string, BlogFeedItem[]>()
+const recentItemBySource = new Map<string, BlogFeedItem>()
+
+for (const source of sources) itemsBySource.set(source.id, [])
+for (const item of items) {
+  if (!recentItemBySource.has(item.source_id)) recentItemBySource.set(item.source_id, item)
+  if (!newIdSet.has(item.id)) continue
+  itemsBySource.get(item.source_id)?.push(item)
+}
 ---
 
-<reading-feed
-  class='mx-auto block max-w-4xl'
-  data-all-empty={labels.allEmpty}
-  data-page-size='20'
-  data-unread-empty={labels.unreadEmpty}
->
+<reading-feed class='mx-auto block max-w-6xl'>
   <header class='mb-8 space-y-4'>
     <div class='flex items-start gap-4'>
       <div
@@ -60,84 +62,72 @@ const updatedDate = contentUpdatedAt ? new Date(contentUpdatedAt) : null
     </div>
 
     <div
-      class='flex flex-col gap-3 border-t border-border pt-4 sm:flex-row sm:items-center sm:justify-between'
+      class='flex flex-wrap items-center gap-x-2 gap-y-1 border-t border-border pt-4 text-xs text-muted-foreground'
     >
-      <div
-        class='flex items-center gap-2'
-        role='group'
-        aria-label={isEnglish ? 'Article filter' : '文章筛选'}
-      >
-        <Button
-          as='button'
-          class='cursor-pointer'
-          type='button'
-          title={labels.unread}
-          data-reading-filter='unread'
-          aria-pressed='false'
-        />
-        <Button
-          as='button'
-          class='cursor-pointer'
-          type='button'
-          title={labels.all}
-          data-reading-filter='all'
-          aria-pressed='false'
-        />
-      </div>
-
-      <p class='text-xs text-muted-foreground'>
-        {
-          updatedDate ? (
-            <>
+      <span>{labels.sourceCount}</span>
+      {
+        monitoringStartedDate && (
+          <>
+            <span aria-hidden='true'>·</span>
+            <span>
+              {labels.monitoredSince}{' '}
+              <FormattedDate
+                class='font-sans'
+                date={monitoringStartedDate}
+                dateTimeOptions={{ hour: '2-digit', minute: '2-digit' }}
+              />
+            </span>
+          </>
+        )
+      }
+      {
+        updatedDate && (
+          <>
+            <span aria-hidden='true'>·</span>
+            <span>
               {labels.updated}{' '}
               <FormattedDate
                 class='font-sans'
                 date={updatedDate}
                 dateTimeOptions={{ hour: '2-digit', minute: '2-digit' }}
               />
-              <span class='mx-1.5' aria-hidden='true'>
-                ·
-              </span>
-            </>
-          ) : null
-        }
-        <span>{labels.sourceCount}</span>
-      </p>
+            </span>
+          </>
+        )
+      }
     </div>
   </header>
 
-  {/* Third-party article titles and summaries must stay out of this site's own search index. */}
-  <ul class='space-y-3' data-pagefind-ignore data-reading-list>
-    {items.map((item) => <FeedUpdateItem {item} />)}
+  {/* Third-party article metadata must stay out of this site's own search index. */}
+  <ul
+    class='grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 lg:grid-cols-3'
+    data-pagefind-ignore
+    data-source-grid
+  >
+    {
+      sources.map((source) => (
+        <FeedSourceCard
+          source={source}
+          items={itemsBySource.get(source.id) ?? []}
+          recentItem={recentItemBySource.get(source.id)}
+          locale={locale}
+        />
+      ))
+    }
   </ul>
 
-  <div
-    class='flex flex-col items-center gap-2 rounded-2xl border border-dashed border-border bg-muted/40 px-6 py-12 text-center text-sm text-muted-foreground'
-    data-reading-empty
-    hidden={items.length > 0}
-  >
-    <Icon class='size-6' name='rss' />
-    <p>{items.length > 0 ? labels.unreadEmpty : labels.allEmpty}</p>
-  </div>
-
-  <div class='mt-6 flex justify-center'>
-    <Button
-      as='button'
-      class='cursor-pointer'
-      type='button'
-      title={labels.loadMore}
-      data-reading-load-more
-      hidden
-    />
-  </div>
-
-  <span class='sr-only' data-reading-status aria-live='polite'></span>
+  <span
+    class='sr-only'
+    data-reading-status
+    data-status-prefix={labels.statusPrefix}
+    aria-atomic='true'
+    aria-live='polite'></span>
 </reading-feed>
 
 <script>
-  const STORAGE_KEY = 'blog-reading-read:v1'
+  const STORAGE_KEY = 'blog-reading-read:v2'
 
-  function loadReadIds() {
+  function loadAcknowledgedIds() {
     try {
       const value = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
       return Array.isArray(value) ? value.filter((id) => typeof id === 'string').slice(-1000) : []
@@ -147,91 +137,93 @@ const updatedDate = contentUpdatedAt ? new Date(contentUpdatedAt) : null
   }
 
   class ReadingFeedElement extends HTMLElement {
+    clickListener?: (event: Event) => void
     storageListener?: (event: StorageEvent) => void
 
     connectedCallback() {
       if (this.dataset.initialized === 'true') return
       this.dataset.initialized = 'true'
 
-      const list = this.querySelector<HTMLElement>('[data-reading-list]')
-      const emptyState = this.querySelector<HTMLElement>('[data-reading-empty]')
-      const loadMoreButton = this.querySelector<HTMLButtonElement>('[data-reading-load-more]')
+      const cards = [...this.querySelectorAll<HTMLElement>('[data-source-card]')]
       const status = this.querySelector<HTMLElement>('[data-reading-status]')
-      const filterButtons = [...this.querySelectorAll<HTMLButtonElement>('[data-reading-filter]')]
-      const items = [...this.querySelectorAll<HTMLElement>('[data-reading-item]')]
-      const pageSize = Number.parseInt(this.dataset.pageSize || '20', 10)
+      let acknowledgedIds = loadAcknowledgedIds()
+      let acknowledgedSet = new Set(acknowledgedIds)
 
-      if (!list || !emptyState || !loadMoreButton || !status || !Number.isInteger(pageSize)) return
-
-      let currentFilter = 'unread'
-      let visibleCount = pageSize
-      let readIds = loadReadIds()
-      let readSet = new Set(readIds)
-
-      const saveReadIds = () => {
+      const saveAcknowledgedIds = () => {
         try {
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(readIds.slice(-1000)))
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(acknowledgedIds.slice(-1000)))
         } catch {
           return
         }
       }
 
       const render = () => {
-        let matchingCount = 0
-        for (const item of items) {
-          const id = item.dataset.entryId || ''
-          const isRead = readSet.has(id)
-          const matches = currentFilter === 'all' || !isRead
-          item.dataset.read = isRead ? 'true' : 'false'
-          item.hidden = !matches || matchingCount >= visibleCount
-          if (matches) matchingCount += 1
+        let totalNew = 0
+
+        for (const card of cards) {
+          const items = [...card.querySelectorAll<HTMLElement>('[data-source-item]')]
+          const count = card.querySelector<HTMLElement>('[data-source-count]')
+          const emptyState = card.querySelector<HTMLElement>('[data-source-empty]')
+          let visibleItemFound = false
+          let newCount = 0
+
+          for (const item of items) {
+            const isAcknowledged = acknowledgedSet.has(item.dataset.entryId || '')
+            if (!isAcknowledged) newCount += 1
+            item.hidden = isAcknowledged || visibleItemFound
+            if (!isAcknowledged && !visibleItemFound) visibleItemFound = true
+          }
+
+          totalNew += newCount
+          card.dataset.hasNew = String(newCount > 0)
+          if (count) {
+            count.textContent =
+              newCount > 0
+                ? `${newCount} ${count.dataset.countSuffix || ''}`.trim()
+                : count.dataset.emptyLabel || '0'
+            count.setAttribute(
+              'aria-label',
+              newCount > 0
+                ? `${newCount} ${count.dataset.countAriaSuffix || ''}`.trim()
+                : count.dataset.emptyAriaLabel || count.textContent
+            )
+          }
+          if (emptyState) emptyState.hidden = newCount > 0
         }
 
-        for (const button of filterButtons) {
-          button.setAttribute(
-            'aria-pressed',
-            String(button.dataset.readingFilter === currentFilter)
-          )
-        }
-
-        emptyState.hidden = matchingCount > 0
-        emptyState.querySelector('p')!.textContent =
-          currentFilter === 'all' ? this.dataset.allEmpty || '' : this.dataset.unreadEmpty || ''
-        loadMoreButton.hidden = matchingCount <= visibleCount
-        status.textContent = `${Math.min(matchingCount, visibleCount)} / ${matchingCount}`
+        this.dataset.hydrated = 'true'
+        if (status) status.textContent = `${status.dataset.statusPrefix || ''}: ${totalNew}`
       }
 
-      for (const button of filterButtons) {
-        button.addEventListener('click', () => {
-          currentFilter = button.dataset.readingFilter === 'all' ? 'all' : 'unread'
-          visibleCount = pageSize
-          render()
-        })
-      }
-
-      loadMoreButton.addEventListener('click', () => {
-        visibleCount += pageSize
-        render()
-      })
-
-      list.addEventListener('click', (event) => {
+      this.clickListener = (event) => {
         const target = event.target
         if (!(target instanceof Element)) return
-        const link = target.closest('[data-reading-link]')
-        const item = link?.closest<HTMLElement>('[data-reading-item]')
+        const link = target.closest('[data-source-item-link]')
+        const item = link?.closest<HTMLElement>('[data-source-item]')
+        const card = item?.closest<HTMLElement>('[data-source-card]')
         const id = item?.dataset.entryId
-        if (!id || readSet.has(id)) return
+        if (!id || acknowledgedSet.has(id)) return
+        const shouldRestoreFocus = event instanceof MouseEvent && event.detail === 0
 
-        readIds = [...readIds.filter((value) => value !== id), id].slice(-1000)
-        readSet = new Set(readIds)
-        saveReadIds()
-        render()
-      })
+        acknowledgedIds = [...acknowledgedIds.filter((value) => value !== id), id].slice(-1000)
+        acknowledgedSet = new Set(acknowledgedIds)
+        saveAcknowledgedIds()
+        window.setTimeout(() => {
+          render()
+          if (!shouldRestoreFocus || !card) return
+          card
+            .querySelector<HTMLElement>(
+              '[data-source-item]:not([hidden]) [data-source-item-link], [data-source-quiet]:not([hidden]) a, header a'
+            )
+            ?.focus({ preventScroll: true })
+        }, 0)
+      }
+      this.addEventListener('click', this.clickListener)
 
       this.storageListener = (event) => {
         if (event.key !== STORAGE_KEY) return
-        readIds = loadReadIds()
-        readSet = new Set(readIds)
+        acknowledgedIds = loadAcknowledgedIds()
+        acknowledgedSet = new Set(acknowledgedIds)
         render()
       }
       window.addEventListener('storage', this.storageListener)
@@ -240,7 +232,11 @@ const updatedDate = contentUpdatedAt ? new Date(contentUpdatedAt) : null
     }
 
     disconnectedCallback() {
+      if (this.clickListener) this.removeEventListener('click', this.clickListener)
       if (this.storageListener) window.removeEventListener('storage', this.storageListener)
+      this.clickListener = undefined
+      this.storageListener = undefined
+      delete this.dataset.initialized
     }
   }
 
@@ -250,14 +246,9 @@ const updatedDate = contentUpdatedAt ? new Date(contentUpdatedAt) : null
 </script>
 
 <style>
-  :global([data-reading-filter][aria-pressed='true']) {
-    border-color: hsl(var(--primary) / 0.45);
-    background-color: hsl(var(--muted));
-    color: hsl(var(--foreground));
-  }
-
-  [data-reading-empty][hidden],
-  :global([data-reading-load-more][hidden]) {
+  reading-feed:not([data-hydrated='true']) :global([data-source-item]:not(:first-child)),
+  :global([data-source-item][hidden]),
+  :global([data-source-empty][hidden]) {
     display: none;
   }
 </style>
