@@ -1,8 +1,8 @@
 {
   "version": 2,
   "monitoring_started_at": "2026-08-30T20:18:47.826Z",
-  "content_updated_at": "2026-08-30T20:43:02.652Z",
-  "source_count": 13,
+  "content_updated_at": "2026-09-01T15:55:07.001Z",
+  "source_count": 14,
   "source_started_at": {
     "axi": "2026-08-30T20:18:47.826Z",
     "tw93": "2026-08-30T20:18:47.826Z",
@@ -16,7 +16,8 @@
     "yutong": "2026-08-30T20:18:47.826Z",
     "neomelt": "2026-08-30T20:18:47.826Z",
     "french-picnic": "2026-08-30T20:18:47.826Z",
-    "linexic": "2026-08-30T20:18:47.826Z"
+    "linexic": "2026-08-30T20:18:47.826Z",
+    "rrorange": "2026-09-01T15:55:07.001Z"
   },
   "source_baseline_day_urls": {
     "axi": [],
@@ -31,7 +32,8 @@
     "yutong": [],
     "neomelt": [],
     "french-picnic": [],
-    "linexic": []
+    "linexic": [],
+    "rrorange": []
   },
   "date_only_item_ids": [
     "tw93:f14458a56b8220b063a76064",
@@ -45,8 +47,28 @@
     "tw93:1f83deaa88b8dfc06df18427",
     "tw93:b9038a3f50dfd8452f50dbf1"
   ],
-  "new_item_ids": [],
+  "new_item_ids": [
+    "kexue:4d06089a9c727a2b7a3c2703"
+  ],
   "items": [
+    {
+      "id": "kexue:4d06089a9c727a2b7a3c2703",
+      "source_id": "kexue",
+      "source_name": "科学空间",
+      "title": "让炼丹更科学一些（八）：多阶段训练的学习率",
+      "published_at": "2026-08-31T03:07:00.000Z",
+      "summary": "上篇文章《让炼丹更科学一些（七）：步长调度与权重平均》我们简单介绍了无调度（Schedule-Free）学习率的工作，它试图通过某种权重平均来替代学习率调度，实现常数学习率就可以训出最优模型的效...",
+      "url": "https://kexue.fm/archives/11879"
+    },
+    {
+      "id": "axi:cbfe206268d375539e554ebb",
+      "source_id": "axi",
+      "source_name": "Axi's Blog",
+      "title": "Pi Agent 小记",
+      "published_at": "2026-08-30T00:00:00.000Z",
+      "summary": "安装 Pi Agent 并进行必要的配置以实现常规 Agent 效果。",
+      "url": "https://axi404.top/blog/pi-agent"
+    },
     {
       "id": "lumina:d7276860582ad2cc29fb101c",
       "source_id": "lumina",
@@ -251,7 +273,7 @@
       "source_name": "Tw93",
       "title": "Mole 出 Mac 版后，用户教会了我做产品",
       "published_at": "2026-08-16T00:00:00.000Z",
-      "summary": "最近我写了不少关于独立开发的思考，想着要汇总一下，就把 Mole 从开源 CLI 做到 Mac 付费软件这一路聊一聊，我当时是怎么想的，哪些事情做下来真的有用，也许能给正在做自己作品的朋友一些输入。 > Mole 的官网是 mole.fit，CLI 在 GitHub 开源，可以先去玩一玩。Yobi 收录了 Mac 版的功能、定价和同类工具对比。 去年国庆我在三亚的泳池边写了几百行代码，做了个 Mac 清理的命令行工具 Mole CLI 开源到 GitHub 上，本来只想给自己和同事用。结果不到一年收了 60K star，陆续发了 50 多个版本，121…",
+      "summary": "最近我写了不少关于独立开发的思考，想着要汇总一下，就把 Mole 从开源 CLI 做到 Mac 付费软件这一路聊一聊，我当时是怎么想的，哪些事情做下来真的有用，也许能给正在做自己作品的朋友一些输入。 > Mole 的官网是 mole.fit，CLI 在 GitHub 开源，可以先去玩一玩。Faberon 收录了 Mac 版的功能、定价和同类工具对比。 去年国庆我在三亚的泳池边写了几百行代码，做了个 Mac 清理的命令行工具 Mole CLI 开源到 GitHub 上，本来只想给自己和同事用。结果不到一年收了 60K star，陆续发了 50 多个版本，…",
       "url": "https://tw93.fun/2026-08-16/mole-mac.html"
     },
     {
@@ -390,6 +412,15 @@
       "url": "https://kexue.fm/archives/11814"
     },
     {
+      "id": "rrorange:8ece354017513d96bb758bc2",
+      "source_id": "rrorange",
+      "source_name": "大橘和朋友们的周刊",
+      "title": "第041期 - 晴云化狐",
+      "published_at": "2026-07-12T00:00:00.000Z",
+      "summary": "第041期 - 晴云化狐 这个是这周下午下班的时候拍到的晚霞，很像一只狼 or 狐，所以我让GPT给我重绘了一下这个图片然后就有了这期封面",
+      "url": "https://rrorangeandfriends.de/posts/2026/041"
+    },
+    {
       "id": "linexic:ab433a2424ed5cc16f797c8b",
       "source_id": "linexic",
       "source_name": "LineXic书屋",
@@ -435,13 +466,13 @@
       "url": "https://ameow.xyz/archives/weekly-099"
     },
     {
-      "id": "kexue:6643ca1df9ed53c2d5dd9dec",
-      "source_id": "kexue",
-      "source_name": "科学空间",
-      "title": "矩阵函数近似中的暴力美学",
-      "published_at": "2026-06-25T13:53:00.000Z",
-      "summary": "此前，我们在《矩阵平方根和逆平方根的高效计算》和《矩阵r次方根和逆r次方根的高效计算》探讨过矩阵幂的高效计算，它们将原本用于计算$\\newcommand{msign}{\\mathop{\\text...",
-      "url": "https://kexue.fm/archives/11787"
+      "id": "rrorange:1cf3d1020585048a041c3bf6",
+      "source_id": "rrorange",
+      "source_name": "大橘和朋友们的周刊",
+      "title": "第040期 - 夕路归人",
+      "published_at": "2026-06-28T00:00:00.000Z",
+      "summary": "第040期 - 夕路归人 这张图是有一天正好我和朋友没事就租了一辆电动车，刚吃完，准备骑着车去兜风，然后看到一个农民工从身边路过正好碰到夕阳就拍了下来 >> 🤺大橘的技术交流 如何搭建一个可以使用大模型翻译岛国爱情片的POTPLAYER 1、如果没有PotPlayer的话需要去官网下载一个 2、下载一个转换引擎 Faster-Whisper-XXL > 或者可以网盘下载 3、点击声音生成字幕 会跳出这样的界面 点击转换引擎，然后放到这里 【模型下载】，这里我使用的是faster-whisper-large-v3 | 模型名称 | 备注 | 模型名称 |…",
+      "url": "https://rrorangeandfriends.de/posts/2026/040"
     },
     {
       "id": "lil-log:008190c8a129541997b0f62b",
@@ -957,6 +988,15 @@
       "url": "https://www.linexic.top/post/month-10-myself/"
     },
     {
+      "id": "rrorange:91a660cd31198d9829d2a8cb",
+      "source_id": "rrorange",
+      "source_name": "大橘和朋友们的周刊",
+      "title": "第039期 - 花间橘影",
+      "published_at": "2026-01-23T00:00:00.000Z",
+      "summary": "第039期 - 花间橘影 >> 🐈大橘的工具集 BIU - B站跨平台桌面音乐播放器 一款基于哔哩哔哩公开接口开发的非官方跨平台桌面音乐播放器（Electron + React + TypeScript 构建），主打纯净无广告的听歌体验。登录后可同步 收藏夹/稍后再看/历史记录/用户投稿，并优先拉取更高码率音频流（含无损 Flac、Hi-Res，部分需大会员）。它提供 mini 播放器 模式和系统托盘控制，支持视频提取音频、单个或收藏夹批量下载、全屏歌词显示，还内置音乐推荐（新歌热榜、分区推荐）和本地音乐播放功能。界面支持浅色/深色主题切换、侧边栏收藏…",
+      "url": "https://rrorangeandfriends.de/posts/2026/039"
+    },
+    {
       "id": "ameow:e76e116481f18105244f038f",
       "source_id": "ameow",
       "source_name": "阿猫的博客",
@@ -991,6 +1031,15 @@
       "published_at": "2026-01-11T23:00:00.000Z",
       "summary": "北京大学 2025 年秋季学期操作系统/OS Lab Part 6",
       "url": "https://arthals.ink/blog/xv6-os-lab-part6"
+    },
+    {
+      "id": "rrorange:27f2679b866dab3ccfe0a250",
+      "source_id": "rrorange",
+      "source_name": "大橘和朋友们的周刊",
+      "title": "第038期 - 布鲁斯科",
+      "published_at": "2026-01-09T00:00:00.000Z",
+      "summary": "第038期 - 布鲁斯科 这是昨天和同事一起去超市买的蓝布鲁斯科气泡酒，最近比较喜欢喝甜白葡萄酒！ >> 🐈大橘的工具集 POSTSPARK - 截图与社媒素材编辑器 一款面向社交媒体营销的可视化截图与 Mockup 设计工具，提供URL -> Screenshot、浏览器边框、阴影与标注、16+ 布局等模板化能力，可快速生成截图、设备 Mockup、X/Bluesky 帖子、代码片段等多种视觉素材；支持视频/动画输出，并提供 Chrome 插件与 VS Code 扩展方便在浏览器和编辑器内直接调用。 MODELS.DEV - 开源 AI 模型数据库 …",
+      "url": "https://rrorangeandfriends.de/posts/2026/038"
     },
     {
       "id": "sora:537a290c38ee665c098f1fdf",
@@ -1029,15 +1078,6 @@
       "url": "https://axi404.top/blog/advise-epilogue-0"
     },
     {
-      "id": "axi:66749c38f670a4cf51b87052",
-      "source_id": "axi",
-      "source_name": "Axi's Blog",
-      "title": "致新生的你/后日谈：为什么 Vibe Coding 如此重要",
-      "published_at": "2026-01-04T00:00:00.000Z",
-      "summary": "伴随着 Coding Agent 的能力提升，Vibe Coding 所触及的范围已经如此之广，然而绝大多数人并没有意识到",
-      "url": "https://axi404.top/blog/advise-epilogue-1"
-    },
-    {
       "id": "french-picnic:a96a242977a4bf90fff3efe9",
       "source_id": "french-picnic",
       "source_name": "FrenchPicnic",
@@ -1072,6 +1112,15 @@
       "published_at": "2025-12-21T12:21:28.000Z",
       "summary": "关于本刊 > 这是猫鱼周刊的第 90 期，本系列每周日更新，主要内容为每周收集内容的分享，同时发布在 > > 博客：阿猫的博客-猫鱼周刊 > > RSS：猫鱼周刊 > > 邮件订阅：猫鱼周刊 > > 微信公众号：猫兄的和谐号列车 > > 私信：leslieleung@proton.me INIT 这周依然花了很多时间在 Glean 的开发上，内容也不是很多，STDOUT 部分介绍一些开发过程中的心得吧。 STDIN 关于博客开头的 AI 总结 原文链接 最近确实见到越来越多博客在开头的地方做一个 AI 总结，甚至为了模拟实时生成（事实上都是提前生成好的…",
       "url": "https://ameow.xyz/archives/weekly-089"
+    },
+    {
+      "id": "rrorange:0adf6464f7bd64d7deec4abd",
+      "source_id": "rrorange",
+      "source_name": "大橘和朋友们的周刊",
+      "title": "第037期 - 西西弗书店",
+      "published_at": "2025-12-20T00:00:00.000Z",
+      "summary": "第037期 - 西西弗书店 这个是上周和同事一起出去吃午饭后，找了一个商场逛了逛，看到西西弗书店，之前在网易云音乐就看到这样的歌单，感觉很有意境，就进去逛了大概有1个小时，还是很有意思的地方。 > 年末稍微发一期，最近休息一下，休息差不多再继续更新 >> 🐈大橘的工具集 GEMINI 3 PRO 如何挑战《宝可梦水晶》（而 2.5 PRO 未能做到） > Twitch现场直播：https://www.twitch.tv/gemini_plays_pokemon，最近几天是Gemini 3 Flash 记录了一场 AI 模型竞赛实验，其中 Gemini …",
+      "url": "https://rrorangeandfriends.de/posts/2025/037"
     },
     {
       "id": "ameow:839c3613acdb682c957a30da",

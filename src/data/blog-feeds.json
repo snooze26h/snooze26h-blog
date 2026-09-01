@@ -14,8 +14,14 @@
       "accent": "#659EB9",
       "description": "具身智能方向的学生，记录研究、技术与日常生活。",
       "description_en": "An embodied-AI student writing about research, technology, and daily life.",
-      "topics": ["具身智能", "生活记录"],
-      "topics_en": ["Embodied AI", "Daily life"]
+      "topics": [
+        "具身智能",
+        "生活记录"
+      ],
+      "topics_en": [
+        "Embodied AI",
+        "Daily life"
+      ]
     }
   },
   {
@@ -34,8 +40,14 @@
       "accent": "#5C6469",
       "description": "产品工程、AI Coding、开源工具、设计与原生 macOS。",
       "description_en": "Product engineering, AI coding, open-source tools, design, and native macOS.",
-      "topics": ["产品工程", "macOS"],
-      "topics_en": ["Product", "macOS"]
+      "topics": [
+        "产品工程",
+        "macOS"
+      ],
+      "topics_en": [
+        "Product",
+        "macOS"
+      ]
     }
   },
   {
@@ -53,8 +65,14 @@
       "accent": "#5F9EA3",
       "description": "记录计算机技术的个人博客。",
       "description_en": "A personal blog documenting computer technology.",
-      "topics": ["计算机技术", "AI 工具"],
-      "topics_en": ["Computing", "AI tools"]
+      "topics": [
+        "计算机技术",
+        "AI 工具"
+      ],
+      "topics_en": [
+        "Computing",
+        "AI tools"
+      ]
     }
   },
   {
@@ -73,8 +91,14 @@
       "accent": "#7B3F52",
       "description": "Lilian Weng 自 2017 年整理的 AI 学习笔记。",
       "description_en": "Lilian Weng’s AI learning notes, documented since 2017.",
-      "topics": ["AI 研究", "机器学习"],
-      "topics_en": ["AI research", "Machine learning"]
+      "topics": [
+        "AI 研究",
+        "机器学习"
+      ],
+      "topics_en": [
+        "AI research",
+        "Machine learning"
+      ]
     }
   },
   {
@@ -91,8 +115,14 @@
       "accent": "#4F6B8A",
       "description": "苏剑林关于机器学习、数学推导与模型优化的深度笔记。",
       "description_en": "Su Jianlin’s deep notes on machine learning, mathematical derivations, and model optimization.",
-      "topics": ["机器学习", "数学推导"],
-      "topics_en": ["Machine learning", "Mathematics"]
+      "topics": [
+        "机器学习",
+        "数学推导"
+      ],
+      "topics_en": [
+        "Machine learning",
+        "Mathematics"
+      ]
     }
   },
   {
@@ -110,8 +140,14 @@
       "accent": "#5D8FB8",
       "description": "记录 AI、Go、技术折腾与猫鱼周刊。",
       "description_en": "AI, Go, technical tinkering, and the recurring Catfish Weekly.",
-      "topics": ["猫鱼周刊", "Go / AI"],
-      "topics_en": ["Catfish Weekly", "Go / AI"]
+      "topics": [
+        "猫鱼周刊",
+        "Go / AI"
+      ],
+      "topics_en": [
+        "Catfish Weekly",
+        "Go / AI"
+      ]
     }
   },
   {
@@ -130,8 +166,14 @@
       "accent": "#3B82F6",
       "description": "肖恩子的知识花园：汇流万象，智能提纯，沉淀真知。",
       "description_en": "Shawn’s knowledge garden for collecting, distilling, and retaining useful ideas.",
-      "topics": ["AI 原生", "知识管理"],
-      "topics_en": ["AI native", "Knowledge"]
+      "topics": [
+        "AI 原生",
+        "知识管理"
+      ],
+      "topics_en": [
+        "AI native",
+        "Knowledge"
+      ]
     }
   },
   {
@@ -149,8 +191,14 @@
       "accent": "#5C6BC0",
       "description": "每周留存并分享作者看到的计算机领域有价值信息。",
       "description_en": "A weekly archive and sharing of useful information, mainly from computing.",
-      "topics": ["每周精选", "效率工具"],
-      "topics_en": ["Weekly picks", "Useful tools"]
+      "topics": [
+        "每周精选",
+        "效率工具"
+      ],
+      "topics_en": [
+        "Weekly picks",
+        "Useful tools"
+      ]
     }
   },
   {
@@ -168,8 +216,14 @@
       "accent": "#659EB9",
       "description": "热爱编程的医学生、开发者与设计者，关注 LLM 和具身智能。",
       "description_en": "A programming-loving medical student, developer, and designer interested in LLMs and embodied AI.",
-      "topics": ["技术学习", "具身智能"],
-      "topics_en": ["Engineering", "Embodied AI"]
+      "topics": [
+        "技术学习",
+        "具身智能"
+      ],
+      "topics_en": [
+        "Engineering",
+        "Embodied AI"
+      ]
     }
   },
   {
@@ -187,8 +241,14 @@
       "accent": "#946A42",
       "description": "UCSD 机器人研究者，关注灵巧操作、人类示范与物理学习。",
       "description_en": "A UCSD robotics researcher working on dexterous manipulation, human demonstrations, and physics-based learning.",
-      "topics": ["机器人", "强化学习"],
-      "topics_en": ["Robotics", "Reinforcement learning"]
+      "topics": [
+        "机器人",
+        "强化学习"
+      ],
+      "topics_en": [
+        "Robotics",
+        "Reinforcement learning"
+      ]
     }
   },
   {
@@ -206,8 +266,14 @@
       "accent": "#3A67A6",
       "description": "AI、机器人、系统折腾与日常思考，向星河彼端延伸。",
       "description_en": "Notes on AI, robotics, systems tinkering, and life—toward the far side of the stars.",
-      "topics": ["机器人", "技术日常"],
-      "topics_en": ["Robotics", "Tech and life"]
+      "topics": [
+        "机器人",
+        "技术日常"
+      ],
+      "topics_en": [
+        "Robotics",
+        "Tech and life"
+      ]
     }
   },
   {
@@ -225,8 +291,14 @@
       "accent": "#2F4154",
       "description": "生活、学习与技术折腾的随记。",
       "description_en": "Personal notes on life, study, and technical tinkering.",
-      "topics": ["生活随记", "技术折腾"],
-      "topics_en": ["Life notes", "Tinkering"]
+      "topics": [
+        "生活随记",
+        "技术折腾"
+      ],
+      "topics_en": [
+        "Life notes",
+        "Tinkering"
+      ]
     }
   },
   {
@@ -244,8 +316,39 @@
       "accent": "#B7791F",
       "description": "分享知识、学习生活、技术与日常。",
       "description_en": "Knowledge sharing, study, technology, and everyday life.",
-      "topics": ["知识分享", "学习生活"],
-      "topics_en": ["Knowledge", "Study and life"]
+      "topics": [
+        "知识分享",
+        "学习生活"
+      ],
+      "topics_en": [
+        "Knowledge",
+        "Study and life"
+      ]
+    }
+  },
+  {
+    "id": "rrorange",
+    "name": "大橘和朋友们的周刊",
+    "site_url": "https://rrorangeandfriends.de/",
+    "discovery_url": "https://rrorangeandfriends.de/",
+    "feed_url": "https://rrorangeandfriends.de/feed.xml",
+    "kind": "rss",
+    "enabled": true,
+    "poll_interval_minutes": 120,
+    "status": "verified",
+    "profile": {
+      "avatar": "/images/blog-sources/rrorange.png",
+      "accent": "#E8944A",
+      "description": "大橘和朋友们的每周记录，分享见闻与生活。",
+      "description_en": "A weekly journal by Rrorange and friends, sharing findings and daily life.",
+      "topics": [
+        "每周周刊",
+        "生活记录"
+      ],
+      "topics_en": [
+        "Weekly journal",
+        "Life notes"
+      ]
     }
   },
   {
@@ -258,5 +361,16 @@
     "enabled": false,
     "poll_interval_minutes": 120,
     "status": "disabled_by_choice"
+  },
+  {
+    "id": "zhifei",
+    "name": "Zhifei Li",
+    "site_url": "https://zhifei.li/",
+    "discovery_url": "https://zhifei.li/",
+    "feed_url": "https://zhifei.li/",
+    "kind": "rss",
+    "enabled": false,
+    "poll_interval_minutes": 120,
+    "status": "unsupported"
   }
 ]
