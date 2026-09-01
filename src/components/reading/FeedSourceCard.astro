@@ -72,17 +72,7 @@ const labels = isEnglish
   data-source-id={source.id}
   style={avatar ? undefined : `--source-accent: ${monogramAccent};`}
 >
-  {
-    avatar ? (
-      <div class='card-ambient' aria-hidden='true'>
-        <img alt='' decoding='async' loading='lazy' src={avatar} />
-      </div>
-    ) : (
-      <div class='card-ambient card-ambient--tint' aria-hidden='true' />
-    )
-  }
-
-  <header class='relative z-10 flex items-center gap-3'>
+  <header class='flex items-center gap-3'>
     <div
       class='source-avatar flex size-12 shrink-0 items-center justify-center overflow-hidden rounded-full'
     >
@@ -149,7 +139,7 @@ const labels = isEnglish
     </span>
   </header>
 
-  <div class='relative z-10 mt-4'>
+  <div class='mt-4'>
     <p class='line-clamp-2 min-h-10 text-xs leading-5 text-muted-foreground'>{description}</p>
     <ul class='mt-2.5 flex flex-wrap gap-1.5' aria-label={isEnglish ? 'Topics' : '常写主题'}>
       {
@@ -162,7 +152,7 @@ const labels = isEnglish
     </ul>
   </div>
 
-  <div class='relative z-10 mt-auto pt-4' data-source-items>
+  <div class='mt-auto pt-4' data-source-items>
     {
       items.map((item) => (
         <article
@@ -241,49 +231,6 @@ const labels = isEnglish
 </li>
 
 <style>
-  /* Each card's ambience comes from that blog's own avatar, blurred into a soft wash. */
-  .card-ambient {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    -webkit-mask-image: linear-gradient(to bottom, black 8%, transparent 62%);
-    mask-image: linear-gradient(to bottom, black 8%, transparent 62%);
-  }
-
-  .card-ambient img {
-    position: absolute;
-    top: -42%;
-    left: -12%;
-    width: 82%;
-    max-width: none;
-    aspect-ratio: 1;
-    object-fit: cover;
-    filter: blur(48px) saturate(1.2) brightness(0.82);
-    opacity: 0.09;
-    transition: opacity 200ms ease-out;
-  }
-
-  :global(.dark) .card-ambient img {
-    opacity: 0.12;
-  }
-
-  .source-card:hover .card-ambient img {
-    opacity: 0.13;
-  }
-
-  :global(.dark) .source-card:hover .card-ambient img {
-    opacity: 0.17;
-  }
-
-  /* Monogram-only sources fall back to a faint tint in the same position. */
-  .card-ambient--tint {
-    background: radial-gradient(
-      circle at 18% -20%,
-      color-mix(in srgb, var(--source-accent) 12%, transparent) 0%,
-      transparent 58%
-    );
-  }
-
   .source-card:hover {
     border-color: hsl(var(--border));
     box-shadow: 0 12px 28px hsl(var(--foreground) / 0.07);
