@@ -55,7 +55,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
     {/* Menu links */}
     <div
       id='headerExpandConetent'
-      class='end-0 start-0 top-12 grid border border-transparent group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-muted/60 max-lg:absolute max-lg:opacity-0 max-lg:pointer-events-none max-lg:group-[.expanded]:pointer-events-auto max-lg:group-[.not-top]:border-border max-lg:group-[.expanded.not-top]:bg-background/60 max-lg:group-[.expanded.not-top]:backdrop-blur-md max-lg:group-[.not-top]:px-4 max-lg:group-[.not-top]:py-2 lg:grid-rows-1'
+      class='end-0 start-0 top-12 grid border border-transparent group-[.not-top]:rounded-xl group-[.expanded]:opacity-100 dark:group-[.expanded.not-top]:bg-muted max-lg:absolute max-lg:opacity-0 max-lg:pointer-events-none max-lg:group-[.expanded]:pointer-events-auto max-lg:group-[.not-top]:border-border max-lg:group-[.expanded.not-top]:bg-background max-lg:group-[.expanded.not-top]:backdrop-blur-md max-lg:group-[.not-top]:px-4 max-lg:group-[.not-top]:py-2 lg:grid-rows-1'
     >
       <div class='flex flex-col items-center justify-center lg:flex-row'>
         {
@@ -73,7 +73,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
                     <Icon name='chevron-down' class='chevron-icon ml-1 size-4 transition-transform' />
                   </a>
                   {/* Dropdown menu */}
-                  <div class='dropdown-menu absolute right-0 top-full mt-0 w-48 rounded-xl border border-border bg-background/75 shadow-lg backdrop-blur-lg dark:bg-muted/75 lg:left-0 lg:right-auto lg:mt-2' style='z-index: 9999;'>
+                  <div class='dropdown-menu absolute right-0 top-full mt-0 w-48 rounded-xl border border-border bg-background shadow-lg dark:bg-muted lg:left-0 lg:right-auto lg:mt-2' style='z-index: 9999;'>
                     <div class='py-1'>
                       {categories.map((category) => (
                         <a
@@ -195,6 +195,7 @@ function getLocalizedUrl(locale: string | undefined, path: string) {
       backdrop-filter 0.15s;
 
     &.not-top {
+      background-color: hsl(var(--background));
       box-shadow:
         rgb(255, 255, 255) 0px 0px 0px 0px,
         rgba(24, 24, 27, 0.08) 0px 0px 0px 1px,
