@@ -246,8 +246,8 @@ const labels = isEnglish
     position: absolute;
     inset: 0;
     pointer-events: none;
-    -webkit-mask-image: linear-gradient(to bottom, black 12%, transparent 78%);
-    mask-image: linear-gradient(to bottom, black 12%, transparent 78%);
+    -webkit-mask-image: linear-gradient(to bottom, black 8%, transparent 62%);
+    mask-image: linear-gradient(to bottom, black 8%, transparent 62%);
   }
 
   .card-ambient img {
@@ -258,28 +258,28 @@ const labels = isEnglish
     max-width: none;
     aspect-ratio: 1;
     object-fit: cover;
-    filter: blur(44px) saturate(1.15);
-    opacity: 0.14;
+    filter: blur(48px) saturate(1.2) brightness(0.82);
+    opacity: 0.09;
     transition: opacity 200ms ease-out;
   }
 
   :global(.dark) .card-ambient img {
-    opacity: 0.24;
+    opacity: 0.12;
   }
 
   .source-card:hover .card-ambient img {
-    opacity: 0.2;
+    opacity: 0.13;
   }
 
   :global(.dark) .source-card:hover .card-ambient img {
-    opacity: 0.32;
+    opacity: 0.17;
   }
 
   /* Monogram-only sources fall back to a faint tint in the same position. */
   .card-ambient--tint {
     background: radial-gradient(
       circle at 18% -20%,
-      color-mix(in srgb, var(--source-accent) 22%, transparent) 0%,
+      color-mix(in srgb, var(--source-accent) 12%, transparent) 0%,
       transparent 58%
     );
   }
